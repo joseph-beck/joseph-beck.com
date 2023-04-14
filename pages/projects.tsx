@@ -1,5 +1,8 @@
+import { Inter } from 'next/font/google'
 import styles from '@/styles/projects.module.css'
 import Link from 'next/link';
+
+const inter = Inter({ subsets: ['latin'] })
 
 export default function Projects() {
   return (
@@ -10,8 +13,9 @@ export default function Projects() {
       </div>
 
       <div className={`${styles.navBar}`}>
-        <Link href="#busb-bot-section">BUSB Bot</Link>
-        <Link href="#">...</Link>
+        <Link className={`${inter.className} ${styles.navText}`} href="#top">---</Link>
+        <Link className={`${inter.className} ${styles.navText}`} href="#rusted-attractors">Rusted Attractors</Link>
+        <Link className={`${inter.className} ${styles.navText}`} href="#busb-bot">BUSB Bot</Link>
       </div>
     </main>
   );
