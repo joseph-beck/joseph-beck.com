@@ -1,0 +1,28 @@
+.main {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6rem;
+}
+
+.box {
+    border-radius: 0.5rem;
+    border-width: 1px;
+    border-color: transparent;
+ 
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+ 
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+ 
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.navBar {
+    
+}
