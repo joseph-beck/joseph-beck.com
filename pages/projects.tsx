@@ -9,7 +9,7 @@ export default function Projects() {
     <main className={styles.main}>
 
       <div className={``}>
-
+        {RustedAttractor()}
       </div>
 
       <div className={`${styles.navBar}`}>
@@ -18,5 +18,16 @@ export default function Projects() {
         <Link className={`${inter.className} ${styles.navText}`} href="#busb-bot">BUSB Bot</Link>
       </div>
     </main>
+  );
+}
+
+const RustedAttractor = () => {
+  return (
+    <div>
+      <h2>Rusted Attractors</h2>
+      <p>
+
+      </p>
+    </div>
   );
 }

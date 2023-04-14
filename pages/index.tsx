@@ -109,7 +109,7 @@ const AboutLink = () => {
       <p
         className={`${inter.className} ${styles.boxText}`}
       >
-        About me details
+        About me details.
       </p>
     </Link>
   );
