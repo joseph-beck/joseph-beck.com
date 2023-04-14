@@ -8,10 +8,10 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className={styles.main}>
       {Title()}
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left gap-3">
+      <div className={`${styles.group} ${styles.lowerGroup}`}>
         {GithubLink()}
 
         {ProjectsLink()}
@@ -26,11 +26,11 @@ export default function Home() {
 
 const Title = () => {
   return (
-    <div className="group rounded-lg border border-transparent px-5 py-4">
+    <div className={`${styles.group} ${styles.title}`}>
       <Head>
         <title>Joseph Beck</title>
       </Head>
-      <p className={`${inter.className} text-4xl opacity-100 font-semibold`}>
+      <p className={`${inter.className} ${styles.titleText}`}>
         Joseph Beck
       </p>
     </div>
@@ -45,14 +45,14 @@ const GithubLink = () => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
+      <h2 className={`${inter.className} ${styles.boxTitleText}`}>
         Github{' '}
         <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none -mb-2">
           {GithubLogo()}
         </span>
       </h2>
       <p
-        className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
+        className={`${inter.className} ${styles.boxText}`}
       >
         Details about Github and something like that.
       </p>
@@ -78,14 +78,14 @@ const ProjectsLink = () => {
       className={`group ${styles.box}`}
       rel="noopener noreferrer"
     >
-      <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
+      <h2 className={`${inter.className} ${styles.boxTitleText}`}>
         Projects{' '}
         <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
           -&gt;
         </span>
       </h2>
       <p
-        className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
+        className={`${inter.className} ${styles.boxText}`}
       >
         Projects details.
       </p>
@@ -100,14 +100,14 @@ const AboutLink = () => {
       className={`group ${styles.box}`}
       rel="noopener noreferrer"
     >
-      <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
+      <h2 className={`${inter.className} ${styles.boxTitleText}`}>
         About{' '}
         <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
           -&gt;
         </span>
       </h2>
       <p
-        className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
+        className={`${inter.className} ${styles.boxText}`}
       >
         About me details
       </p>
@@ -122,14 +122,14 @@ const ContactLink = () => {
       className={`group ${styles.box}`}
       rel="noopener noreferrer"
     >
-      <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
+      <h2 className={`${inter.className} ${styles.boxTitleText}`}>
         Contact{' '}
         <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
           -&gt;
         </span>
       </h2>
       <p
-        className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
+        className={`${inter.className} ${styles.boxText}`}
       >
         Contact me details.
       </p>
