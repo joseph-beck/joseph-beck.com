@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Projects from './projects'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,7 +28,7 @@ export default function Home() {
           </p>
         </a>
 
-        <a
+        <Link
           href="/projects"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-800 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
           rel="noopener noreferrer"
@@ -43,9 +44,9 @@ export default function Home() {
           >
             Learn about Next.js in an interactive course with&nbsp;quizzes!
           </p>
-        </a>
+        </Link>
 
-        <a
+        <Link
           href="/about"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-800 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
           rel="noopener noreferrer"
@@ -61,9 +62,9 @@ export default function Home() {
           >
             Discover and deploy boilerplate example Next.js&nbsp;projects.
           </p>
-        </a>
+        </Link>
 
-        <a
+        <Link
           href="/contact"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-800 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
           rel="noopener noreferrer"
@@ -79,7 +80,7 @@ export default function Home() {
           >
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
-        </a>
+        </Link>
       </div>
     </main>
   )
