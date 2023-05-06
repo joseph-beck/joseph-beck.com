@@ -2,7 +2,7 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/projects.module.css'
 import Link from 'next/link';
 import Head from 'next/head';
-import { RustLogo, BevyLogo, GoLogo, MySqlLogo, NodeJsLogo, FirebaseLogo } from './components/logos';
+import { RustLogo, BevyLogo, GoLogo, MySqlLogo, NodeJsLogo, FirebaseLogo, TypescriptLogo } from './components/logos';
 
 const inter = Inter({ subsets: ['latin'] })
 
