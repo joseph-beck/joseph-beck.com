@@ -1,8 +1,8 @@
-import { Inter } from 'next/font/google'
-import Image from 'next/image'
-import Link from 'next/link'
-import Head from 'next/head'
-import styles from '@/styles/index.module.css'
+import { Inter } from 'next/font/google';
+import Link from 'next/link';
+import Head from 'next/head';
+import styles from '@/styles/index.module.css';
+import { GithubLogo } from './components/logos';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -57,17 +57,6 @@ const GithubLink = () => {
         Details about Github and something like that.
       </p>
     </a>
-  );
-}
-
-const GithubLogo = () => {
-  return (
-    <Image
-      src="/github.png"
-      alt="Github logo"
-      width={32}
-      height={32}
-    />
   );
 }
 

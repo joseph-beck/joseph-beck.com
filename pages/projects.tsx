@@ -1,8 +1,8 @@
 import { Inter } from 'next/font/google'
 import styles from '@/styles/projects.module.css'
 import Link from 'next/link';
-import Image from 'next/image'
 import Head from 'next/head';
+import { RustLogo, BevyLogo, GoLogo, MySqlLogo, NodeJsLogo, FirebaseLogo } from './components/logos';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,13 +14,18 @@ export default function Projects() {
       <div className={`${styles.group} ${styles.lowerGroup}`}>
         {RustedAttractors()}
         {BUSRBot()}
+        {DordleBot()}
         {CordleBot()}
+        {RestAPI()}
       </div>
 
       <div className={`${styles.navBar}`}>
+        <Link className={`${inter.className} ${styles.navText} font-semibold`} href="/">Home</Link>
         <Link className={`${inter.className} ${styles.navText}`} href="#rusted-attractors">Rusted Attractors</Link>
         <Link className={`${inter.className} ${styles.navText}`} href="#busb-bot">BUSB Bot</Link>
         <Link className={`${inter.className} ${styles.navText}`} href="#cordle-bot">Hackaway v6</Link>
+        <Link className={`${inter.className} ${styles.navText}`} href="#dordle-bot">Dordle Bot</Link>
+        <Link className={`${inter.className} ${styles.navText}`} href="#rest-api">Rest API</Link>
       </div>
     </main>
   );
@@ -86,21 +91,21 @@ const BUSRBot = () => {
   );
 }
 
-const CordleBot = () => {
+const DordleBot = () => {
   return (
     <a 
       href="https://github.com/joseph-beck/hackaway-v6"
       className={`group ${styles.box}`} 
-      id="cordle-bot"
+      id="dordle-bot"
       target="_blank"
       rel="noopener noreferrer"
     >
       <h2 
         className={`${inter.className} ${styles.boxTitleText}`}>
-        Hackaway v6 Cordle Bot
-        <span className="flex items-center gap-3 my-1">
-          {FirebaseLogo()}
+        Hackaway v6 Dordle Bot
+        <span className="flex items-center gap-3 my-2">
           {NodeJsLogo()}
+          {FirebaseLogo()}
         </span>
       </h2>
 
@@ -112,74 +117,54 @@ const CordleBot = () => {
   );
 }
 
-const RustLogo = () => {
+const CordleBot = () => {
   return (
-    <Image 
-      className="relative bg-blend-hard-light top-1.5 mb-1"
-      src="/rust-logo.ico"
-      alt="Rust logo"
-      width={32}
-      height={32}
-    />
+    <a 
+      href="https://github.com/joseph-beck/hackaway-v6"
+      className={`group ${styles.box}`} 
+      id="dordle-bot"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <h2 
+        className={`${inter.className} ${styles.boxTitleText}`}>
+        Cordle Bot
+        <span className="flex items-center gap-3 my-0">
+          {GoLogo()}
+          {MySqlLogo()}
+        </span>
+      </h2>
+
+      <p 
+        className={styles.boxText}>
+        An improved version of our Hackaway v6 project.
+      </p>
+    </a>
   );
 }
 
-const BevyLogo = () => {
+const RestAPI = () => {
   return (
-    <Image 
-      className="relative bg-blend-hard-light top-1.5 mb-1"
-      src="/bevy-logo.ico"
-      alt="Bevy logo"
-      width={96}
-      height={96}
-    />
-  );
-}
+    <a 
+      href="https://github.com/joseph-beck/go-rest"
+      className={`group ${styles.box}`} 
+      id="dordle-bot"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <h2 
+        className={`${inter.className} ${styles.boxTitleText}`}>
+        Rest API
+        <span className="flex items-center gap-3 my-0">
+          {GoLogo()}
+          {FirebaseLogo()}
+        </span>
+      </h2>
 
-const GoLogo = () => {
-  return (
-    <Image
-      className="relative bg-blend-hard-light top-2 mb-2"
-      src="/go-logo.ico"
-      alt="Go logo"
-      width={64}
-      height={64}
-    />
-  );
-}
-
-const MySqlLogo = () => {
-  return (
-    <Image
-      className="relative bg-blend-hard-light"
-      src="/mysql-logo.ico"
-      alt="MySQL logo"
-      width={64}
-      height={64}
-    />
-  );
-}
-
-const NodeJsLogo = () => {
-  return (
-    <Image
-      className="relative bg-blend-hard-light top-2 mb-2"
-      src="/nodejs-logo.ico"
-      alt="JavaScript logo"
-      width={48}
-      height={48}
-    />
-  );
-}
-
-const FirebaseLogo = () => {
-  return (
-    <Image
-      className="relative bg-blend-hard-light top-2 mb-2"
-      src="/firebase-logo.ico"
-      alt="Firebase logo"
-      width={104}
-      height={104}
-    />
+      <p 
+        className={styles.boxText}>
+        Rest API written using Gin.
+      </p>
+    </a>
   );
 }
