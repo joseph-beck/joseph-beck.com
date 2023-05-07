@@ -2,7 +2,7 @@ import { Inter } from 'next/font/google';
 import Link from 'next/link';
 import Head from 'next/head';
 import styles from '@/styles/index.module.css';
-import { GithubLogo } from './components/logos';
+import { GithubLogo } from '@/components/icons/github';
 
 const inter = Inter({ subsets: ['latin'] })
 
