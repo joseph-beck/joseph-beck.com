@@ -1,7 +1,4 @@
-import { Inter } from 'next/font/google'
-import styles from '@/styles/projects.module.css'
-import Link from 'next/link';
-import Head from 'next/head';
+import styles from './projects.module.css'
 
 import { RustLogo } from '@/components/icons/rust';
 import { BevyLogo } from '@/components/icons/bevy';
@@ -10,42 +7,9 @@ import { FirebaseLogo } from '@/components/icons/firebase';
 import { MySqlLogo } from '@/components/icons/mysql';
 import { NodeJsLogo } from '@/components/icons/node';
 
-const inter = Inter({ subsets: ['latin'] })
+import { inter } from './inter';
 
-export default function Projects() {
-  return (
-    <main className={styles.main}>
-      {Title()}
-      
-      <div className={`${styles.group} ${styles.lowerGroup}`}>
-        {RustedAttractors()}
-        {BUSRBot()}
-        {DordleBot()}
-        {CordleBot()}
-        {RestAPI()}
-      </div>
-
-      <div className={`${styles.navBar}`}>
-        <Link className={`${inter.className} ${styles.navText} font-semibold`} href="/">Home</Link>
-        <Link className={`${inter.className} ${styles.navText}`} href="#rusted-attractors">Rusted Attractors</Link>
-        <Link className={`${inter.className} ${styles.navText}`} href="#busb-bot">BUSB Bot</Link>
-        <Link className={`${inter.className} ${styles.navText}`} href="#cordle-bot">Hackaway v6</Link>
-        <Link className={`${inter.className} ${styles.navText}`} href="#dordle-bot">Dordle Bot</Link>
-        <Link className={`${inter.className} ${styles.navText}`} href="#rest-api">Rest API</Link>
-      </div>
-    </main>
-  );
-}
-
-const Title = () => {
-  return (
-    <Head>
-      <title>Projects</title>
-    </Head>
-  );
-}
-
-const RustedAttractors = () => {
+export const RustedAttractorsCard = () => {
   return (
     <a 
       href="https://github.com/joseph-beck/rusted-attractors"
@@ -70,8 +34,8 @@ const RustedAttractors = () => {
     </a>
   );
 }
-
-const BUSRBot = () => {
+  
+export const BUSRBotCard = () => {
   return (
     <a 
       href="https://github.com/joseph-beck/busr-bot"
@@ -96,8 +60,8 @@ const BUSRBot = () => {
     </a>
   );
 }
-
-const DordleBot = () => {
+  
+export const DordleBotCard = () => {
   return (
     <a 
       href="https://github.com/joseph-beck/hackaway-v6"
@@ -122,8 +86,8 @@ const DordleBot = () => {
     </a>
   );
 }
-
-const CordleBot = () => {
+  
+export const CordleBotCard = () => {
   return (
     <a 
       href="https://github.com/joseph-beck/hackaway-v6"
@@ -148,8 +112,8 @@ const CordleBot = () => {
     </a>
   );
 }
-
-const RestAPI = () => {
+  
+export const RestAPICard = () => {
   return (
     <a 
       href="https://github.com/joseph-beck/go-rest"
