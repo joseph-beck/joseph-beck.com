@@ -9,9 +9,8 @@ import { NodeJsLogo } from '@/components/icons/node';
 
 import { inter } from './inter';
 
-export default function Context() {
-    
-}
+const  Context = () => { }
+export default Context
 
 export const RustedAttractorsCard = () => {
   return (
