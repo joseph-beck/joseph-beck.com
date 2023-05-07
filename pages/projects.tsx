@@ -83,7 +83,7 @@ const BUSRBot = () => {
       <h2 
         className={`${inter.className} ${styles.boxTitleText}`}>
         BUSR Statistics Bot
-        <span className="flex items-center gap-4 -my-1">
+        <span className="flex items-center gap-4 my-1">
           {GoLogo()}
           {MySqlLogo()}
         </span>
