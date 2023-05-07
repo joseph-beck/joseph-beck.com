@@ -9,6 +9,10 @@ import { NodeJsLogo } from '@/components/icons/node';
 
 import { inter } from './inter';
 
+export default function Context() {
+    
+}
+
 export const RustedAttractorsCard = () => {
   return (
     <a 
