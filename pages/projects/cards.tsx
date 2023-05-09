@@ -32,7 +32,7 @@ export const RustedAttractorsCard = () => {
 
       <p 
         className={styles.boxText}>
-        Words about this attractors stuff
+        Chaotic attractors written in Rust using Bevy.
       </p>
     </a>
   );
@@ -58,7 +58,7 @@ export const BUSRBotCard = () => {
 
       <p 
         className={styles.boxText}>
-        Words about this bot stuff
+        Discord Bot for displaying statistics of Drivers and Races.
       </p>
     </a>
   );
@@ -75,7 +75,7 @@ export const DordleBotCard = () => {
     >
       <h2 
         className={`${inter.className} ${styles.boxTitleText}`}>
-        Hackaway v6 Dordle Bot
+        Hackaway v6 Cordle Bot
         <span className="flex items-center gap-3 my-2">
           {NodeJsLogo()}
           {FirebaseLogo()}
@@ -84,7 +84,7 @@ export const DordleBotCard = () => {
 
       <p 
         className={styles.boxText}>
-        Words about this bot stuff
+        Discord Competitive Wordle bot written in Javascript using a DiscordJs and a Firebase backend.
       </p>
     </a>
   );
@@ -101,7 +101,7 @@ export const CordleBotCard = () => {
     >
       <h2 
         className={`${inter.className} ${styles.boxTitleText}`}>
-        Cordle Bot
+        Cordle Bot v2
         <span className="flex items-center gap-3 my-0">
           {GoLogo()}
           {MySqlLogo()}
@@ -110,7 +110,7 @@ export const CordleBotCard = () => {
 
       <p 
         className={styles.boxText}>
-        An improved version of our Hackaway v6 project.
+        An improved version of Cordle written in Go using a MySQL backend.
       </p>
     </a>
   );
@@ -136,7 +136,7 @@ export const RestAPICard = () => {
 
       <p 
         className={styles.boxText}>
-        Rest API written using Gin.
+        Rest API written using Gin, using a Firebase backend.
       </p>
     </a>
   );

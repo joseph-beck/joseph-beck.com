@@ -30,8 +30,8 @@ export default function Projects() {
         <Link className={`${inter.className} ${styles.navText} font-semibold`} href="/">Home</Link>
         <Link className={`${inter.className} ${styles.navText}`} href="#rusted-attractors">Rusted Attractors</Link>
         <Link className={`${inter.className} ${styles.navText}`} href="#busb-bot">BUSB Bot</Link>
-        <Link className={`${inter.className} ${styles.navText}`} href="#cordle-bot">Hackaway v6</Link>
-        <Link className={`${inter.className} ${styles.navText}`} href="#dordle-bot">Dordle Bot</Link>
+        <Link className={`${inter.className} ${styles.navText}`} href="#cordle-1">Hackaway v6</Link>
+        <Link className={`${inter.className} ${styles.navText}`} href="#cordle-2">Cordle Bot v2</Link>
         <Link className={`${inter.className} ${styles.navText}`} href="#rest-api">Rest API</Link>
       </div>
     </main>
