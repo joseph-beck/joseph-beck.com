@@ -1,4 +1,5 @@
-import styles from './projects.module.css';
+import common from '@/styles/common.module.css';
+import styles from '@/styles/projects.module.css'
 import Link from 'next/link';
 import Head from 'next/head';
 
@@ -15,7 +16,7 @@ const Title = () => {
 
 export default function Projects() {
   return (
-    <main className={styles.main}>
+    <main className={common.main}>
       {Title()}
       
       <div className={`${styles.group} ${styles.lowerGroup}`}>
