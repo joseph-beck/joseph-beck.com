@@ -8,7 +8,10 @@ export default Context
 export const ErrorCard = () => {
   return (
     <a
-      className={`group ${styles.box}`}
+      href='./'
+      className={`group ${styles.box}`} 
+      id="404"
+      rel="noopener noreferrer"
     >
       <h2 
         className={`${inter.className} ${styles.boxTitleText}`}>

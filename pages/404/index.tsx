@@ -13,7 +13,7 @@ const Title = () => {
 
 export default function e404() {
   return (
-    <main className={`{styles.}`}>
+    <main className={`${styles.main}`}>
       {Title()}
 
       <div className={`${styles.group} ${styles.lowerGroup}`}>

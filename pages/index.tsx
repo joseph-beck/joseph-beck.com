@@ -54,7 +54,7 @@ const GithubLink = () => {
       <p
         className={`${inter.className} ${styles.boxText}`}
       >
-        Details about Github and something like that.
+        Link to my Github.
       </p>
     </a>
   );
@@ -63,7 +63,7 @@ const GithubLink = () => {
 const ProjectsLink = () => {
   return (
     <Link
-      href="/404"
+      href="/projects"
       className={`group ${styles.box}`}
       rel="noopener noreferrer"
     >
@@ -76,7 +76,7 @@ const ProjectsLink = () => {
       <p
         className={`${inter.className} ${styles.boxText}`}
       >
-        Projects details.
+        Details about projects that I have worked on.
       </p>
     </Link>
   );
@@ -98,7 +98,7 @@ const AboutLink = () => {
       <p
         className={`${inter.className} ${styles.boxText}`}
       >
-        About me details.
+        About me.
       </p>
     </Link>
   );
@@ -120,7 +120,7 @@ const ContactLink = () => {
       <p
         className={`${inter.className} ${styles.boxText}`}
       >
-        Contact me details.
+        Ways to contact me.
       </p>
     </Link>
   );
