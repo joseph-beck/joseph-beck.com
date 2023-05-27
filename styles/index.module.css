@@ -8,15 +8,44 @@
   padding: 6rem;
 }  
 
+@keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+
+.stars, .twinkling {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.stars {
+  background:#000 url(../public/stars.png) repeat top center;
+  z-index: 0;
+}
+
+.twinkling{
+  background:transparent url(../public/twinkling.png) repeat top center;
+  z-index: 1;
+  animation:move-twink-back 1000s linear infinite;
+}
+
 .title {
   border-radius: 0.5rem;
   border-width: 1px;
   border-color: transparent;
-
+  
+  top: 10rem;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  z-index: 2;
 }
 
 .titleText {
@@ -31,6 +60,7 @@
   margin-bottom: 8rem;
   display: grid;
   text-align: center;
+  z-index: 2;
 }
   
 .lowerGroup {
@@ -46,8 +76,8 @@
 
   border-radius: 0.5rem;
   background: linear-gradient(145deg, #272727, #2e2e2e);
-  box-shadow: 15px 15px 55px #1c1c1c,
-             -15px -15px 55px #3a3a3a;
+  box-shadow: 10px 10px 40px #1c1c1c,
+             -10px -10px 40px #3a3a3a;
  
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -60,14 +90,9 @@
 }
   
 .box:hover {
-  --tw-border-opacity: 1;
-  --tw-bg-opacity: 1;
-
-  border-color: rgb(30 30 30 / var(--tw-border-opacity));
-  background-color: rgb(10 10 10 / var(--tw-bg-opacity));
   background: linear-gradient(145deg, #191919, #1e1e1e);
-  box-shadow:  15px 15px 55px #121212,
-             -15px -15px 55px #262626;
+  box-shadow:  10px 10px 40px #121212,
+             -10px -10px 40px #262626;
 }
   
 .boxText {

@@ -10,16 +10,16 @@ export default function Home() {
   return (
     <main className={styles.main}>
       {Title()}
-
+      
       <div className={`${styles.group} ${styles.lowerGroup}`}>
         {GithubLink()}
-
         {ProjectsLink()}
-
         {AboutLink()}
-
         {ContactLink()}
       </div>
+
+      <div className={`${styles.stars}`}></div>
+      <div className={`${styles.twinkling}`}></div> 
     </main>
   )
 }
@@ -76,7 +76,7 @@ const ProjectsLink = () => {
       <p
         className={`${inter.className} ${styles.boxText}`}
       >
-        Projects that I have worked on.
+        Projects I have worked on.
       </p>
     </Link>
   );
