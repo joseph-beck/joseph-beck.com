@@ -1,5 +1,4 @@
-import styles from './404.module.css'
-
+import styles from './404.module.css';
 import { inter  } from './inter';
 
 const  Context = () => { }

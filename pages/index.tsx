@@ -76,7 +76,7 @@ const ProjectsLink = () => {
       <p
         className={`${inter.className} ${styles.boxText}`}
       >
-        Details about projects that I have worked on.
+        Projects that I have worked on.
       </p>
     </Link>
   );
