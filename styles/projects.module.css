@@ -2,6 +2,7 @@
   margin-bottom: 8rem;
   display: grid;
   text-align: center;
+  z-index: 3;
 }
 
 .lowerGroup {

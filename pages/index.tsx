@@ -20,8 +20,8 @@ export default function Home() {
         {ContactLink()}
       </div>
 
-      <div className={`${common.stars}`}></div>
-      <div className={`${common.twinkling}`}></div> 
+      {/* <div className={`${common.stars}`}></div>
+      <div className={`${common.twinkling}`}></div>  */}
     </main>
   )
 }

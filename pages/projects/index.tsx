@@ -30,6 +30,9 @@ export default function Projects() {
         {ThisWebsiteCard()}
         {RainCard()}
       </div>
+
+      {/* <div className={`${common.stars}`}></div>
+      <div className={`${common.twinkling}`}></div>  */}
     </main>
   );
 }
