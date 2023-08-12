@@ -1,22 +1,25 @@
 import { NavigationBar } from '@/components/navigationBar'
 import { Footer } from '@/components/footer'
-import { Hero } from '@/components/card'
+import { BlankHero, BlankCard } from '@/components/card'
 
 export default function Home() {
   return (
     <main>
-      <NavigationBar></NavigationBar>
+      <NavigationBar/>
 
       <div>
-        <Hero
-          img='/images/stock/photo-1635805737707-575885ab0820.jpg'
-          alt='img'
+        <BlankHero
+          title='Hello'
+          body='Body text'
+        />
+
+        <BlankHero
           title='Hello'
           body='Body text'
         />
       </div>
       
-      <Footer></Footer>
+      <Footer/>
     </main>
   )
 }
