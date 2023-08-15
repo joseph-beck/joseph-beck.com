@@ -1,6 +1,8 @@
-import { NavigationBar } from '@/components/navigationBar'
-import { Footer } from '@/components/footer'
-import { BlankHero, BlankCard } from '@/components/card'
+import { NavigationBar } from '@/components/navigation/bar'
+import { Footer } from '@/components/navigation/footer'
+import { BlankHero, BlankCard } from '@/components/output/card'
+import { CodeMockup, LineType, TextType } from '@/components/output/code'
+import { Tooltip } from '@/components/output/tooltip'
 
 export default function Home() {
   return (
@@ -18,7 +20,7 @@ export default function Home() {
           body='Body text'
         />
       </div>
-      
+
       <Footer/>
     </main>
   )

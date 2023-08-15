@@ -1,13 +1,13 @@
 import React from "react";
 
-interface CardProps {
+interface CardProp {
   img?: string;
   alt?: string;
   title?: string;
   body?: string;
 };
 
-export const ImageHero: React.FC<CardProps> = ({ img, alt, title, body }): JSX.Element => {
+export const ImageHero: React.FC<CardProp> = ({ img, alt, title, body }): JSX.Element => {
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row">
@@ -21,7 +21,7 @@ export const ImageHero: React.FC<CardProps> = ({ img, alt, title, body }): JSX.E
   );
 };
 
-export const BlankHero: React.FC<CardProps> = ({ title, body }): JSX.Element => {
+export const BlankHero: React.FC<CardProp> = ({ title, body }): JSX.Element => {
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row">
@@ -34,7 +34,7 @@ export const BlankHero: React.FC<CardProps> = ({ title, body }): JSX.Element => 
   );
 };
 
-export const BlankCard: React.FC<CardProps> = ({ title, body }): JSX.Element => {
+export const BlankCard: React.FC<CardProp> = ({ title, body }): JSX.Element => {
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <div className="card-body">
@@ -47,7 +47,7 @@ export const BlankCard: React.FC<CardProps> = ({ title, body }): JSX.Element => 
   );
 };
 
-export const ImageCard: React.FC<CardProps> = ({ img, alt, title, body }): JSX.Element => {
+export const ImageCard: React.FC<CardProp> = ({ img, alt, title, body }): JSX.Element => {
   return (
     <div className="card w-96 bg-base-100 shadow-xl image-full">
       <figure><img src={img} alt={alt} /></figure>
@@ -59,7 +59,7 @@ export const ImageCard: React.FC<CardProps> = ({ img, alt, title, body }): JSX.E
   );
 };
 
-export const TopImageCard: React.FC<CardProps> = ({ img, alt, title, body }): JSX.Element => {
+export const TopImageCard: React.FC<CardProp> = ({ img, alt, title, body }): JSX.Element => {
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <figure><img src={img} alt={alt} /></figure>
@@ -71,7 +71,7 @@ export const TopImageCard: React.FC<CardProps> = ({ img, alt, title, body }): JS
   );
 };
 
-export const BottomImageCard: React.FC<CardProps> = ({ img, alt, title, body }): JSX.Element => {
+export const BottomImageCard: React.FC<CardProp> = ({ img, alt, title, body }): JSX.Element => {
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <div className="card-body">

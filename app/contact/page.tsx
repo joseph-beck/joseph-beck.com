@@ -1,6 +1,6 @@
-import { NavigationBar } from '@/components/navigationBar'
-import { Footer } from '@/components/footer'
-import { LargeInputBox, SmallInputBox } from '@/components/input';
+import { NavigationBar } from '@/components/navigation/bar'
+import { Footer } from '@/components/navigation/footer'
+import { LargeInputBox, SmallInputBox } from '@/components/input/input';
 
 export default function Home() {
   return (
