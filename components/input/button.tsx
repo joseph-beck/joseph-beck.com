@@ -2,7 +2,7 @@ interface ButtonProps {
   text?: string;
 }
 
-export const DefaultButton: React.FC<ButtonProps>  = ({ text }) => {
+export const DefaultButton: React.FC<ButtonProps> = ({ text }) => {
   return (
     <button className="btn">{text}</button>
   );

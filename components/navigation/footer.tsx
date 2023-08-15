@@ -3,9 +3,9 @@ export const Footer = (): JSX.Element => {
     <footer className="footer footer-center p-10 bg-base-200 mt-auto text-base-content rounded">
       <div className="grid grid-flow-col gap-4">
         <a className="link link-hover">projects</a>
-        <a className="link link-hover">about</a> 
-        <a className="link link-hover">contact</a> 
-      </div> 
+        <a className="link link-hover">about</a>
+        <a className="link link-hover">contact</a>
+      </div>
       <div>
         <div className="grid grid-flow-col gap-4">
           <a
@@ -29,7 +29,7 @@ export const Footer = (): JSX.Element => {
             </svg>
           </a>
         </div>
-      </div> 
+      </div>
       <div>
         <p>much love</p>
       </div>
