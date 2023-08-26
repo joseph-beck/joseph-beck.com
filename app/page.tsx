@@ -1,8 +1,6 @@
 import { NavigationBar } from '@/components/navigation/bar'
 import { Footer } from '@/components/navigation/footer'
-import { BlankHero, BlankCard } from '@/components/output/card'
-import { CodeMockup, LineType, TextType } from '@/components/output/code'
-import { Tooltip } from '@/components/output/tooltip'
+import { BlankHero } from '@/components/output/hero'
 
 export default function Home() {
   return (
@@ -11,13 +9,8 @@ export default function Home() {
 
       <div>
         <BlankHero
-          title='Hello'
-          body='Body text'
-        />
-
-        <BlankHero
-          title='Hello'
-          body='Body text'
+          title='hi,'
+          body='im joseph beck <br /> current student at royal holloway university of london'
         />
       </div>
 
