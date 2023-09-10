@@ -7,11 +7,13 @@ interface Props {
   title?: string;
   body?: string;
   icons?: string[];
-  link_href?: string;
-  link_text?: string;
+  gh_href?: string;
+  gh_text?: string;
+  web_href?: string;
+  web_text?: string;
 };
 
-export const ImageHero: React.FC<Props> = ({ img, alt, title, body, icons, link_href, link_text }): JSX.Element => {
+export const ImageHero: React.FC<Props> = ({ img, alt, title, body, icons, gh_href, gh_text, web_href, web_text }): JSX.Element => {
   return (
     <div className="hero bg-base-200">
       <div className="hero-content flex-col lg:flex-row w-1/2">
@@ -33,13 +35,22 @@ export const ImageHero: React.FC<Props> = ({ img, alt, title, body, icons, link_
               <p></p>
             </div>
           ))}
-          {(link_href && link_text) &&
+          {(gh_href && gh_text) &&
           <a
-            href={link_href}
+            href={gh_href}
             target="_blank"
             className="link"
           >
-            {link_text}
+            {gh_text}
+          </a>}
+          {(gh_href && gh_text && web_href && web_text) && <p></p>}
+          {(web_href && web_text) &&
+          <a
+            href={web_href}
+            target="_blank"
+            className="link"
+          >
+            {web_text}
           </a>}
         </div>
       </div>

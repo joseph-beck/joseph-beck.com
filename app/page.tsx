@@ -10,7 +10,8 @@ export default function Home() {
       <div>
         <BlankHero
           title='hi,'
-          body='im joseph beck <br /> current student at royal holloway university of london'
+          body={  `im joseph beck,
+                  current student at royal holloway university of london`}
         />
       </div>
 
