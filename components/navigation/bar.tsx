@@ -15,12 +15,12 @@ export const NavigationBar = (): JSX.Element => {
             <li>
             <Link href="projects">projects</Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="about">about</Link>
             </li>
             <li>
               <Link href="contact">contact</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
