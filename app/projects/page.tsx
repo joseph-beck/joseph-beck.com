@@ -1,3 +1,4 @@
+import { Divider } from '@/components/layout/divider';
 import { NavigationBar } from '@/components/navigation/bar'
 import { Footer } from '@/components/navigation/footer'
 import { ImageHero } from '@/components/output/hero';
@@ -18,6 +19,7 @@ export default function Home() {
           gh_href='https://github.com/orgs/cordle-bot/repositories'
           gh_text='view cordle on github'
         />
+        <Divider/>
 
         <ImageHero
           img='/obb-logo.png'
@@ -28,16 +30,31 @@ export default function Home() {
           gh_href='https://github.com/OpenBotBrain'
           gh_text='view obb on github'
         />
+        <Divider/>
 
         <ImageHero
-          img='/hangman-robot.png'
-          alt='lejos-ev3'
-          title='hangman robot'
-          body='group project using ev3 and lejos to create robots. our group created a robot you can play hangman against. this project used a client written in ruby and a server written in java.'
-          icons={['fa-solid fa-robot text-xl']}
-          gh_href='https://github.com/joseph-beck/hangman-robot'
-          gh_text='view the hangman robot on github'
+          img='/routey_logo.png'
+          alt='routey-logo'
+          title='routey'
+          body='a simple http router with some basic html templating for basic web development written in golang.'
+          icons={['fa-brands fa-golang text-2xl']}
+          gh_href='https://github.com/joseph-beck/routey'
+          gh_text='view routey on github'
         />
+        <Divider/>
+
+        <ImageHero
+          img='/hackaway_logo.png'
+          alt='hackaway-logo'
+          title='royal hackaway website'
+          body='working with other members of the committee to develop and deploy the royal hackaway v7 website.'
+          icons={['fa-brands fa-react text-xl']}
+          gh_href='https://github.com/rhul-compsoc/royal-hackaway-v7.com'
+          gh_text='view the royal hackaway website on github'
+          web_href='https://www.royalhackaway.com/'
+          web_text='use the royal hackaway website here'
+        />
+        <Divider/>
 
         <ImageHero
           img='/rusted-attractors.png'
@@ -48,6 +65,7 @@ export default function Home() {
           gh_href='https://github.com/joseph-beck/rusted-attractors'
           gh_text='view rusted attractors on github'
         />
+        <Divider/>
 
         <ImageHero
           img='/spotify_logo.png'
@@ -60,6 +78,18 @@ export default function Home() {
           web_href='https://spotify-wrapper.vercel.app/'
           web_text='use spotify wrapper here'
         />
+        <Divider/>
+
+        <ImageHero
+          img='/hangman-robot.png'
+          alt='lejos-ev3'
+          title='hangman robot'
+          body='group project using ev3 and lejos to create robots. our group created a robot you can play hangman against. this project used a client written in ruby and a server written in java.'
+          icons={['fa-solid fa-robot text-xl']}
+          gh_href='https://github.com/joseph-beck/hangman-robot'
+          gh_text='view the hangman robot on github'
+        />
+        <Divider/>
       </div>
 
       <Footer/>
