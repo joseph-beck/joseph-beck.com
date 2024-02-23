@@ -7,7 +7,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 export default function Home() {
   return (
     <main>
-      <NavigationBar/>
+      <NavigationBar />
 
       <div>
         <ImageHero
@@ -19,7 +19,7 @@ export default function Home() {
           gh_href='https://github.com/orgs/cordle-bot/repositories'
           gh_text='view cordle on github'
         />
-        <Divider/>
+        <Divider />
 
         <ImageHero
           img='/obb-logo.png'
@@ -30,7 +30,7 @@ export default function Home() {
           gh_href='https://github.com/OpenBotBrain'
           gh_text='view obb on github'
         />
-        <Divider/>
+        <Divider />
 
         <ImageHero
           img='/routey_logo.png'
@@ -41,7 +41,7 @@ export default function Home() {
           gh_href='https://github.com/joseph-beck/routey'
           gh_text='view routey on github'
         />
-        <Divider/>
+        <Divider />
 
         <ImageHero
           img='/hackaway_logo.png'
@@ -54,7 +54,7 @@ export default function Home() {
           web_href='https://www.royalhackaway.com/'
           web_text='use the royal hackaway website here'
         />
-        <Divider/>
+        <Divider />
 
         <ImageHero
           img='/rusted-attractors.png'
@@ -65,7 +65,7 @@ export default function Home() {
           gh_href='https://github.com/joseph-beck/rusted-attractors'
           gh_text='view rusted attractors on github'
         />
-        <Divider/>
+        <Divider />
 
         <ImageHero
           img='/spotify_logo.png'
@@ -78,7 +78,7 @@ export default function Home() {
           web_href='https://spotify-wrapper.vercel.app/'
           web_text='use spotify wrapper here'
         />
-        <Divider/>
+        <Divider />
 
         <ImageHero
           img='/hangman-robot.png'
@@ -89,10 +89,10 @@ export default function Home() {
           gh_href='https://github.com/joseph-beck/hangman-robot'
           gh_text='view the hangman robot on github'
         />
-        <Divider/>
+        <Divider />
       </div>
 
-      <Footer/>
+      <Footer />
     </main>
   );
 }
