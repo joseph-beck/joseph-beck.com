@@ -16,8 +16,10 @@ export default function Home() {
           title='cordle'
           body='originally started out as our hackaway v6 project has been rewritten in go. a discord bot for playing competitive wordle. the project is currently in its alpha stages.'
           icons={['fa-brands fa-golang text-2xl']}
-          gh_href='https://github.com/orgs/cordle-bot/repositories'
+          gh_href='https://github.com/j3-n/cordle-bot'
           gh_text='view cordle on github'
+          web_href='https://github.com/orgs/j3-n/repositories'
+          web_text='view more projects'
         />
         <Divider />
 
@@ -42,6 +44,18 @@ export default function Home() {
           gh_text='view routey on github'
         />
         <Divider />
+
+        <ImageHero
+          img='/tuner-logo.png'
+          alt='tuner'
+          title='tuner'
+          body='our hack sussex project! a real-time quiz game using you and your friends favourite songs on spotify.'
+          icons={['fa-brands fa-golang text-2xl', 'fa-brands fa-react text-xl']}
+          gh_href='https://github.com/j3-n/tuner'
+          gh_text='view the tuner on github'
+          web_href='https://github.com/orgs/j3-n/repositories'
+          web_text='view more projects'
+        />
 
         <ImageHero
           img='/hackaway_logo.png'
@@ -89,6 +103,7 @@ export default function Home() {
           gh_href='https://github.com/joseph-beck/hangman-robot'
           gh_text='view the hangman robot on github'
         />
+
         <Divider />
       </div>
 
