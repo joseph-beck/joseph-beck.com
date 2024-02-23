@@ -5,9 +5,9 @@ import { LargeInputBox, SmallInputBox } from '@/components/input/input';
 export default function Home() {
   return (
     <main>
-      <NavigationBar/>
-      <ContactForm/>
-      <Footer/>
+      <NavigationBar />
+      <ContactForm />
+      <Footer />
     </main>
   );
 }

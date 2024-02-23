@@ -5,17 +5,17 @@ import { BlankHero } from '@/components/output/hero'
 export default function Home() {
   return (
     <main>
-      <NavigationBar/>
+      <NavigationBar />
 
       <div>
         <BlankHero
           title='hi,'
-          body={  `im joseph beck,
+          body={`im joseph beck,
                   current student at royal holloway university of london`}
         />
       </div>
 
-      <Footer/>
+      <Footer />
     </main>
   )
 }
