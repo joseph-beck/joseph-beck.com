@@ -1,6 +1,14 @@
 {
-  "name": "joseph-beck.vercel.app",
-  "version": "0.1.0",
+  "name": "joseph-beck.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joseph-beck/joseph-beck.com"
+  },
+  "author": {
+    "name": "Joseph Beck"
+  },
+  "description": "www.joseph-beck.com",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
