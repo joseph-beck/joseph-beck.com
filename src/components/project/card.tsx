@@ -1,21 +1,11 @@
-import { Badge } from '@/ui/badge';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/ui/card';
-import React, { JSX, ReactNode } from 'react';
-import { GoBadge } from '@/components/badges/go-badge';
-import { RustBadge } from '@/components/badges/rust-badge';
-import { TypeScriptBadge } from '@/components/badges/typescript-badge';
-import { CBadge } from '@/components/badges/c-badge';
+import React, { JSX } from 'react';
+import { ProjectBadge } from './badge';
+import { CardProps } from './cards';
 
-interface Props {
-  title: string;
-  body?: ReactNode;
-  badges?: {
-    text?: string;
-    colour?: string;
-  }[];
-}
+interface Props extends CardProps {}
 
-export const ProjectCard: React.FC<Props> = ({ title, body, badges }): JSX.Element => {
+export const ProjectCard: React.FC<Props> = ({ title, body, badges }: Props): JSX.Element => {
   return (
     <Card>
       <CardHeader>
@@ -25,19 +15,11 @@ export const ProjectCard: React.FC<Props> = ({ title, body, badges }): JSX.Eleme
       <CardContent>{body}</CardContent>
 
       <CardFooter>
-        {badges?.map((badge, index) => (
-          <Badge
-            variant="default"
-            key={index}
-            className={`mr-2 mb-2 bg-${badge.colour ?? 'white'}-500 text-white`}
-          >
-            {badge.text}
-          </Badge>
-        ))}
-        <GoBadge />
-        <RustBadge />
-        <TypeScriptBadge />
-        <CBadge />
+        <div className="flex w-full flex-wrap gap-1">
+          {badges?.map((badge, index) => (
+            <ProjectBadge key={index} {...badge} />
+          ))}
+        </div>
       </CardFooter>
     </Card>
   );
