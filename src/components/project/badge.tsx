@@ -2,7 +2,9 @@ import { Badge } from '@/ui/badge';
 import { JSX } from 'react';
 import { BadgeProps } from './badges';
 
-interface Props extends BadgeProps {}
+interface Props extends BadgeProps {
+  _?: void;
+}
 
 export const ProjectBadge = ({ text, icon, colour, textColour, variant }: Props): JSX.Element => {
   return (

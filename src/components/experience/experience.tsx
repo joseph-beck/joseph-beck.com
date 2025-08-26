@@ -1,9 +1,11 @@
-import { Building2, Calendar } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 import { JSX } from 'react';
 import { ProjectBadge } from '@/components/project/badge';
 import { ExperienceProps } from './experiences';
 
-interface Props extends ExperienceProps {}
+interface Props extends ExperienceProps {
+  _?: void;
+}
 
 export const Experience = ({ experience }: Props): JSX.Element => {
   return (

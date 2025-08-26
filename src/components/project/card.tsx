@@ -3,7 +3,9 @@ import React, { JSX } from 'react';
 import { ProjectBadge } from './badge';
 import { CardProps } from './cards';
 
-interface Props extends CardProps {}
+interface Props extends CardProps {
+  _?: void;
+}
 
 export const ProjectCard: React.FC<Props> = ({ title, body, badges }: Props): JSX.Element => {
   return (
