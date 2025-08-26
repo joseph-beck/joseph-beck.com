@@ -77,6 +77,12 @@ export const CPP_BADGE: BadgeProps = {
   colour: 'bg-pink-500',
 };
 
+export const CS_BADGE: BadgeProps = {
+  ...DEFAULT_BADGE,
+  text: 'C#',
+  colour: 'bg-green-500',
+};
+
 export const JAVA_BADGE: BadgeProps = {
   ...DEFAULT_BADGE,
   text: 'Java',
@@ -118,6 +124,12 @@ export const AZURE_BADGE: BadgeProps = {
   ...DEFAULT_BADGE,
   text: 'Azure',
   colour: 'bg-blue-400',
+};
+
+export const FIREBASE_BADGE: BadgeProps = {
+  ...DEFAULT_BADGE,
+  text: 'Firebase',
+  colour: 'bg-orange-500',
 };
 
 export const MYSQL_BADGE: BadgeProps = {

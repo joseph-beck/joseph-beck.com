@@ -3,6 +3,8 @@ import {
   BadgeProps,
   C_BADGE,
   CPP_BADGE,
+  CS_BADGE,
+  FIREBASE_BADGE,
   GO_BADGE,
   JAVA_BADGE,
   JAVASCRIPT_BADGE,
@@ -81,38 +83,58 @@ export const AMP_CARD: CardProps = {
 export const RUSTED_ATTRACTORS_CARD: CardProps = {
   ...DEFAULT_CARD,
   title: 'rusted attractors',
+  body: (
+    <p>
+      exploring a variety of chaotic attractors and dynamical systems in rust whilst using bevy to
+      generate 3d shapes.
+    </p>
+  ),
   badges: [RUST_BADGE],
 };
 
 export const TUNER_CARD: CardProps = {
   ...DEFAULT_CARD,
   title: 'tuner',
+  body: (
+    <p>
+      our hack sussex project! a real-time quiz game using you and your friends favourite songs on
+      spotify.
+    </p>
+  ),
   badges: [GO_BADGE, TYPESCRIPT_BADGE, REACT_BADGE],
 };
 
 export const HANGMAN_ROBOT_CARD: CardProps = {
   ...DEFAULT_CARD,
   title: 'hangman robot',
+  body: (
+    <p>
+      university team project, using ev3 and lejos to create robots. our group created a robot you
+      can play hangman against - this project used a client written in ruby and a server written in
+      java.
+    </p>
+  ),
   badges: [JAVA_BADGE, RUBY_BADGE],
 };
 
 export const CORDLE_BOT_CARD: CardProps = {
   ...DEFAULT_CARD,
   title: 'cordle bot',
+  body: <p>a discord bot for playing wordle competitively with your friends.</p>,
   badges: [GO_BADGE, MYSQL_BADGE],
 };
 
 export const ROYAL_HACKAWAY_V7_CARD: CardProps = {
   ...DEFAULT_CARD,
   title: 'royal hackaway v7',
-  body: <p>a discord bot for playing wordle competitively with your friends.</p>,
+  body: <p>website for royal hackaway v7 built with next.js.</p>,
   badges: [TYPESCRIPT_BADGE, REACT_BADGE],
 };
 
 export const PEAR_CARD: CardProps = {
   ...DEFAULT_CARD,
   title: 'pear',
-  body: <p>learning more about parsers by implementing a pratt parser</p>,
+  body: <p>learning more about parsers by implementing a pratt parser.</p>,
   badges: [GO_BADGE],
 };
 
@@ -169,4 +191,11 @@ export const JOSEPH_BECK_COM_CARD: CardProps = {
   title: 'joseph-beck.com',
   body: <p>this website!</p>,
   badges: [TYPESCRIPT_BADGE, REACT_BADGE],
+};
+
+export const BATTLESHIPS_CARD: CardProps = {
+  ...DEFAULT_CARD,
+  title: 'battleships',
+  body: <p>a multiplayer battleships game written for my computer science a-level nea.</p>,
+  badges: [CS_BADGE, FIREBASE_BADGE],
 };

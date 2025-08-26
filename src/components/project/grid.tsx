@@ -2,6 +2,7 @@ import { JSX } from 'react';
 import { ProjectCard } from './card';
 import {
   AMP_CARD,
+  BATTLESHIPS_CARD,
   CardProps,
   CORDLE_BOT_CARD,
   HANGMAN_ROBOT_CARD,
@@ -31,6 +32,7 @@ const PROJECT_CARDS: CardProps[] = [
   SPOTIFY_WRAPPER_CARD,
   ROUTEY_CARD,
   RAT_CARD,
+  BATTLESHIPS_CARD,
 ];
 
 export const ProjectGrid = (): JSX.Element => {
