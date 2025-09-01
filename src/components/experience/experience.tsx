@@ -33,7 +33,7 @@ export const Experience = ({ experience }: Props): JSX.Element => {
                   <span>{span}</span>
                 </div>
               </div>
-              <p className="text-sm sm:text-base text-muted-foreground">{body}</p>
+              <div className="text-sm sm:text-base text-muted-foreground">{body}</div>
               <div className="flex flex-wrap gap-2">
                 {badges?.map((badge, index) => (
                   <ProjectBadge key={index} {...badge} />
