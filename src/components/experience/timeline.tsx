@@ -20,5 +20,9 @@ const EXPERIENCE: ExperienceProps = {
 };
 
 export const ExperienceTimeline = (): JSX.Element => {
-  return <Experience {...EXPERIENCE} />;
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center p-4" id="experience">
+      <Experience {...EXPERIENCE} />
+    </div>
+  );
 };

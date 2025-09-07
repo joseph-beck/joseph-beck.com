@@ -2,6 +2,7 @@ import { Calendar } from 'lucide-react';
 import { JSX } from 'react';
 import { ProjectBadge } from '@/components/project/badge';
 import { ExperienceProps } from './experiences';
+import { motion } from 'motion/react';
 
 interface Props extends ExperienceProps {
   _?: void;
@@ -14,11 +15,16 @@ export const Experience = ({ experience }: Props): JSX.Element => {
         <div className="absolute left-0 top-4 bottom-0 border-l-2" />
 
         {experience?.map(({ location, body, span, badges, title, icon }, index) => (
-          <div key={index} className="relative pl-8 pb-12 last:pb-0">
-            {/* Timeline dot */}
+          <motion.div
+            key={index}
+            className="relative pl-8 pb-12 last:pb-0"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: 'easeOut' }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
             <div className="absolute h-3 w-3 -translate-x-1/2 left-px top-3 rounded-full border-2 border-primary bg-background" />
 
-            {/* Content */}
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <div className="flex-shrink-0 h-9 w-9 bg-accent rounded-full flex items-center justify-center">
@@ -40,7 +46,7 @@ export const Experience = ({ experience }: Props): JSX.Element => {
                 ))}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

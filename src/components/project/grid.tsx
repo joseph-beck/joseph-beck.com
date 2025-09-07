@@ -37,10 +37,14 @@ const PROJECT_CARDS: CardProps[] = [
 
 export const ProjectGrid = (): JSX.Element => {
   return (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-      {PROJECT_CARDS.map((card, index) => (
-        <ProjectCard key={index} {...card} />
-      ))}
+    <div className="min-h-screen flex flex-col items-center justify-center p-4" id="projects">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {PROJECT_CARDS.map((card, index) => (
+          <>
+            <ProjectCard key={index} {...card} />
+          </>
+        ))}
+      </div>
     </div>
   );
 };
