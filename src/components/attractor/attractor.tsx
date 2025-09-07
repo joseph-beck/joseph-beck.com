@@ -1,16 +1,15 @@
 import { Coordinate } from '@/lib/attractors/coordinate';
-import { RosslerAttractor } from '@/lib/attractors/rossler';
 import { JSX } from 'react';
 import { AttractorCanvas } from './canvas';
 import { AttractorNode } from './node';
+import { Attractor as AbstractAttractor } from '@/lib/attractors/attractor';
 
 interface Props {
-  _?: void;
+  attractor: AbstractAttractor<any>;
 }
 
-export const Attractor = ({ _ }: Props): JSX.Element => {
+export const Attractor = ({ attractor }: Props): JSX.Element => {
   const data: Coordinate[] = [];
-  const attractor = new RosslerAttractor();
   let last: Coordinate = attractor.start;
   for (let i = 0; i < 10000; i++) {
     data.push(attractor.next(last));

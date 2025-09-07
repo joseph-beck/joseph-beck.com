@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@/components/theme/theme-provider';
+import { ThemeProvider } from '@/components/theme/theme';
 import { ThemeToggle } from '@/components/theme/theme-toggle';
 import { createRootRoute, Outlet } from '@tanstack/react-router';
 import { TanStackRouterDevtools } from '@tanstack/router-devtools';
