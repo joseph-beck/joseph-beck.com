@@ -1,6 +1,5 @@
 import { JSX, ReactNode } from 'react';
 import { Canvas } from '@react-three/fiber';
-import * as THREE from 'three/webgpu';
 
 interface Props {
   children?: ReactNode;
@@ -9,13 +8,7 @@ interface Props {
 export const AttractorCanvas = ({ children }: Props): JSX.Element => {
   return (
     <div id="canvas-container" className="w-100 outline-1 outline-amber-500">
-      <Canvas
-        gl={async (props) => {
-          const renderer = new THREE.WebGPURenderer(props as any);
-          await renderer.init();
-          return renderer;
-        }}
-      >
+      <Canvas>
         <ambientLight intensity={Math.PI / 2} />
         <spotLight
           position={[10, 10, 10]}

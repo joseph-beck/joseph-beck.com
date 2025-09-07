@@ -27,7 +27,7 @@ jobs:
       - name: Build
         run: pnpm run build
 
-  # Run all unit testing libraries, e2e tests are done seperately.
+  # Run all unit testing libraries, e2e tests are done separately.
   # This uses Vitest.
   test:
     name: Test
@@ -69,7 +69,7 @@ jobs:
         run: pnpm install
 
       - name: Install Playwright Browsers
-        run: pnpx playwright install --with-deps
+        run: pnpm exec playwright install --with-deps
 
       - name: Run Playwright tests
         run: pnpm e2e
@@ -103,7 +103,7 @@ jobs:
         run: pnpm install
 
       - name: Run Prettier Check
-        run: pnpm run check
+        run: pnpm run fmt
 
       - name: Run Lint Check
         run: pnpm run lint
@@ -134,5 +134,5 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
-          name: bundle-snalysis
+          name: bundle-analysis
           path: dist/stats.html

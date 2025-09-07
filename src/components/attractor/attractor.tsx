@@ -8,7 +8,7 @@ interface Props {
   _?: void;
 }
 
-export const Attractor = ({}: Props): JSX.Element => {
+export const Attractor = ({ _ }: Props): JSX.Element => {
   const data: Coordinate[] = [];
   const attractor = new RosslerAttractor();
   let last: Coordinate = attractor.start;
