@@ -77,6 +77,7 @@ export const DEFAULT_LINK = {
 export const AMP_CARD: CardProps = {
   ...DEFAULT_CARD,
   title: 'amp',
+  body: <p>a lightweight http router made using the go mux.</p>,
   badges: [GO_BADGE],
 };
 
@@ -110,8 +111,7 @@ export const HANGMAN_ROBOT_CARD: CardProps = {
   body: (
     <p>
       university team project, using ev3 and lejos to create robots. our group created a robot you
-      can play hangman against - this project used a client written in ruby and a server written in
-      java.
+      can play hangman against!
     </p>
   ),
   badges: [JAVA_BADGE, RUBY_BADGE],

@@ -1,6 +1,7 @@
 import { ExperienceTimeline } from '@/components/experience/timeline';
 import { Home } from '@/components/home/home';
 import { ProjectGrid } from '@/components/project/grid';
+import { BackgroundBeams } from '@/ui/background-beams';
 import { Separator } from '@/ui/separator';
 import { createLazyFileRoute } from '@tanstack/react-router';
 
@@ -24,6 +25,8 @@ function Page() {
           <ExperienceTimeline />
         </div>
       </div>
+
+      <BackgroundBeams className="-z-10 fixed opacity-50" />
     </div>
   );
 }

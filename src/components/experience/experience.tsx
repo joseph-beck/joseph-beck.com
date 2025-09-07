@@ -23,11 +23,11 @@ export const Experience = ({ experience }: Props): JSX.Element => {
             transition={{ duration: 0.7, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
           >
-            <div className="absolute h-3 w-3 -translate-x-1/2 left-px top-3 rounded-full border-2 border-primary bg-background" />
+            <div className="absolute h-3 w-3 -translate-x-1/2 left-px top-3 rounded-full border-2 border-amber-700 bg-amber-500" />
 
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <div className="flex-shrink-0 h-9 w-9 bg-accent rounded-full flex items-center justify-center">
+                <div className="flex-shrink-0 h-9 w-9 bg-amber-500/25 rounded-full flex items-center justify-center">
                   {icon}
                 </div>
                 <span className="text-base sm:text-lg font-semibold">{location}</span>
