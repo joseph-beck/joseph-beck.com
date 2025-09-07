@@ -143,3 +143,9 @@ export const POSTGRESQL_BADGE: BadgeProps = {
   text: 'PostgreSQL',
   colour: 'bg-sky-900',
 };
+
+export const SQL_BADGE: BadgeProps = {
+  ...DEFAULT_BADGE,
+  text: 'SQL',
+  colour: 'bg-gray-700',
+};

@@ -5,8 +5,8 @@ import {
   C_BADGE,
   CPP_BADGE,
   JAVA_BADGE,
-  MYSQL_BADGE,
   PYTHON_BADGE,
+  SQL_BADGE,
   TYPESCRIPT_BADGE,
 } from '@/components/project/badges';
 import { Building2, Computer, University } from 'lucide-react';
@@ -81,7 +81,7 @@ export const UNIVERSITY_EXPERIENCE: ExperienceProp = {
     </p>
   ),
   span: <p>2022 - Present</p>,
-  badges: [JAVA_BADGE, PYTHON_BADGE, MYSQL_BADGE],
+  badges: [JAVA_BADGE, PYTHON_BADGE, SQL_BADGE],
 };
 
 export const AMADEUS_EXPERIENCE: ExperienceProp = {
