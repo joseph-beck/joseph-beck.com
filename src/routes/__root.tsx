@@ -14,7 +14,8 @@ export const Route = createRootRoute({
       <div className="scroll-smooth">
         <Outlet />
       </div>
-      <TanStackRouterDevtools />
+
+      {process.env.NODE_ENV === 'development' && <TanStackRouterDevtools />}
     </ThemeProvider>
   ),
 });
