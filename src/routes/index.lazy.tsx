@@ -26,7 +26,7 @@ function Page() {
         </div>
       </div>
 
-      <BackgroundBeams className="-z-10 fixed opacity-50" />
+      <BackgroundBeams className="-z-10 fixed opacity-75" />
     </div>
   );
 }

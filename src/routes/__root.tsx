@@ -10,7 +10,10 @@ export const Route = createRootRoute({
         <ThemeToggle />
       </div>
       <hr />
-      <Outlet />
+
+      <div className="scroll-smooth">
+        <Outlet />
+      </div>
       <TanStackRouterDevtools />
     </ThemeProvider>
   ),
