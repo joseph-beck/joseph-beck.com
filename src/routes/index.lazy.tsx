@@ -1,4 +1,5 @@
 import { ExperienceTimeline } from '@/components/experience/timeline';
+import Footer from '@/components/footer/footer';
 import { Home } from '@/components/home/home';
 import { ProjectGrid } from '@/components/project/grid';
 import { BackgroundBeams } from '@/ui/background-beams';
@@ -25,6 +26,8 @@ function Page() {
           <ExperienceTimeline />
         </div>
       </div>
+
+      <Footer />
 
       <BackgroundBeams className="-z-10 fixed opacity-75" />
     </div>
