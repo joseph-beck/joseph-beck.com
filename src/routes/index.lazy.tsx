@@ -1,7 +1,7 @@
-import { ExperienceTimeline } from '@/components/experience/timeline';
+import { ExperienceTimeline } from '@/components/experience/experience-timeline';
 import Footer from '@/components/footer/footer';
 import { Home } from '@/components/home/home';
-import { ProjectGrid } from '@/components/project/grid';
+import { ProjectGrid } from '@/components/project/project-grid';
 import { BackgroundBeams } from '@/ui/background-beams';
 import { Separator } from '@/ui/separator';
 import { createLazyFileRoute } from '@tanstack/react-router';

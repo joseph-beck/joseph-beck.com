@@ -1,7 +1,7 @@
 import {
   ANGULAR_BADGE,
   AZURE_BADGE,
-  BadgeProps,
+  ProjectBadgeProps,
   C_BADGE,
   CPP_BADGE,
   GO_BADGE,
@@ -10,7 +10,7 @@ import {
   REACT_BADGE,
   SQL_BADGE,
   TYPESCRIPT_BADGE,
-} from '@/components/project/badges';
+} from '@/components/project/project-badges';
 import { Building2, Computer, University } from 'lucide-react';
 import { ReactNode } from 'react';
 
@@ -55,7 +55,7 @@ export interface ExperienceProp {
    *
    * @default undefined
    */
-  badges?: BadgeProps[];
+  badges?: ProjectBadgeProps[];
 }
 
 export const DEFAULT_EXPERIENCES: ExperienceProps = {

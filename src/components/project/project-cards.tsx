@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import {
-  BadgeProps,
+  ProjectBadgeProps,
   C_BADGE,
   CPP_BADGE,
   CS_BADGE,
@@ -15,9 +15,9 @@ import {
   RUST_BADGE,
   SVELTE_BADGE,
   TYPESCRIPT_BADGE,
-} from './badges';
+} from './project-badges';
 
-export interface CardProps {
+export interface ProjectCardProps {
   /**
    * Title of the card.
    * Displayed in the header of the card.
@@ -35,7 +35,7 @@ export interface CardProps {
    *
    * @default undefined
    */
-  badges?: BadgeProps[];
+  badges?: ProjectBadgeProps[];
   /**
    * Link information for the card.
    *
@@ -61,7 +61,7 @@ export interface CardProps {
   };
 }
 
-export const DEFAULT_CARD: CardProps = {
+export const DEFAULT_CARD: ProjectCardProps = {
   title: 'Title',
   body: undefined,
   badges: undefined,
@@ -74,14 +74,14 @@ export const DEFAULT_LINK = {
   target: '_blank',
 };
 
-export const AMP_CARD: CardProps = {
+export const AMP_CARD: ProjectCardProps = {
   ...DEFAULT_CARD,
   title: 'amp',
   body: <p>a lightweight http router made using the go mux.</p>,
   badges: [GO_BADGE],
 };
 
-export const RUSTED_ATTRACTORS_CARD: CardProps = {
+export const RUSTED_ATTRACTORS_CARD: ProjectCardProps = {
   ...DEFAULT_CARD,
   title: 'rusted attractors',
   body: (
@@ -93,7 +93,7 @@ export const RUSTED_ATTRACTORS_CARD: CardProps = {
   badges: [RUST_BADGE],
 };
 
-export const TUNER_CARD: CardProps = {
+export const TUNER_CARD: ProjectCardProps = {
   ...DEFAULT_CARD,
   title: 'tuner',
   body: (
@@ -105,7 +105,7 @@ export const TUNER_CARD: CardProps = {
   badges: [GO_BADGE, TYPESCRIPT_BADGE, REACT_BADGE],
 };
 
-export const HANGMAN_ROBOT_CARD: CardProps = {
+export const HANGMAN_ROBOT_CARD: ProjectCardProps = {
   ...DEFAULT_CARD,
   title: 'hangman robot',
   body: (
@@ -117,35 +117,35 @@ export const HANGMAN_ROBOT_CARD: CardProps = {
   badges: [JAVA_BADGE, RUBY_BADGE],
 };
 
-export const CORDLE_BOT_CARD: CardProps = {
+export const CORDLE_BOT_CARD: ProjectCardProps = {
   ...DEFAULT_CARD,
   title: 'cordle bot',
   body: <p>a discord bot for playing wordle competitively with your friends.</p>,
   badges: [GO_BADGE, MYSQL_BADGE],
 };
 
-export const ROYAL_HACKAWAY_V7_CARD: CardProps = {
+export const ROYAL_HACKAWAY_V7_CARD: ProjectCardProps = {
   ...DEFAULT_CARD,
   title: 'royal hackaway v7',
   body: <p>website for royal hackaway v7 built with next.js.</p>,
   badges: [TYPESCRIPT_BADGE, REACT_BADGE],
 };
 
-export const PEAR_CARD: CardProps = {
+export const PEAR_CARD: ProjectCardProps = {
   ...DEFAULT_CARD,
   title: 'pear',
   body: <p>learning more about parsers by implementing a pratt parser.</p>,
   badges: [GO_BADGE],
 };
 
-export const OAXACA_CARD: CardProps = {
+export const OAXACA_CARD: ProjectCardProps = {
   ...DEFAULT_CARD,
   title: 'oaxaca',
   body: <p>university team project, creating a full-stack application for a restaurant.</p>,
   badges: [GO_BADGE, TYPESCRIPT_BADGE, REACT_BADGE, POSTGRESQL_BADGE],
 };
 
-export const OPEN_BOT_BRAIN_CARD: CardProps = {
+export const OPEN_BOT_BRAIN_CARD: ProjectCardProps = {
   ...DEFAULT_CARD,
   title: 'open bot brain',
   body: (
@@ -157,7 +157,7 @@ export const OPEN_BOT_BRAIN_CARD: CardProps = {
   badges: [C_BADGE, CPP_BADGE],
 };
 
-export const SPOTIFY_WRAPPER_CARD: CardProps = {
+export const SPOTIFY_WRAPPER_CARD: ProjectCardProps = {
   ...DEFAULT_CARD,
   title: 'spotify wrapper',
   body: (
@@ -168,13 +168,13 @@ export const SPOTIFY_WRAPPER_CARD: CardProps = {
   badges: [JAVASCRIPT_BADGE, SVELTE_BADGE],
 };
 
-export const ROUTEY_CARD: CardProps = {
+export const ROUTEY_CARD: ProjectCardProps = {
   title: 'routey',
   body: <p>an http router with basic html templating for web development written in golang.</p>,
   badges: [GO_BADGE],
 };
 
-export const RAT_CARD: CardProps = {
+export const RAT_CARD: ProjectCardProps = {
   ...DEFAULT_CARD,
   title: 'rat',
   body: (
@@ -186,14 +186,14 @@ export const RAT_CARD: CardProps = {
   badges: [TYPESCRIPT_BADGE, REACT_BADGE],
 };
 
-export const JOSEPH_BECK_COM_CARD: CardProps = {
+export const JOSEPH_BECK_COM_CARD: ProjectCardProps = {
   ...DEFAULT_CARD,
   title: 'joseph-beck.com',
   body: <p>this website!</p>,
   badges: [TYPESCRIPT_BADGE, REACT_BADGE],
 };
 
-export const BATTLESHIPS_CARD: CardProps = {
+export const BATTLESHIPS_CARD: ProjectCardProps = {
   ...DEFAULT_CARD,
   title: 'battleships',
   body: <p>a multiplayer battleships game written for my computer science a-level nea.</p>,

@@ -1,10 +1,10 @@
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/ui/card';
 import React, { JSX } from 'react';
-import { ProjectBadge } from './badge';
-import { CardProps } from './cards';
+import { ProjectBadge } from './project-badge';
+import { ProjectCardProps } from './project-cards';
 import { motion } from 'motion/react';
 
-interface Props extends CardProps {
+interface Props extends ProjectCardProps {
   _?: void;
 }
 

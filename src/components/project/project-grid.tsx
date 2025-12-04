@@ -1,9 +1,9 @@
 import { JSX } from 'react';
-import { ProjectCard } from './card';
+import { ProjectCard } from './project-card';
 import {
   AMP_CARD,
   BATTLESHIPS_CARD,
-  CardProps,
+  ProjectCardProps,
   CORDLE_BOT_CARD,
   HANGMAN_ROBOT_CARD,
   JOSEPH_BECK_COM_CARD,
@@ -16,11 +16,11 @@ import {
   RUSTED_ATTRACTORS_CARD,
   SPOTIFY_WRAPPER_CARD,
   TUNER_CARD,
-} from './cards';
+} from './project-cards';
 import { TypewriterEffectSmooth } from '@/ui/typewriter-effect';
 
 export const ProjectGrid = (): JSX.Element => {
-  const projectCards: CardProps[] = [
+  const projectCards: ProjectCardProps[] = [
     TUNER_CARD,
     RUSTED_ATTRACTORS_CARD,
     AMP_CARD,

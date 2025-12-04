@@ -1,6 +1,6 @@
 import { Calendar } from 'lucide-react';
 import { JSX } from 'react';
-import { ProjectBadge } from '@/components/project/badge';
+import { ProjectBadge } from '@/components/project/project-badge';
 import { ExperienceProps } from './experiences';
 import { motion } from 'motion/react';
 
@@ -8,7 +8,7 @@ interface Props extends ExperienceProps {
   _?: void;
 }
 
-export const Experience = ({ experience }: Props): JSX.Element => {
+export const ExperienceCard = ({ experience }: Props): JSX.Element => {
   return (
     <div className="max-w-screen-sm mx-auto py-12 md:py-20 px-6">
       <div className="relative ml-3">
