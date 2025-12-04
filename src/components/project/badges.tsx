@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { DiMysql, DiPostgresql, DiFirebase, DiReact, DiAngularSimple } from 'react-icons/di';
 
 export interface BadgeProps {
   /**
@@ -105,6 +106,7 @@ export const PYTHON_BADGE: BadgeProps = {
 export const REACT_BADGE: BadgeProps = {
   ...DEFAULT_BADGE,
   text: 'React',
+  icon: <DiReact />,
   colour: 'bg-sky-400',
 };
 
@@ -117,6 +119,7 @@ export const SVELTE_BADGE: BadgeProps = {
 export const ANGULAR_BADGE: BadgeProps = {
   ...DEFAULT_BADGE,
   text: 'Angular',
+  icon: <DiAngularSimple />,
   colour: 'bg-red-600',
 };
 
@@ -129,18 +132,21 @@ export const AZURE_BADGE: BadgeProps = {
 export const FIREBASE_BADGE: BadgeProps = {
   ...DEFAULT_BADGE,
   text: 'Firebase',
+  icon: <DiFirebase />,
   colour: 'bg-orange-500',
 };
 
 export const MYSQL_BADGE: BadgeProps = {
   ...DEFAULT_BADGE,
   text: 'MySQL',
+  icon: <DiMysql />,
   colour: 'bg-yellow-600',
 };
 
 export const POSTGRESQL_BADGE: BadgeProps = {
   ...DEFAULT_BADGE,
   text: 'PostgreSQL',
+  icon: <DiPostgresql />,
   colour: 'bg-sky-900',
 };
 
