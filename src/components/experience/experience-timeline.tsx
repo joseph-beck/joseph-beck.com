@@ -8,7 +8,7 @@ import {
   TREASURER_EXPERIENCE,
   UNIVERSITY_EXPERIENCE,
 } from './experiences';
-import { Experience } from './experience';
+import { ExperienceCard } from './experience-card';
 import { TypewriterEffectSmooth } from '@/ui/typewriter-effect';
 
 export const ExperienceTimeline = (): JSX.Element => {
@@ -39,7 +39,7 @@ export const ExperienceTimeline = (): JSX.Element => {
         <TypewriterEffectSmooth words={words} cursorClassName="bg-amber-500 dark:bg-amber-500" />
       </div>
 
-      <Experience {...experience} />
+      <ExperienceCard {...experience} />
     </div>
   );
 };
