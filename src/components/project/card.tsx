@@ -16,7 +16,7 @@ export const ProjectCard: React.FC<Props> = ({ title, body, badges }: Props): JS
       transition={{ duration: 0.7, ease: 'easeOut' }}
       viewport={{ once: true, amount: 0.2 }}
     >
-      <Card className="bg-transparent backdrop-blur-[2px] border-amber-500/25 border-1 inset-shadow-md shadow-amber-500/50">
+      <Card className="bg-transparent backdrop-blur-[2px]">
         <CardHeader>
           <CardTitle>{title}</CardTitle>
         </CardHeader>
