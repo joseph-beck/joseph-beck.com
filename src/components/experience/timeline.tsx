@@ -3,6 +3,7 @@ import {
   AMADEUS_EXPERIENCE,
   COMPETITIONS_DIRECTOR_EXPERIENCE,
   ExperienceProps,
+  MOHC_EXPERIENCE,
   RESEARCH_ASSISTANT_EXPERIENCE,
   TREASURER_EXPERIENCE,
   UNIVERSITY_EXPERIENCE,
@@ -13,8 +14,9 @@ import { TypewriterEffectSmooth } from '@/ui/typewriter-effect';
 export const ExperienceTimeline = (): JSX.Element => {
   const experience: ExperienceProps = {
     experience: [
-      UNIVERSITY_EXPERIENCE,
+      MOHC_EXPERIENCE,
       AMADEUS_EXPERIENCE,
+      UNIVERSITY_EXPERIENCE,
       COMPETITIONS_DIRECTOR_EXPERIENCE,
       RESEARCH_ASSISTANT_EXPERIENCE,
       TREASURER_EXPERIENCE,

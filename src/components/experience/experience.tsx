@@ -27,7 +27,7 @@ export const Experience = ({ experience }: Props): JSX.Element => {
 
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <div className="flex-shrink-0 h-9 w-9 bg-amber-500/25 rounded-full flex items-center justify-center">
+                <div className="shrink-0 h-9 w-9 bg-amber-500/25 rounded-full flex items-center justify-center">
                   {icon}
                 </div>
                 <span className="text-base sm:text-lg font-semibold">{location}</span>
