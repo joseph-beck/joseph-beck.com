@@ -4,8 +4,10 @@ import {
   BadgeProps,
   C_BADGE,
   CPP_BADGE,
+  GO_BADGE,
   JAVA_BADGE,
   PYTHON_BADGE,
+  REACT_BADGE,
   SQL_BADGE,
   TYPESCRIPT_BADGE,
 } from '@/components/project/badges';
@@ -69,6 +71,15 @@ export const DEFAULT_EXPERIENCE: ExperienceProp = {
   badges: undefined,
 };
 
+export const MOHC_EXPERIENCE: ExperienceProp = {
+  ...DEFAULT_EXPERIENCE,
+  title: 'Junior Fullstack Developer',
+  location: 'MOHC',
+  body: <p></p>,
+  span: <p>Oct 2025 - Present</p>,
+  badges: [REACT_BADGE, GO_BADGE, TYPESCRIPT_BADGE],
+};
+
 export const UNIVERSITY_EXPERIENCE: ExperienceProp = {
   ...DEFAULT_EXPERIENCE,
   title: 'Student',
@@ -80,7 +91,7 @@ export const UNIVERSITY_EXPERIENCE: ExperienceProp = {
       after completing my year in industry at Amadeus.
     </p>
   ),
-  span: <p>2022 - Present</p>,
+  span: <p>Sep 2022 - Present</p>,
   badges: [JAVA_BADGE, PYTHON_BADGE, SQL_BADGE],
 };
 
@@ -95,7 +106,7 @@ export const AMADEUS_EXPERIENCE: ExperienceProp = {
       cloud native applications with Azure with multiple development phases and environments.
     </p>
   ),
-  span: <p>2024 - Present</p>,
+  span: <p>Jul 2024 - Sep 2025</p>,
   badges: [ANGULAR_BADGE, TYPESCRIPT_BADGE, AZURE_BADGE],
 };
 
