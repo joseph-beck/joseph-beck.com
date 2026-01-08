@@ -1,8 +1,10 @@
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/ui/card';
+import { motion } from 'motion/react';
 import React, { JSX } from 'react';
+
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/ui/card';
+
 import { ProjectBadge } from './project-badge';
 import { ProjectCardProps } from './project-cards';
-import { motion } from 'motion/react';
 
 interface Props extends ProjectCardProps {
   _?: void;
@@ -20,9 +22,7 @@ export const ProjectCard: React.FC<Props> = ({ title, body, badges }: Props): JS
         <CardHeader>
           <CardTitle>{title}</CardTitle>
         </CardHeader>
-
         <CardContent>{body}</CardContent>
-
         <CardFooter>
           <div className="flex w-full flex-wrap gap-1">
             {badges?.map((badge, index) => (

@@ -1,18 +1,19 @@
+import { Building2, Computer, University } from 'lucide-react';
+import { ReactNode } from 'react';
+
 import {
   ANGULAR_BADGE,
   AZURE_BADGE,
-  ProjectBadgeProps,
   C_BADGE,
   CPP_BADGE,
   GO_BADGE,
   JAVA_BADGE,
+  ProjectBadgeProps,
   PYTHON_BADGE,
   REACT_BADGE,
   SQL_BADGE,
   TYPESCRIPT_BADGE,
 } from '@/components/project/project-badges';
-import { Building2, Computer, University } from 'lucide-react';
-import { ReactNode } from 'react';
 
 export interface ExperienceProps {
   /**
@@ -87,8 +88,8 @@ export const UNIVERSITY_EXPERIENCE: ExperienceProp = {
   location: 'Royal Holloway, University of London',
   body: (
     <p>
-      BSc Computer Science with Year In Industry. Currently going into my third year of university
-      after completing my year in industry at Amadeus.
+      BSc Computer Science with Year In Industry. Currently going into my third year of university after completing my
+      year in industry at Amadeus.
     </p>
   ),
   span: <p>Sep 2022 - Present</p>,
@@ -101,9 +102,9 @@ export const AMADEUS_EXPERIENCE: ExperienceProp = {
   location: 'Amadeus, London',
   body: (
     <p>
-      Worked on a project for validating critical flight safety data through visualisation and
-      comparison. Developed a frontend application using Angular in an agile environment. Deployed
-      cloud native applications with Azure with multiple development phases and environments.
+      Worked on a project for validating critical flight safety data through visualisation and comparison. Developed a
+      frontend application using Angular in an agile environment. Deployed cloud native applications with Azure with
+      multiple development phases and environments.
     </p>
   ),
   span: <p>Jul 2024 - Sep 2025</p>,

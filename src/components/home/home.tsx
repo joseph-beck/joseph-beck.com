@@ -1,6 +1,7 @@
-import { TypewriterEffectSmooth } from '@/ui/typewriter-effect';
 import { ArrowBigDown } from 'lucide-react';
 import { JSX } from 'react';
+
+import { TypewriterEffectSmooth } from '@/ui/typewriter-effect';
 
 export const Home = (): JSX.Element => {
   const words = [
@@ -21,7 +22,6 @@ export const Home = (): JSX.Element => {
       <div className="text-3xl font-semibold tracking-tight">
         <TypewriterEffectSmooth words={words} cursorClassName="bg-amber-500 dark:bg-amber-500" />
       </div>
-
       <div className="mt-10">
         <a href="#projects" className="flex flex-col items-center">
           view projects...

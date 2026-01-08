@@ -1,15 +1,18 @@
 import { JSX } from 'react';
+
+import { TypewriterEffectSmooth } from '@/ui/typewriter-effect';
+
 import { ProjectCard } from './project-card';
 import {
   AMP_CARD,
   BATTLESHIPS_CARD,
-  ProjectCardProps,
   CORDLE_BOT_CARD,
   HANGMAN_ROBOT_CARD,
   JOSEPH_BECK_COM_CARD,
   OAXACA_CARD,
   OPEN_BOT_BRAIN_CARD,
   PEAR_CARD,
+  ProjectCardProps,
   RAT_CARD,
   ROUTEY_CARD,
   ROYAL_HACKAWAY_V7_CARD,
@@ -17,7 +20,6 @@ import {
   SPOTIFY_WRAPPER_CARD,
   TUNER_CARD,
 } from './project-cards';
-import { TypewriterEffectSmooth } from '@/ui/typewriter-effect';
 
 export const ProjectGrid = (): JSX.Element => {
   const projectCards: ProjectCardProps[] = [
@@ -52,7 +54,6 @@ export const ProjectGrid = (): JSX.Element => {
       <div className="text-3xl font-semibold tracking-tight my-5">
         <TypewriterEffectSmooth words={words} cursorClassName="bg-amber-500 dark:bg-amber-500" />
       </div>
-
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {projectCards.map((card, index) => (
           <ProjectCard key={index} {...card} />

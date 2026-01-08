@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { DiMysql, DiPostgresql, DiFirebase, DiReact, DiAngularSimple } from 'react-icons/di';
+import { DiAngularSimple, DiFirebase, DiMysql, DiPostgresql, DiReact } from 'react-icons/di';
 
 export interface ProjectBadgeProps {
   /**

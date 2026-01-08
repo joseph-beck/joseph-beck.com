@@ -1,4 +1,8 @@
 import { JSX } from 'react';
+
+import { TypewriterEffectSmooth } from '@/ui/typewriter-effect';
+
+import { ExperienceCard } from './experience-card';
 import {
   AMADEUS_EXPERIENCE,
   COMPETITIONS_DIRECTOR_EXPERIENCE,
@@ -8,8 +12,6 @@ import {
   TREASURER_EXPERIENCE,
   UNIVERSITY_EXPERIENCE,
 } from './experiences';
-import { ExperienceCard } from './experience-card';
-import { TypewriterEffectSmooth } from '@/ui/typewriter-effect';
 
 export const ExperienceTimeline = (): JSX.Element => {
   const experience: ExperienceProps = {
@@ -38,7 +40,6 @@ export const ExperienceTimeline = (): JSX.Element => {
       <div className="text-3xl font-semibold tracking-tight mt-5">
         <TypewriterEffectSmooth words={words} cursorClassName="bg-amber-500 dark:bg-amber-500" />
       </div>
-
       <ExperienceCard {...experience} />
     </div>
   );

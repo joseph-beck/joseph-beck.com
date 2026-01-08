@@ -19,13 +19,8 @@ export default function Footer() {
               experience
             </a>
           </nav>
-
           <div className="flex gap-4">
-            <a
-              href="https://www.linkedin.com/in/josephbbeck/"
-              target="_blank"
-              aria-label="LinkedIn"
-            >
+            <a href="https://www.linkedin.com/in/josephbbeck/" target="_blank" aria-label="LinkedIn">
               <LinkedinIcon className="h-5 w-5" />
             </a>
             <a href="https://github.com/joseph-beck" target="_blank" aria-label="GitHub">

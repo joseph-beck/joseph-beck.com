@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
+
 import {
-  ProjectBadgeProps,
   C_BADGE,
   CPP_BADGE,
   CS_BADGE,
@@ -10,6 +10,7 @@ import {
   JAVASCRIPT_BADGE,
   MYSQL_BADGE,
   POSTGRESQL_BADGE,
+  ProjectBadgeProps,
   REACT_BADGE,
   RUBY_BADGE,
   RUST_BADGE,
@@ -86,8 +87,7 @@ export const RUSTED_ATTRACTORS_CARD: ProjectCardProps = {
   title: 'rusted attractors',
   body: (
     <p>
-      exploring a variety of chaotic attractors and dynamical systems in rust whilst using bevy to
-      generate 3d shapes.
+      exploring a variety of chaotic attractors and dynamical systems in rust whilst using bevy to generate 3d shapes.
     </p>
   ),
   badges: [RUST_BADGE],
@@ -96,12 +96,7 @@ export const RUSTED_ATTRACTORS_CARD: ProjectCardProps = {
 export const TUNER_CARD: ProjectCardProps = {
   ...DEFAULT_CARD,
   title: 'tuner',
-  body: (
-    <p>
-      our hack sussex project! a real-time quiz game using you and your friends favourite songs on
-      spotify.
-    </p>
-  ),
+  body: <p>our hack sussex project! a real-time quiz game using you and your friends favourite songs on spotify.</p>,
   badges: [GO_BADGE, TYPESCRIPT_BADGE, REACT_BADGE],
 };
 
@@ -110,8 +105,8 @@ export const HANGMAN_ROBOT_CARD: ProjectCardProps = {
   title: 'hangman robot',
   body: (
     <p>
-      university team project, using ev3 and lejos to create robots. our group created a robot you
-      can play hangman against!
+      university team project, using ev3 and lejos to create robots. our group created a robot you can play hangman
+      against!
     </p>
   ),
   badges: [JAVA_BADGE, RUBY_BADGE],
@@ -150,8 +145,8 @@ export const OPEN_BOT_BRAIN_CARD: ProjectCardProps = {
   title: 'open bot brain',
   body: (
     <p>
-      an open source and hackable project to control robots. using a custom made board and firmware
-      written in c using freertos to manage tasks.
+      an open source and hackable project to control robots. using a custom made board and firmware written in c using
+      freertos to manage tasks.
     </p>
   ),
   badges: [C_BADGE, CPP_BADGE],
@@ -160,11 +155,7 @@ export const OPEN_BOT_BRAIN_CARD: ProjectCardProps = {
 export const SPOTIFY_WRAPPER_CARD: ProjectCardProps = {
   ...DEFAULT_CARD,
   title: 'spotify wrapper',
-  body: (
-    <p>
-      providing a variety of different spotify user statistics using the spotify api and svelte.
-    </p>
-  ),
+  body: <p>providing a variety of different spotify user statistics using the spotify api and svelte.</p>,
   badges: [JAVASCRIPT_BADGE, SVELTE_BADGE],
 };
 
@@ -179,8 +170,7 @@ export const RAT_CARD: ProjectCardProps = {
   title: 'rat',
   body: (
     <p>
-      (r)eact (a)pp (t)emplate. a quick template repository for getting started with react,
-      tailwind, tanstack and more!
+      (r)eact (a)pp (t)emplate. a quick template repository for getting started with react, tailwind, tanstack and more!
     </p>
   ),
   badges: [TYPESCRIPT_BADGE, REACT_BADGE],
