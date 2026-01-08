@@ -1,5 +1,7 @@
-import { Badge } from '@/ui/badge';
 import { JSX } from 'react';
+
+import { Badge } from '@/ui/badge';
+
 import { ProjectBadgeProps } from './project-badges';
 
 interface Props extends ProjectBadgeProps {

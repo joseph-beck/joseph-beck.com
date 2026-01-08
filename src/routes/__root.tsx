@@ -1,7 +1,8 @@
-import { ThemeProvider } from '@/components/theme/theme';
-import { ThemeToggle } from '@/components/theme/theme-toggle';
 import { createRootRoute, Outlet } from '@tanstack/react-router';
 import { TanStackRouterDevtools } from '@tanstack/router-devtools';
+
+import { ThemeProvider } from '@/components/theme/theme';
+import { ThemeToggle } from '@/components/theme/theme-toggle';
 
 export const Route = createRootRoute({
   component: () => (
@@ -10,11 +11,9 @@ export const Route = createRootRoute({
         <ThemeToggle />
       </div>
       <hr />
-
       <div className="scroll-smooth">
         <Outlet />
       </div>
-
       {process.env.NODE_ENV === 'development' && <TanStackRouterDevtools />}
     </ThemeProvider>
   ),
