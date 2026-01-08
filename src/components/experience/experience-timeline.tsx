@@ -9,6 +9,7 @@ import {
   ExperienceProps,
   MOHC_EXPERIENCE,
   RESEARCH_ASSISTANT_EXPERIENCE,
+  TEACHING_ASSISTANT_EXPERIENCE,
   TREASURER_EXPERIENCE,
   UNIVERSITY_EXPERIENCE,
 } from './experiences';
@@ -17,6 +18,7 @@ export const ExperienceTimeline = (): JSX.Element => {
   const experience: ExperienceProps = {
     experience: [
       MOHC_EXPERIENCE,
+      TEACHING_ASSISTANT_EXPERIENCE,
       AMADEUS_EXPERIENCE,
       UNIVERSITY_EXPERIENCE,
       COMPETITIONS_DIRECTOR_EXPERIENCE,

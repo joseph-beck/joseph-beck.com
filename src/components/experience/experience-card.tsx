@@ -15,7 +15,7 @@ export const ExperienceCard = ({ experience }: Props): JSX.Element => {
     <div className="max-w-screen-sm mx-auto py-12 md:py-20 px-6">
       <div className="relative ml-3">
         <div className="absolute left-0 top-4 bottom-0 border-l-2" />
-        {experience?.map(({ location, body, span, badges, title, icon }, index) => (
+        {experience?.map(({ location, description: body, timeSpan: span, badges, title, icon }, index) => (
           <motion.div
             key={index}
             className="relative pl-8 pb-12 last:pb-0"

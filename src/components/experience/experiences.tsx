@@ -1,4 +1,4 @@
-import { Building2, Computer, University } from 'lucide-react';
+import { Book, Building2, Computer, University } from 'lucide-react';
 import { ReactNode } from 'react';
 
 import {
@@ -44,13 +44,13 @@ export interface ExperienceProp {
    *
    * @default undefined
    */
-  body?: ReactNode;
+  description?: ReactNode;
   /**
    * Time period or span of the experience.
    *
    * @default undefined
    */
-  span?: ReactNode;
+  timeSpan?: ReactNode;
   /**
    * Badges for the footer of the experience.
    *
@@ -67,8 +67,8 @@ export const DEFAULT_EXPERIENCE: ExperienceProp = {
   title: 'Title',
   icon: <Building2 className="h-5 w-5 text-muted-foreground" />,
   location: 'Location',
-  body: undefined,
-  span: undefined,
+  description: undefined,
+  timeSpan: undefined,
   badges: undefined,
 };
 
@@ -76,8 +76,8 @@ export const MOHC_EXPERIENCE: ExperienceProp = {
   ...DEFAULT_EXPERIENCE,
   title: 'Junior Fullstack Developer',
   location: 'MOHC',
-  body: <p></p>,
-  span: <p>Oct 2025 - Present</p>,
+  description: <p></p>,
+  timeSpan: <p>Oct 2025 - Present</p>,
   badges: [REACT_BADGE, GO_BADGE, TYPESCRIPT_BADGE],
 };
 
@@ -86,28 +86,37 @@ export const UNIVERSITY_EXPERIENCE: ExperienceProp = {
   title: 'Student',
   icon: <University className="h-5 w-5 text-muted-foreground" />,
   location: 'Royal Holloway, University of London',
-  body: (
+  description: (
     <p>
       BSc Computer Science with Year In Industry. Currently going into my third year of university after completing my
       year in industry at Amadeus.
     </p>
   ),
-  span: <p>Sep 2022 - Present</p>,
+  timeSpan: <p>Sep 2022 - Present</p>,
   badges: [JAVA_BADGE, PYTHON_BADGE, SQL_BADGE],
+};
+
+export const TEACHING_ASSISTANT_EXPERIENCE: ExperienceProp = {
+  ...DEFAULT_EXPERIENCE,
+  title: 'Teaching Assistant',
+  icon: <Book className="h-5 w-5 text-muted-foreground" />,
+  location: 'Royal Holloway, University of London',
+  description: <p></p>,
+  timeSpan: <p>Sep 2025 - Present</p>,
 };
 
 export const AMADEUS_EXPERIENCE: ExperienceProp = {
   ...DEFAULT_EXPERIENCE,
   title: 'Software Development Engineer Intern',
   location: 'Amadeus, London',
-  body: (
+  description: (
     <p>
       Worked on a project for validating critical flight safety data through visualisation and comparison. Developed a
       frontend application using Angular in an agile environment. Deployed cloud native applications with Azure with
       multiple development phases and environments.
     </p>
   ),
-  span: <p>Jul 2024 - Sep 2025</p>,
+  timeSpan: <p>Jul 2024 - Sep 2025</p>,
   badges: [ANGULAR_BADGE, TYPESCRIPT_BADGE, AZURE_BADGE],
 };
 
@@ -116,7 +125,7 @@ export const COMPETITIONS_DIRECTOR_EXPERIENCE: ExperienceProp = {
   title: 'Competitions Director',
   icon: <Computer className="h-5 w-5 text-muted-foreground" />,
   location: 'Computing Society, Royal Holloway, University of London',
-  body: (
+  description: (
     <p>
       Working as a team to run the Computing Society with more focus on organising this years{' '}
       <a
@@ -129,7 +138,7 @@ export const COMPETITIONS_DIRECTOR_EXPERIENCE: ExperienceProp = {
       .
     </p>
   ),
-  span: <p>2025 - Present</p>,
+  timeSpan: <p>2025 - Present</p>,
 };
 
 export const RESEARCH_ASSISTANT_EXPERIENCE: ExperienceProp = {
@@ -137,7 +146,7 @@ export const RESEARCH_ASSISTANT_EXPERIENCE: ExperienceProp = {
   title: 'Research Assistant',
   icon: <University className="h-5 w-5 text-muted-foreground" />,
   location: 'Royal Holloway, University of London',
-  body: (
+  description: (
     <p>
       Assisted in the development of the{' '}
       <a
@@ -150,7 +159,7 @@ export const RESEARCH_ASSISTANT_EXPERIENCE: ExperienceProp = {
       . An open source and hackable project to control robots using custom made boards and firmware.
     </p>
   ),
-  span: <p>2023 - 2024</p>,
+  timeSpan: <p>2023 - 2024</p>,
   badges: [C_BADGE, CPP_BADGE],
 };
 
@@ -159,7 +168,7 @@ export const TREASURER_EXPERIENCE: ExperienceProp = {
   title: 'Treasurer',
   icon: <Computer className="h-5 w-5 text-muted-foreground" />,
   location: 'Computing Society, Royal Holloway, University of London',
-  body: (
+  description: (
     <p>
       Working as a part of a team to run the Computing Society, managing finances and organising of{' '}
       <a
@@ -172,5 +181,5 @@ export const TREASURER_EXPERIENCE: ExperienceProp = {
       .
     </p>
   ),
-  span: <p>2023 - 2024</p>,
+  timeSpan: <p>2023 - 2024</p>,
 };
