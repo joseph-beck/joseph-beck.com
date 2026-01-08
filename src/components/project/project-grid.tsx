@@ -1,5 +1,6 @@
 import { JSX } from 'react';
 
+import { isNonEmptyArray } from '@/lib/is/is-non-empty-array';
 import { TypewriterEffectSmooth } from '@/ui/typewriter-effect';
 
 import { ProjectCard } from './project-card';
@@ -57,9 +58,9 @@ export const ProjectGrid = (): JSX.Element => {
         <TypewriterEffectSmooth words={words} cursorClassName="bg-amber-500 dark:bg-amber-500" />
       </div>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {projectCards.map((card, index) => (
-          <ProjectCard key={index} {...card} />
-        ))}
+        {isNonEmptyArray(projectCards)
+          ? projectCards.map((card, index) => <ProjectCard key={index} {...card} />)
+          : undefined}
       </div>
     </div>
   );
