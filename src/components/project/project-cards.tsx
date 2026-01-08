@@ -44,15 +44,11 @@ export interface ProjectCardProps {
    */
   link?: {
     /**
-     * Label text.
-     */
-    label: string;
-    /**
      * URL for the link.
      *
      * @default undefined
      */
-    href?: string;
+    href: string;
     /**
      * Target for the link
      *
@@ -69,9 +65,8 @@ export const DEFAULT_CARD: ProjectCardProps = {
   link: undefined,
 };
 
-export const DEFAULT_LINK = {
-  label: 'Link',
-  href: undefined,
+export const DEFAULT_LINK: ProjectCardProps['link'] = {
+  href: '#',
   target: '_blank',
 };
 
@@ -80,6 +75,9 @@ export const AMP_CARD: ProjectCardProps = {
   title: 'amp',
   body: <p>a lightweight http router made using the go mux.</p>,
   badges: [GO_BADGE],
+  link: {
+    href: 'https://github.com/joseph-beck/amp',
+  },
 };
 
 export const RUSTED_ATTRACTORS_CARD: ProjectCardProps = {
@@ -91,6 +89,9 @@ export const RUSTED_ATTRACTORS_CARD: ProjectCardProps = {
     </p>
   ),
   badges: [RUST_BADGE],
+  link: {
+    href: 'https://github.com/joseph-beck/rusted-attractors',
+  },
 };
 
 export const TUNER_CARD: ProjectCardProps = {
@@ -98,6 +99,9 @@ export const TUNER_CARD: ProjectCardProps = {
   title: 'tuner',
   body: <p>our hack sussex project! a real-time quiz game using you and your friends favourite songs on spotify.</p>,
   badges: [GO_BADGE, TYPESCRIPT_BADGE, REACT_BADGE],
+  link: {
+    href: 'https://github.com/j3-n/tuner',
+  },
 };
 
 export const HANGMAN_ROBOT_CARD: ProjectCardProps = {
@@ -110,6 +114,9 @@ export const HANGMAN_ROBOT_CARD: ProjectCardProps = {
     </p>
   ),
   badges: [JAVA_BADGE, RUBY_BADGE],
+  link: {
+    href: 'https://github.com/joseph-beck/hangman-robot',
+  },
 };
 
 export const CORDLE_BOT_CARD: ProjectCardProps = {
@@ -117,13 +124,19 @@ export const CORDLE_BOT_CARD: ProjectCardProps = {
   title: 'cordle bot',
   body: <p>a discord bot for playing wordle competitively with your friends.</p>,
   badges: [GO_BADGE, MYSQL_BADGE],
+  link: {
+    href: 'https://github.com/j3-n/cordle-bot',
+  },
 };
 
-export const ROYAL_HACKAWAY_V7_CARD: ProjectCardProps = {
+export const ROYAL_HACKAWAY_V9_CARD: ProjectCardProps = {
   ...DEFAULT_CARD,
-  title: 'royal hackaway v7',
-  body: <p>website for royal hackaway v7 built with next.js.</p>,
+  title: 'royal hackaway v9',
+  body: <p>website for royal hackaway v9 built with next.js.</p>,
   badges: [TYPESCRIPT_BADGE, REACT_BADGE],
+  link: {
+    href: 'https://github.com/rhul-compsoc/royal-hackaway-v9.com',
+  },
 };
 
 export const PEAR_CARD: ProjectCardProps = {
@@ -131,6 +144,9 @@ export const PEAR_CARD: ProjectCardProps = {
   title: 'pear',
   body: <p>learning more about parsers by implementing a pratt parser.</p>,
   badges: [GO_BADGE],
+  link: {
+    href: 'https://github.com/joseph-beck/pear',
+  },
 };
 
 export const GEAR_CARD: ProjectCardProps = {
@@ -138,6 +154,9 @@ export const GEAR_CARD: ProjectCardProps = {
   title: 'gear',
   body: <p>peg parsing, with packrat parsing, implementation written in go.</p>,
   badges: [GO_BADGE],
+  link: {
+    href: 'https://github.com/joseph-beck/gear',
+  },
 };
 
 export const OAXACA_CARD: ProjectCardProps = {
@@ -145,6 +164,9 @@ export const OAXACA_CARD: ProjectCardProps = {
   title: 'oaxaca',
   body: <p>university team project, creating a full-stack application for a restaurant.</p>,
   badges: [GO_BADGE, TYPESCRIPT_BADGE, REACT_BADGE, POSTGRESQL_BADGE],
+  link: {
+    href: 'https://github.com/joseph-beck/oaxaca',
+  },
 };
 
 export const OPEN_BOT_BRAIN_CARD: ProjectCardProps = {
@@ -157,6 +179,9 @@ export const OPEN_BOT_BRAIN_CARD: ProjectCardProps = {
     </p>
   ),
   badges: [C_BADGE, CPP_BADGE],
+  link: {
+    href: 'https://github.com/OpenBotBrain/controller-firmware',
+  },
 };
 
 export const SPOTIFY_WRAPPER_CARD: ProjectCardProps = {
@@ -164,12 +189,18 @@ export const SPOTIFY_WRAPPER_CARD: ProjectCardProps = {
   title: 'spotify wrapper',
   body: <p>providing a variety of different spotify user statistics using the spotify api and svelte.</p>,
   badges: [JAVASCRIPT_BADGE, SVELTE_BADGE],
+  link: {
+    href: 'https://github.com/joseph-beck/spotify-wrapper',
+  },
 };
 
 export const ROUTEY_CARD: ProjectCardProps = {
   title: 'routey',
   body: <p>an http router with basic html templating for web development written in golang.</p>,
   badges: [GO_BADGE],
+  link: {
+    href: 'https://github.com/joseph-beck/routey',
+  },
 };
 
 export const RAT_CARD: ProjectCardProps = {
@@ -181,6 +212,9 @@ export const RAT_CARD: ProjectCardProps = {
     </p>
   ),
   badges: [TYPESCRIPT_BADGE, REACT_BADGE],
+  link: {
+    href: 'https://github.com/joseph-beck/rat',
+  },
 };
 
 export const JOSEPH_BECK_COM_CARD: ProjectCardProps = {
@@ -188,6 +222,9 @@ export const JOSEPH_BECK_COM_CARD: ProjectCardProps = {
   title: 'joseph-beck.com',
   body: <p>this website!</p>,
   badges: [TYPESCRIPT_BADGE, REACT_BADGE],
+  link: {
+    href: 'https://github.com/joseph-beck/joseph-beck.com',
+  },
 };
 
 export const BATTLESHIPS_CARD: ProjectCardProps = {
@@ -195,4 +232,7 @@ export const BATTLESHIPS_CARD: ProjectCardProps = {
   title: 'battleships',
   body: <p>a multiplayer battleships game written for my computer science a-level nea.</p>,
   badges: [CS_BADGE, FIREBASE_BADGE],
+  link: {
+    href: 'https://github.com/joseph-beck/battleships',
+  },
 };

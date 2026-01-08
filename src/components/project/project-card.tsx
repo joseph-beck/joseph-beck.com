@@ -1,6 +1,9 @@
+import { Link } from '@tanstack/react-router';
+import { SquareArrowOutUpRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import React, { JSX } from 'react';
 
+import { isDefined } from '@/lib/is/is-defined';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/ui/card';
 
 import { ProjectBadge } from './project-badge';
@@ -10,7 +13,7 @@ interface Props extends ProjectCardProps {
   _?: void;
 }
 
-export const ProjectCard: React.FC<Props> = ({ title, body, badges }: Props): JSX.Element => {
+export const ProjectCard: React.FC<Props> = ({ title, body, badges, link }: Props): JSX.Element => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -20,7 +23,19 @@ export const ProjectCard: React.FC<Props> = ({ title, body, badges }: Props): JS
     >
       <Card className="bg-transparent backdrop-blur-[2px] hover:scale-[1.02] transition-transform duration-300">
         <CardHeader>
-          <CardTitle>{title}</CardTitle>
+          <CardTitle>
+            {isDefined(link) ? (
+              <Link
+                to={link.href}
+                target={link.target ?? '_blank'}
+                className="flex flex-row items-center gap-0.5 hover:underline"
+              >
+                {title} <SquareArrowOutUpRight size={12} />
+              </Link>
+            ) : (
+              title
+            )}
+          </CardTitle>
         </CardHeader>
         <CardContent>{body}</CardContent>
         <CardFooter>
