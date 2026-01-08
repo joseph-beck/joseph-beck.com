@@ -12,10 +12,10 @@ interface Props extends ExperienceProps {
 
 export const ExperienceCard = ({ experience }: Props): JSX.Element => {
   return (
-    <div className="max-w-screen-sm mx-auto py-12 md:py-20 px-6">
+    <div className="max-w-screen-sm mx-auto py-12 md:py-20 px-6 hover">
       <div className="relative ml-3">
         <div className="absolute left-0 top-4 bottom-0 border-l-2" />
-        {experience?.map(({ location, description: body, timeSpan: span, badges, title, icon }, index) => (
+        {experience?.map(({ location, description, timeSpan, badges, title, icon }, index) => (
           <motion.div
             key={index}
             className="relative pl-8 pb-12 last:pb-0"
@@ -36,10 +36,10 @@ export const ExperienceCard = ({ experience }: Props): JSX.Element => {
                 <h3 className="text-lg sm:text-xl font-medium">{title}</h3>
                 <div className="flex items-center gap-2 mt-1 text-sm">
                   <Calendar className="h-4 w-4" />
-                  <span>{span}</span>
+                  <span>{timeSpan}</span>
                 </div>
               </div>
-              <div className="text-sm sm:text-base text-muted-foreground">{body}</div>
+              <div className="text-sm sm:text-base text-muted-foreground">{description}</div>
               <div className="flex flex-wrap gap-2">
                 {badges?.map((badge, index) => (
                   <ProjectBadge key={index} {...badge} />
