@@ -133,6 +133,13 @@ export const PEAR_CARD: ProjectCardProps = {
   badges: [GO_BADGE],
 };
 
+export const GEAR_CARD: ProjectCardProps = {
+  ...DEFAULT_CARD,
+  title: 'gear',
+  body: <p>peg parsing, with packrat parsing, implementation written in go.</p>,
+  badges: [GO_BADGE],
+};
+
 export const OAXACA_CARD: ProjectCardProps = {
   ...DEFAULT_CARD,
   title: 'oaxaca',
