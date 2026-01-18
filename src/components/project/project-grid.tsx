@@ -44,9 +44,6 @@ export const ProjectGrid = (): JSX.Element => {
 
   const words = [
     {
-      text: 'featured',
-    },
-    {
       text: 'projects',
       className: 'text-amber-600 dark:text-amber-600',
     },

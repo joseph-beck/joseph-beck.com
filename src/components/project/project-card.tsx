@@ -22,7 +22,7 @@ export const ProjectCard: React.FC<Props> = ({ title, body, badges, link }: Prop
       transition={{ duration: 0.7, ease: 'easeOut' }}
       viewport={{ once: true, amount: 0.2 }}
     >
-      <Card className="bg-transparent backdrop-blur-[2px] hover:scale-[1.02] transition-transform duration-300">
+      <Card className=" backdrop-blur-[2px] hover:scale-[1.02] transition-transform duration-300">
         <CardHeader>
           <CardTitle>
             {isDefined(link) ? (
