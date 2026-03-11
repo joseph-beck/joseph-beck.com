@@ -1,13 +1,13 @@
-import { Coordinate } from './coordinate';
+import type { Coordinate } from './coordinate'
 
 export abstract class Attractor<TOptions> {
-  abstract get default(): TOptions;
+  abstract get default(): TOptions
 
-  abstract get options(): TOptions;
+  abstract get options(): TOptions
 
-  abstract set options(options: TOptions);
+  abstract set options(options: TOptions)
 
-  abstract get start(): Coordinate;
+  abstract get start(): Coordinate
 
-  abstract next(last: Coordinate): Coordinate;
+  abstract next(last: Coordinate): Coordinate
 }

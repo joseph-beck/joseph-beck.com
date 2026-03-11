@@ -1,9 +1,9 @@
-import { createRootRoute, Outlet } from '@tanstack/react-router';
-import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
-import { ReactElement } from 'react';
+import { createRootRoute, Outlet } from '@tanstack/react-router'
+import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
+import type { ReactElement } from 'react'
 
-import { ThemeProvider } from '@/components/theme/theme';
-import { ThemeToggle } from '@/components/theme/theme-toggle';
+import { ThemeProvider } from '@/components/theme/theme'
+import { ThemeToggle } from '@/components/theme/theme-toggle'
 
 const Root = (): ReactElement => (
   <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
@@ -16,10 +16,10 @@ const Root = (): ReactElement => (
     </div>
     <TanStackRouterDevtools />
   </ThemeProvider>
-);
+)
 
 const Route = createRootRoute({
   component: Root,
-});
+})
 
-export { Route };
+export { Route }

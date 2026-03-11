@@ -1,7 +1,5 @@
-import { createLazyFileRoute } from '@tanstack/react-router';
-import type { ReactElement } from 'react';
-
-import { BackgroundBeams } from '@/ui/background-beams';
+import { createLazyFileRoute } from '@tanstack/react-router'
+import type { ReactElement } from 'react'
 
 const Page = (): ReactElement => {
   return (
@@ -9,13 +7,12 @@ const Page = (): ReactElement => {
       <div className="flex justify-center">
         <div className="w-full sm:w-5/6 md:w-3/4 lg:w-2/3">test</div>
       </div>
-      <BackgroundBeams className="-z-10 fixed opacity-75" />
     </div>
-  );
-};
+  )
+}
 
 const Route = createLazyFileRoute('/')({
   component: Page,
-});
+})
 
-export { Route };
+export { Route }
