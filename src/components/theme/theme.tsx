@@ -1,8 +1,8 @@
 import type { JSX } from 'react'
 import { useEffect, useState } from 'react'
 
-import type { Theme } from '@/providers/theme/theme-provider'
-import { ThemeProviderContext } from '@/providers/theme/theme-provider'
+import type { Theme } from '@/components/theme/theme-provider'
+import { ThemeProviderContext } from '@/components/theme/theme-provider'
 
 interface Props {
   children: React.ReactNode
@@ -10,7 +10,7 @@ interface Props {
   storageKey?: string
 }
 
-export const ThemeProvider = ({
+const ThemeProvider = ({
   children,
   defaultTheme = 'system',
   storageKey = 'vite-ui-theme',
@@ -48,3 +48,5 @@ export const ThemeProvider = ({
     </ThemeProviderContext.Provider>
   )
 }
+
+export { ThemeProvider }
