@@ -2,6 +2,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import { type ReactElement } from 'react'
 
 import { Freelance } from '@/components/experience/freelance'
+import { Professional } from '@/components/experience/professional'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/ui/tabs'
 
 const Page = (): ReactElement => {
@@ -14,7 +15,9 @@ const Page = (): ReactElement => {
           <TabsTrigger value="freelance">Freelance</TabsTrigger>
           <TabsTrigger value="extracurricular">Extra Curricular</TabsTrigger>
         </TabsList>
-        <TabsContent value="professional">coming soon...</TabsContent>
+        <TabsContent value="professional">
+          <Professional />
+        </TabsContent>
         <TabsContent value="education">coming soon...</TabsContent>
         <TabsContent value="freelance">
           <Freelance />
