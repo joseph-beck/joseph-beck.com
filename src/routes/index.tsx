@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
-import type { ReactElement } from 'react'
+import { type ReactElement } from 'react'
 
 import { Button } from '@/ui/button'
 

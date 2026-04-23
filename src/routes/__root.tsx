@@ -1,6 +1,6 @@
 import { createRootRoute, Outlet } from '@tanstack/react-router'
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
-import type { ReactElement } from 'react'
+import { type ReactElement } from 'react'
 
 import { ThemeProvider } from '@/components/theme/theme'
 import { ThemeToggle } from '@/components/theme/theme-toggle'

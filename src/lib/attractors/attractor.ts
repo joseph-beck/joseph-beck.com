@@ -1,4 +1,4 @@
-import type { Coordinate } from './coordinate'
+import { type Coordinate } from './coordinate'
 
 export abstract class Attractor<TOptions> {
   abstract get default(): TOptions

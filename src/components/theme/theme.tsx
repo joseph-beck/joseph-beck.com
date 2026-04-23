@@ -1,7 +1,7 @@
-import type { JSX } from 'react'
+import { type JSX } from 'react'
 import { useEffect, useState } from 'react'
 
-import type { Theme } from '@/components/theme/theme-provider'
+import { type Theme } from '@/components/theme/theme-provider'
 import { ThemeProviderContext } from '@/components/theme/theme-provider'
 
 interface Props {

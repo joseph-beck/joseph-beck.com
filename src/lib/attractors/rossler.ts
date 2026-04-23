@@ -1,5 +1,5 @@
-import type { Attractor } from './attractor'
-import type { Coordinate } from './coordinate'
+import { type Attractor } from './attractor'
+import { type Coordinate } from './coordinate'
 
 interface RosslerOptions {
   a: number
