@@ -1,6 +1,7 @@
 // @ts-check
 
 import { defineConfig } from 'eslint/config'
+import importPlugin from 'eslint-plugin-import'
 import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
@@ -24,6 +25,7 @@ export default defineConfig([
     },
     plugins: {
       '@typescript-eslint': tseslint.plugin,
+      import: importPlugin,
       react: react,
       // @ts-expect-error types are not fully compatible
       'react-hooks': reactHooks,
@@ -73,7 +75,14 @@ export default defineConfig([
         },
       ],
       '@typescript-eslint/no-floating-promises': 'error',
-      '@typescript-eslint/consistent-type-imports': 'error',
+      '@typescript-eslint/consistent-type-imports': [
+        'error',
+        {
+          prefer: 'type-imports',
+          fixStyle: 'separate-type-imports',
+        },
+      ],
+      'import/consistent-type-specifier-style': ['error', 'prefer-inline'],
     },
   },
 ])
