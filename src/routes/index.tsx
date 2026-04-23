@@ -1,17 +1,22 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
 import { type ReactElement } from 'react'
 
 import { Button } from '@/ui/button'
 
 const Page = (): ReactElement => {
   return (
-    <div className="p-2">
-      <h1>title</h1>
-      <p>body</p>
-      <code>code</code>
-      <div className="flex justify-center">
-        <div className="w-full sm:w-5/6 md:w-3/4 lg:w-2/3">test</div>
-        <Button>button</Button>
+    <div className="flex flex-col">
+      <h1>hi, i'm joseph</h1>
+      <div className="inline-flex gap-x-2">
+        <Link to="/experience">
+          <Button>experience</Button>
+        </Link>
+        <Link to="/projects">
+          <Button>projects</Button>
+        </Link>
+        <Link to="/blog">
+          <Button>blog</Button>
+        </Link>
       </div>
     </div>
   )

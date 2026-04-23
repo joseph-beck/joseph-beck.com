@@ -2,16 +2,12 @@ import { createRootRoute, Outlet } from '@tanstack/react-router'
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 import { type ReactElement } from 'react'
 
-import { ThemeProvider } from '@/components/theme/theme'
-import { ThemeToggle } from '@/components/theme/theme-toggle'
+import { ThemeProvider } from '@/components/theme/theme-provider'
 
 const Root = (): ReactElement => (
   <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-    <div className="p-2 flex gap-2">
-      <ThemeToggle />
-    </div>
     <hr />
-    <div className="scroll-smooth">
+    <div className="scroll-smooth p-4">
       <Outlet />
     </div>
     <TanStackRouterDevtools />
