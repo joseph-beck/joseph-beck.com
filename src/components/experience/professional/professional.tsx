@@ -2,11 +2,19 @@ import { type ReactElement } from 'react'
 
 import { Badge } from '@/ui/badge'
 
-import { Experience } from './experience'
+import { Experience } from '../experience'
+import { getProfessionalExperience } from './get-professional-experience'
 
 const Professional = (): ReactElement => {
+  const experience = getProfessionalExperience()
+
   return (
     <div className="border-l-2 border-muted pl-6 mb-4">
+      {experience.map((exp) => (
+        <Experience key={exp.slug} title={exp.title} description={exp.date}>
+          <exp.component />
+        </Experience>
+      ))}
       <h2>Professional Experience</h2>
       <div className="w-1/3 flex flex-col gap-y-4 mt-4">
         <Experience

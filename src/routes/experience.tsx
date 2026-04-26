@@ -1,8 +1,8 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { type ReactElement } from 'react'
 
-import { Freelance } from '@/components/experience/freelance'
-import { Professional } from '@/components/experience/professional'
+import { Freelance } from '@/components/experience/freelance/freelance'
+import { Professional } from '@/components/experience/professional/professional'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/ui/tabs'
 
 const Page = (): ReactElement => {
