@@ -72,12 +72,21 @@ export const DEFAULT_EXPERIENCE: ExperienceProp = {
   badges: undefined,
 };
 
-export const MOHC_EXPERIENCE: ExperienceProp = {
+export const MOHC_EXPERIENCE_2: ExperienceProp = {
+  ...DEFAULT_EXPERIENCE,
+  title: 'Fullstack Developer',
+  location: 'MOHC',
+  description: <p></p>,
+  timeSpan: <p>Jul 2026 - Present</p>,
+  badges: [REACT_BADGE, GO_BADGE, TYPESCRIPT_BADGE],
+};
+
+export const MOHC_EXPERIENCE_1: ExperienceProp = {
   ...DEFAULT_EXPERIENCE,
   title: 'Junior Fullstack Developer',
   location: 'MOHC',
   description: <p></p>,
-  timeSpan: <p>Oct 2025 - Present</p>,
+  timeSpan: <p>Oct 2025 - Jul 2026</p>,
   badges: [REACT_BADGE, GO_BADGE, TYPESCRIPT_BADGE],
 };
 
