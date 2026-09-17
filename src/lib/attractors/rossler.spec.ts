@@ -1,8 +1,9 @@
-import { expect, test } from 'vitest';
+import { expect, test } from 'vitest'
 
-import { RosslerAttractor } from './rossler';
+import { RosslerAttractor } from './rossler'
 
 test('rossler', () => {
-  const rossler = new RosslerAttractor();
-  expect(rossler).toBeInstanceOf(RosslerAttractor);
-});
+  const rossler = new RosslerAttractor()
+
+  expect(rossler).toBeInstanceOf(RosslerAttractor)
+})
