@@ -1,28 +1,41 @@
-import { Geist, Geist_Mono } from "next/font/google"
+import './globals.css'
 
-import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@/lib/utils";
+import { type Metadata } from 'next'
+import { Geist, Geist_Mono } from 'next/font/google'
 
-const geistMonoHeading = Geist_Mono({subsets:['latin'],variable:'--font-heading'});
+import { ThemeProvider } from '@/components/theme/ThemeProvider'
+import { cn } from '@/lib/utils'
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'})
-
-const fontMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
+const geistMonoHeading = Geist_Mono({
+  subsets: ['latin'],
+  variable: '--font-heading',
 })
 
-export default function RootLayout({
+const geist = Geist({
+  subsets: ['latin'],
+  variable: '--font-sans',
+})
+
+const fontMono = Geist_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
+})
+
+const metadata: Metadata = {
+  description: 'stuff and things',
+  title: 'joseph',
+}
+
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode
-}>) {
+}>) => {
   return (
     <html
-      lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", geist.variable, geistMonoHeading.variable)}
+      className={cn('antialiased', fontMono.variable, 'font-sans', geist.variable, geistMonoHeading.variable)}
+      lang="en"
     >
       <body>
         <ThemeProvider>{children}</ThemeProvider>
@@ -30,3 +43,8 @@ export default function RootLayout({
     </html>
   )
 }
+
+export default RootLayout
+
+// eslint-disable-next-line react-refresh/only-export-components
+export { metadata }
