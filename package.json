@@ -11,7 +11,8 @@
     "lint": "eslint --cache",
     "lint:fix": "eslint --fix --cache",
     "fmt": "prettier . --check --cache",
-    "fmt:fix": "prettier . --write --cache"
+    "fmt:fix": "prettier . --write --cache",
+    "prepare": "husky"
   },
   "dependencies": {
     "@jblib/has": "0.0.5",
