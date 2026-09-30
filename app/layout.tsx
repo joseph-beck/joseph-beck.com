@@ -1,10 +1,10 @@
 import './globals.css'
 
+import { cn } from 'cn'
 import { type Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 
 import { ThemeProvider } from '@/components/theme/ThemeProvider'
-import { cn } from '@/lib/utils'
 
 const geistMonoHeading = Geist_Mono({
   subsets: ['latin'],
