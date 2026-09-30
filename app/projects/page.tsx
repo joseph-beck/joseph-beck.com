@@ -1,10 +1,27 @@
+import { Stack } from '@/components/layout/Stack'
 import { Typography } from '@/components/ui/Typography'
+
+import { ProjectCard } from './ProjectCard'
 
 const Page = () => {
   return (
-    <div className="flex min-h-svh p-6">
+    <Stack className="flex min-h-svh p-6">
       <Typography variant="h2">projects</Typography>
-    </div>
+      <Stack className="flex max-w-md">
+        <ProjectCard
+          project={{
+            description: 'description.',
+            title: 'project',
+          }}
+        />
+        <ProjectCard
+          project={{
+            description: 'description.',
+            title: 'project',
+          }}
+        />
+      </Stack>
+    </Stack>
   )
 }
 
