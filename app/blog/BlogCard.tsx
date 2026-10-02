@@ -11,7 +11,7 @@ interface BlogCardProps {
 
 const BlogCard = ({ blog }: BlogCardProps): ReactElement => {
   return (
-    <Card className="hover:bg-accent hover:ring-accent w-full bg-transparent ring-0 transition-colors hover:ring-1">
+    <Card className="hover:bg-accent hover:from-primary/10 hover:via-accent hover:ring-primary/33 w-full bg-transparent ring-0 transition-all hover:bg-linear-to-br hover:to-transparent hover:shadow-[inset_0_1px_0_rgb(255_255_255/0.08)] hover:ring-1">
       <CardHeader>
         <CardTitle>{blog.title}</CardTitle>
       </CardHeader>
