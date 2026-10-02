@@ -1,8 +1,8 @@
-import { Separator } from '@base-ui/react/separator'
 import { type ReactElement } from 'react'
 
 import { Stack } from '../layout/Stack'
 import { Link } from '../ui/Link'
+import { Separator } from '../ui/Separator'
 import { Typography } from '../ui/Typography'
 
 const NavigationBar = (): ReactElement => {
@@ -11,15 +11,15 @@ const NavigationBar = (): ReactElement => {
       <Link href="/">
         <Typography style="mono">home</Typography>
       </Link>
-      <Separator orientation="vertical" />
+      <Separator className="bg-primary" orientation="vertical" />
       <Link href="/projects">
         <Typography style="mono">projects</Typography>
       </Link>
-      <Separator orientation="vertical" />
+      <Separator className="bg-primary" orientation="vertical" />
       <Link href="/experience">
         <Typography style="mono">experience</Typography>
       </Link>
-      <Separator orientation="vertical" />
+      <Separator className="bg-primary" orientation="vertical" />
       <Link href="/blog">
         <Typography style="mono">blog</Typography>
       </Link>
