@@ -3,25 +3,25 @@ import { type ReactElement } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Typography } from '@/components/ui/Typography'
 
-import { type Project } from './types'
+import { type Experience } from './types'
 
-interface ProjectCardProps {
-  project: Project
+interface ExperienceCardProps {
+  experience: Experience
 }
 
-const ProjectCard = ({ project }: ProjectCardProps): ReactElement => {
+const ExperienceCard = ({ experience }: ExperienceCardProps): ReactElement => {
   return (
     <Card className="hover:bg-accent hover:ring-accent w-full bg-transparent ring-0 transition-colors hover:ring-1">
       <CardHeader>
-        <CardTitle>{project.title}</CardTitle>
+        <CardTitle>{experience.title}</CardTitle>
       </CardHeader>
       <CardContent>
         <Typography size="sm" variant="p">
-          {project.description}
+          {experience.description}
         </Typography>
       </CardContent>
     </Card>
   )
 }
 
-export { ProjectCard }
+export { ExperienceCard }

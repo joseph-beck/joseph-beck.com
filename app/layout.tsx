@@ -4,6 +4,7 @@ import { cn } from 'cn'
 import { type Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 
+import { NavigationBar } from '@/components/navigation/NavigationBar'
 import { ThemeProvider } from '@/components/theme/ThemeProvider'
 
 const geistMonoHeading = Geist_Mono({
@@ -38,7 +39,10 @@ const RootLayout = ({
       lang="en"
     >
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <NavigationBar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )

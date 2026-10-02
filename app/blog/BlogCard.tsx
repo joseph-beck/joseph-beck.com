@@ -3,25 +3,25 @@ import { type ReactElement } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Typography } from '@/components/ui/Typography'
 
-import { type Project } from './types'
+import { type Blog } from './types'
 
-interface ProjectCardProps {
-  project: Project
+interface BlogCardProps {
+  blog: Blog
 }
 
-const ProjectCard = ({ project }: ProjectCardProps): ReactElement => {
+const BlogCard = ({ blog }: BlogCardProps): ReactElement => {
   return (
     <Card className="hover:bg-accent hover:ring-accent w-full bg-transparent ring-0 transition-colors hover:ring-1">
       <CardHeader>
-        <CardTitle>{project.title}</CardTitle>
+        <CardTitle>{blog.title}</CardTitle>
       </CardHeader>
       <CardContent>
         <Typography size="sm" variant="p">
-          {project.description}
+          {blog.description}
         </Typography>
       </CardContent>
     </Card>
   )
 }
 
-export { ProjectCard }
+export { BlogCard }
