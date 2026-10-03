@@ -8,19 +8,19 @@ import { Typography } from '@/components/ui/Typography'
 const NavigationBar = (): ReactElement => {
   return (
     <Stack className="items-center gap-4 p-6" orientation="horizontal">
-      <Link href="/">
+      <Link underline href="/">
         <Typography style="mono">home</Typography>
       </Link>
       <Separator className="bg-primary" orientation="vertical" />
-      <Link href="/projects">
+      <Link underline href="/projects">
         <Typography style="mono">projects</Typography>
       </Link>
       <Separator className="bg-primary" orientation="vertical" />
-      <Link href="/experience">
+      <Link underline href="/experience">
         <Typography style="mono">experience</Typography>
       </Link>
       <Separator className="bg-primary" orientation="vertical" />
-      <Link href="/blog">
+      <Link underline href="/blog">
         <Typography style="mono">blog</Typography>
       </Link>
     </Stack>
