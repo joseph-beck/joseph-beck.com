@@ -16,9 +16,9 @@
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
-    "@jblib/has": "0.0.5",
-    "@jblib/is": "0.0.9",
-    "@jblib/should": "0.0.7",
+    "@jblib/has": "0.0.7",
+    "@jblib/is": "0.0.11",
+    "@jblib/should": "0.0.9",
     "@tabler/icons-react": "^3.48.0",
     "@tailwindcss/typography": "^0.5.20",
     "class-variance-authority": "^0.7.1",
@@ -36,10 +36,10 @@
     "zustand": "^5.0.15"
   },
   "devDependencies": {
-    "@jblib/eslint": "0.0.8",
-    "@jblib/eslint-json": "0.0.2",
-    "@jblib/eslint-next": "0.0.3",
-    "@jblib/eslint-react": "0.0.6",
+    "@jblib/eslint": "0.0.11",
+    "@jblib/eslint-json": "0.0.4",
+    "@jblib/eslint-next": "0.0.6",
+    "@jblib/eslint-react": "0.0.8",
     "@tailwindcss/postcss": "^4.3.3",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/react": "^16.3.3",
@@ -53,6 +53,7 @@
     "prettier-plugin-tailwindcss": "^0.8.1",
     "tailwindcss": "^4.3.3",
     "typescript": "^5.9.3",
-    "vitest": "^5.0.1"
+    "vitest": "^5.0.1",
+    "husky": "^9.1.7"
   }
 }

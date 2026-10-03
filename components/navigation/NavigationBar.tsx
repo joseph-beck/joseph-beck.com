@@ -1,9 +1,9 @@
 import { type ReactElement } from 'react'
 
-import { Stack } from '../layout/Stack'
-import { Link } from '../ui/Link'
-import { Separator } from '../ui/Separator'
-import { Typography } from '../ui/Typography'
+import { Stack } from '@/components/layout/Stack'
+import { Link } from '@/components/ui/Link'
+import { Separator } from '@/components/ui/Separator'
+import { Typography } from '@/components/ui/Typography'
 
 const NavigationBar = (): ReactElement => {
   return (

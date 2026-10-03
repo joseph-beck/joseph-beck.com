@@ -1,8 +1,7 @@
+import { BlogPost } from '@/app/blog/BlogPost'
+import { getBlogBySlug } from '@/app/blog/getBlogBySlug'
 import { Stack } from '@/components/layout/Stack'
 import { Typography } from '@/components/ui/Typography'
-
-import { BlogPost } from '../BlogPost'
-import { getBlogBySlug } from '../getBlogBySlug'
 
 interface PageParams {
   slug: string
