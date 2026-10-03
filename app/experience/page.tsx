@@ -1,7 +1,6 @@
+import { ExperienceCard } from '@/app/experience/ExperienceCard'
 import { Stack } from '@/components/layout/Stack'
 import { Typography } from '@/components/ui/Typography'
-
-import { ExperienceCard } from './ExperienceCard'
 
 const Page = () => {
   return (

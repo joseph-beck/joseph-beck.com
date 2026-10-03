@@ -1,9 +1,8 @@
 import { type ReactElement } from 'react'
 
+import { type Blog } from '@/app/blog/types'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Typography } from '@/components/ui/Typography'
-
-import { type Blog } from './types'
 
 interface BlogCardProps {
   blog: Blog

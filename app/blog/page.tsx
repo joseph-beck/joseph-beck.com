@@ -1,7 +1,6 @@
+import { BlogCard } from '@/app/blog/BlogCard'
 import { Stack } from '@/components/layout/Stack'
 import { Typography } from '@/components/ui/Typography'
-
-import { BlogCard } from './BlogCard'
 
 const Page = () => {
   return (

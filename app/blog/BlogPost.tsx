@@ -1,9 +1,8 @@
 import { type ReactElement, type ReactNode } from 'react'
 
+import { type Blog } from '@/app/blog/types'
 import { Stack } from '@/components/layout/Stack'
 import { Typography } from '@/components/ui/Typography'
-
-import { type Blog } from './types'
 
 interface BlogPostProps {
   blog: Blog

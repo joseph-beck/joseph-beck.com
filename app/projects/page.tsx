@@ -1,7 +1,6 @@
+import { ProjectCard } from '@/app/projects/ProjectCard'
 import { Stack } from '@/components/layout/Stack'
 import { Typography } from '@/components/ui/Typography'
-
-import { ProjectCard } from './ProjectCard'
 
 const Page = () => {
   return (

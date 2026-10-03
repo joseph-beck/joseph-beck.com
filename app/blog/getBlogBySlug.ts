@@ -1,8 +1,7 @@
+import { contentDirectory } from '@/app/blog/contentDirectory'
+import { Blog, type BlogData } from '@/app/blog/types'
 import { getBySlug } from '@/lib/mdx/getBySlug'
 import { getFromFile } from '@/lib/mdx/getFromFile'
-
-import { contentDirectory } from './contentDirectory'
-import { Blog, type BlogData } from './types'
 
 const getBlogBySlug = async (slug: string): Promise<BlogData | undefined> =>
   getBySlug<BlogData>({

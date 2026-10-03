@@ -1,4 +1,4 @@
-import './globals.css'
+import '@/app/globals.css'
 
 import { cn } from 'cn'
 import { type Metadata } from 'next'

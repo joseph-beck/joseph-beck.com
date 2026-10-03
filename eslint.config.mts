@@ -1,3 +1,5 @@
+import noRelativeImportPaths from 'eslint-plugin-no-relative-import-paths'
+
 import { jblibConfig } from '@jblib/eslint'
 import { jblibJsonConfig } from '@jblib/eslint-json'
 import { jblibNextConfig } from '@jblib/eslint-next'
@@ -11,6 +13,14 @@ const config: Linter.Config[] = [
   ...jblibNextConfig,
   {
     ignores: ['**/*.mjs', '**/*.mts'],
+  },
+  {
+    plugins: {
+      'no-relative-import-paths': noRelativeImportPaths,
+    },
+    rules: {
+      'no-relative-import-paths/no-relative-import-paths': ['error', { rootDir: '.', prefix: '@' }],
+    },
   },
 ]
 

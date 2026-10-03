@@ -5,8 +5,7 @@ import matter from 'gray-matter'
 import type * as z from 'zod'
 
 import { getSlug } from '@/lib/mdx/getSlug'
-
-import { type BaseData } from './types'
+import { type BaseData } from '@/lib/mdx/types'
 
 interface GetFromFileParams<TData> {
   contentDirectory: string

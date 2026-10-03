@@ -1,6 +1,6 @@
 import { readdir } from 'fs/promises'
 
-import { type BaseData } from './types'
+import { type BaseData } from '@/lib/mdx/types'
 
 interface GetAllParams<TData extends BaseData> {
   contentDirectory: string

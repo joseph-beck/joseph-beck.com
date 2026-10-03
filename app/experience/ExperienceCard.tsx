@@ -1,9 +1,8 @@
 import { type ReactElement } from 'react'
 
+import { type Experience } from '@/app/experience/types'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Typography } from '@/components/ui/Typography'
-
-import { type Experience } from './types'
 
 interface ExperienceCardProps {
   experience: Experience

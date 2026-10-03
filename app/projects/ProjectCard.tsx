@@ -2,11 +2,10 @@ import { isDefined } from '@jblib/is'
 import { IconBrandGithub } from '@tabler/icons-react'
 import { type ReactElement } from 'react'
 
+import { type Project } from '@/app/projects/types'
 import { Card, CardAction, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Link } from '@/components/ui/Link'
 import { Typography } from '@/components/ui/Typography'
-
-import { type Project } from './types'
 
 interface ProjectCardProps {
   project: Project
