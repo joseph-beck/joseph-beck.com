@@ -1,6 +1,12 @@
-interface Blog {
-  description: string
-  title: string
-}
+import * as z from 'zod'
 
-export type { Blog }
+const blogSchema = z.object({
+  description: z.string(),
+  title: z.string(),
+})
+
+const Blog = z.compile(blogSchema)
+
+type Blog = z.infer<typeof blogSchema>
+
+export { Blog }
