@@ -17,6 +17,7 @@ const Page = () => {
         <ProjectCard
           project={{
             description: 'description.',
+            link: 'https://joseph-beck.com',
             title: 'project',
           }}
         />
