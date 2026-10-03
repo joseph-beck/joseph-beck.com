@@ -1,5 +1,6 @@
 import { ExperiencePage } from '@/app/experience/ExperiencePage'
 import { getExperienceBySlug } from '@/app/experience/getExperienceBySlug'
+import { Container } from '@/components/layout/Container'
 import { Stack } from '@/components/layout/Stack'
 import { Typography } from '@/components/ui/Typography'
 
@@ -14,16 +15,20 @@ const Page = async ({ params }: { params: Promise<PageParams> }) => {
 
   if (!experience) {
     return (
-      <Stack className="flex min-h-svh p-6">
-        <Typography>experience not found</Typography>
-      </Stack>
+      <Container>
+        <Stack>
+          <Typography>experience not found</Typography>
+        </Stack>
+      </Container>
     )
   }
 
   return (
-    <Stack className="flex min-h-svh p-6">
-      <ExperiencePage experience={experience}>{experience.content}</ExperiencePage>
-    </Stack>
+    <Container>
+      <Stack>
+        <ExperiencePage experience={experience}>{experience.content}</ExperiencePage>
+      </Stack>
+    </Container>
   )
 }
 
