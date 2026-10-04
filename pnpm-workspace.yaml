@@ -1,0 +1,18 @@
+packages: []
+
+allowBuilds:
+  sharp: true
+  unrs-resolver: true
+  msw: false
+  '@parcel/watcher': true
+  '@swc/core': true
+
+minimumReleaseAgeExclude:
+  - '@jblib/eslint-json@0.0.4'
+  - '@jblib/eslint-next@0.0.6'
+  - '@jblib/eslint-react@0.0.8'
+  - '@jblib/eslint@0.0.10 || 0.0.11'
+  - '@jblib/has@0.0.7'
+  - '@jblib/is@0.0.11'
+  - '@jblib/should@0.0.9'
+  - eslint@10.12.0
