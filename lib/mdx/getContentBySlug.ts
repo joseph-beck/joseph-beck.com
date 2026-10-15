@@ -2,17 +2,17 @@ import { readdir } from 'fs/promises'
 
 import { getSlug } from '@/lib/mdx/getSlug'
 
-interface GetBySlugParams<TData> {
+interface GetContentBySlugParams<TData> {
   contentDirectory: string
   getFn: (filename: string) => Promise<TData>
   slug: string
 }
 
-const getBySlug = async <TData>({
+const getContentBySlug = async <TData>({
   contentDirectory,
   getFn,
   slug,
-}: GetBySlugParams<TData>): Promise<TData | undefined> => {
+}: GetContentBySlugParams<TData>): Promise<TData | undefined> => {
   const candidates = await readdir(contentDirectory)
 
   const filename = candidates.find((candidate) => candidate.endsWith('.mdx') && getSlug(candidate) === slug)
@@ -24,4 +24,4 @@ const getBySlug = async <TData>({
   return await getFn(filename)
 }
 
-export { getBySlug }
+export { getContentBySlug }
