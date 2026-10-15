@@ -2,7 +2,8 @@ import * as z from 'zod'
 
 const projectSchema = z.object({
   description: z.string(),
-  link: z.string().optional(),
+  languages: z.string().array().optional(),
+  repo: z.string().optional(),
   title: z.string(),
 })
 

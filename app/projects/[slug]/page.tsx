@@ -41,7 +41,7 @@ const Page = async ({ params }: { params: Promise<PageParams> }) => {
 
   return (
     <Container>
-      <Stack>
+      <Stack className="w-full max-w-lg">
         <ProjectPage project={project}>{project.content}</ProjectPage>
       </Stack>
     </Container>

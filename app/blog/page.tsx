@@ -25,7 +25,7 @@ const Page = async () => {
 
   return (
     <Container>
-      <Stack>
+      <Stack className="w-full">
         <Typography variant="h2">blog</Typography>
         <Stack className="flex max-w-md">
           {isNonEmptyArray(blogs)

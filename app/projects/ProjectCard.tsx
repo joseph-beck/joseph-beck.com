@@ -1,10 +1,10 @@
-import { isDefined } from '@jblib/is'
-import { IconBrandGithub } from '@tabler/icons-react'
+import { isNonEmptyArray } from '@jblib/is'
 import { type ReactElement } from 'react'
 
 import { type Project } from '@/app/projects/types'
-import { Card, CardAction, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
-import { Link } from '@/components/ui/Link'
+import { Stack } from '@/components/layout/Stack'
+import { Badge } from '@/components/ui/Badge'
+import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Typography } from '@/components/ui/Typography'
 
 interface ProjectCardProps {
@@ -16,19 +16,21 @@ const ProjectCard = ({ project }: ProjectCardProps): ReactElement => {
     <Card variant="gradient">
       <CardHeader>
         <CardTitle>{project.title}</CardTitle>
-        {isDefined(project.link) ? (
-          <CardAction>
-            <Link href={project.link} target="_blank">
-              <IconBrandGithub />
-            </Link>
-          </CardAction>
-        ) : undefined}
+        <CardDescription>{project.description}</CardDescription>
       </CardHeader>
-      <CardContent>
-        <Typography size="sm" variant="p">
-          {project.description}
-        </Typography>
-      </CardContent>
+      <CardFooter>
+        <Stack orientation="horizontal" spacing="sm">
+          {isNonEmptyArray(project.languages)
+            ? project.languages.map((language) => (
+                <Badge key={language}>
+                  <Typography size="sm" variant="p">
+                    {language}
+                  </Typography>
+                </Badge>
+              ))
+            : undefined}
+        </Stack>
+      </CardFooter>
     </Card>
   )
 }

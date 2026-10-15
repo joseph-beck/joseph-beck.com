@@ -23,7 +23,7 @@ const Page = async () => {
 
   return (
     <Container>
-      <Stack>
+      <Stack className="w-full">
         <Typography variant="h2">projects</Typography>
         <Stack className="flex max-w-md">
           {projects.map((project) => (

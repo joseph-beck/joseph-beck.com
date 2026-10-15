@@ -1,8 +1,10 @@
+import { isDefined } from '@jblib/is'
+import { IconBrandGithub } from '@tabler/icons-react'
 import { type ReactElement, type ReactNode } from 'react'
 
 import { type Project } from '@/app/projects/types'
-import { Stack } from '@/components/layout/Stack'
-import { Typography } from '@/components/ui/Typography'
+import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
+import { Link } from '@/components/ui/Link'
 
 interface ProjectPageProps {
   children: ReactNode
@@ -11,11 +13,20 @@ interface ProjectPageProps {
 
 const ProjectPage = ({ children, project }: ProjectPageProps): ReactElement => {
   return (
-    <Stack>
-      <Typography variant="h2">{project.title}</Typography>
-      <Typography>{project.description}</Typography>
-      {children}
-    </Stack>
+    <Card className="w-full" variant="invisible">
+      <CardHeader>
+        <CardTitle>{project.title}</CardTitle>
+        <CardDescription>{project.description}</CardDescription>
+        <CardAction>
+          {isDefined(project.repo) ? (
+            <Link href={project.repo} target="_blank">
+              <IconBrandGithub />
+            </Link>
+          ) : undefined}
+        </CardAction>
+      </CardHeader>
+      <CardContent>{children}</CardContent>
+    </Card>
   )
 }
 
