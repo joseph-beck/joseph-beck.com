@@ -1,11 +1,13 @@
 import * as z from 'zod'
 
 const experienceSchema = z.object({
-  company: z.string(),
   description: z.string(),
   endDate: z.date().optional(),
+  location: z.string(),
   startDate: z.date(),
+  tags: z.string().array().optional(),
   title: z.string(),
+  type: z.literal(['professional', 'extra-curricular', 'freelance', 'education']),
 })
 
 const Experience = z.compile(experienceSchema)

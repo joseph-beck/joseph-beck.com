@@ -15,7 +15,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps): ReactElement => {
     <Card variant="gradient">
       <CardHeader>
         <CardTitle>{experience.title}</CardTitle>
-        <CardDescription>{experience.company}</CardDescription>
+        <CardDescription>{experience.location}</CardDescription>
       </CardHeader>
       <CardContent>
         <Typography size="sm" variant="p">
