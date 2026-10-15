@@ -31,7 +31,9 @@ const Page = async ({ params }: { params: Promise<PageParams> }) => {
     return (
       <Container>
         <Stack>
-          <Typography>sorry, blog {slug} could not be found</Typography>
+          <Typography style="mono" variant="h5">
+            sorry, blog {slug} could not be found
+          </Typography>
         </Stack>
       </Container>
     )

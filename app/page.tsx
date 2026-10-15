@@ -6,7 +6,8 @@ const Page = () => {
   return (
     <Container>
       <Stack>
-        <Typography variant="h2">joseph-beck.com</Typography>
+        <Typography variant="h2">joseph beck</Typography>
+        <Typography variant="h5">full stack developer</Typography>
       </Stack>
     </Container>
   )

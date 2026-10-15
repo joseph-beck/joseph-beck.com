@@ -6,6 +6,7 @@ const typographyVariants = cva('', {
   defaultVariants: {
     align: 'left',
     decoration: 'none',
+    intensity: 'default',
     size: 'default',
     style: 'default',
     variant: 'p',
@@ -22,6 +23,10 @@ const typographyVariants = cva('', {
       none: 'no-underline',
       overline: 'overline',
       underline: 'underline',
+    },
+    intensity: {
+      default: '',
+      muted: 'text-muted-foreground',
     },
     size: {
       '2xl': 'text-2xl',
@@ -83,6 +88,7 @@ const Typography = ({
   className,
   component,
   decoration,
+  intensity,
   size,
   style,
   variant,
@@ -98,6 +104,7 @@ const Typography = ({
         typographyVariants({
           align,
           decoration,
+          intensity,
           size,
           style,
           variant,
