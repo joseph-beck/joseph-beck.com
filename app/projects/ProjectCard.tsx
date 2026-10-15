@@ -5,7 +5,6 @@ import { type Project } from '@/app/projects/types'
 import { Stack } from '@/components/layout/Stack'
 import { Badge } from '@/components/ui/Badge'
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/Card'
-import { Typography } from '@/components/ui/Typography'
 
 interface ProjectCardProps {
   project: Project
@@ -21,13 +20,7 @@ const ProjectCard = ({ project }: ProjectCardProps): ReactElement => {
       <CardFooter>
         <Stack orientation="horizontal" spacing="sm">
           {isNonEmptyArray(project.languages)
-            ? project.languages.map((language) => (
-                <Badge key={language}>
-                  <Typography size="sm" variant="p">
-                    {language}
-                  </Typography>
-                </Badge>
-              ))
+            ? project.languages.map((language) => <Badge key={language}>{language}</Badge>)
             : undefined}
         </Stack>
       </CardFooter>

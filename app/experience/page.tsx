@@ -21,12 +21,16 @@ const Page = async () => {
     },
   })
 
+  const sortedExperiences = experiences.sort((a, b) => {
+    return new Date(b.startDate).getTime() - new Date(a.startDate).getTime()
+  })
+
   return (
     <Container>
       <Stack className="w-full">
         <Typography variant="h2">experience</Typography>
         <Stack className="flex max-w-md">
-          {experiences.map((experience) => (
+          {sortedExperiences.map((experience) => (
             <Link key={experience.slug} href={`/experience/${experience.slug}`}>
               <ExperienceCard experience={experience} />
             </Link>
