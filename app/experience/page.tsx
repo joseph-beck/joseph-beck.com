@@ -4,7 +4,6 @@ import { Experience } from '@/app/experience/types'
 import { type ExperienceData } from '@/app/experience/types'
 import { Container } from '@/components/layout/Container'
 import { Stack } from '@/components/layout/Stack'
-import { Link } from '@/components/ui/Link'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/Tabs'
 import { Typography } from '@/components/ui/Typography'
 import { getAllContent } from '@/lib/mdx/getAllContent'
@@ -43,20 +42,16 @@ const Page = async () => {
               <TabsTrigger value="extra-curricular">extra curricular</TabsTrigger>
             </TabsList>
             <TabsContent value="professional">
-              <Stack className="flex max-w-md">
+              <Stack className="flex max-w-lg">
                 {professionalExperiences.map((experience) => (
-                  <Link key={experience.slug} href={`/experience/${experience.slug}`}>
-                    <ExperienceCard experience={experience} />
-                  </Link>
+                  <ExperienceCard key={experience.slug} experience={experience} />
                 ))}
               </Stack>
             </TabsContent>
             <TabsContent value="education">
-              <Stack className="flex max-w-md">
+              <Stack className="flex max-w-lg">
                 {educationExperiences.map((experience) => (
-                  <Link key={experience.slug} href={`/experience/${experience.slug}`}>
-                    <ExperienceCard experience={experience} />
-                  </Link>
+                  <ExperienceCard key={experience.slug} experience={experience} />
                 ))}
               </Stack>
             </TabsContent>

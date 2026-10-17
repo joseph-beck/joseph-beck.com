@@ -1,7 +1,7 @@
 const formatDate = (date: Date): string => {
   return new Intl.DateTimeFormat('en-US', {
-    month: 'long',
-    year: 'numeric',
+    month: 'short',
+    year: '2-digit',
   })
     .format(date)
     .toLocaleLowerCase()
