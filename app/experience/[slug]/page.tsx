@@ -1,9 +1,13 @@
+import { isDefined } from '@jblib/is'
+import { ViewTransition } from 'react'
+
 import { contentDirectory } from '@/app/experience/contentDirectory'
 import { ExperiencePage } from '@/app/experience/ExperiencePage'
 import { Experience } from '@/app/experience/types'
 import { type ExperienceData } from '@/app/experience/types'
 import { Container } from '@/components/layout/Container'
 import { Stack } from '@/components/layout/Stack'
+import { BackArrow } from '@/components/navigation/BackArrow'
 import { Typography } from '@/components/ui/Typography'
 import { getContentBySlug } from '@/lib/mdx/getContentBySlug'
 import { getContentFromFile } from '@/lib/mdx/getContentFromFile'
@@ -27,24 +31,21 @@ const Page = async ({ params }: { params: Promise<PageParams> }) => {
     slug,
   })
 
-  if (!experience) {
-    return (
+  return (
+    <ViewTransition name={`experience-${slug}`}>
       <Container>
         <Stack>
-          <Typography style="mono" variant="h5">
-            sorry, experience {slug} could not be found
-          </Typography>
+          <BackArrow href="/experience">back to experience</BackArrow>
+          {isDefined(experience) ? (
+            <ExperiencePage experience={experience}>{experience.content}</ExperiencePage>
+          ) : (
+            <Typography style="mono" variant="h5">
+              sorry, experience {slug} could not be found
+            </Typography>
+          )}
         </Stack>
       </Container>
-    )
-  }
-
-  return (
-    <Container>
-      <Stack>
-        <ExperiencePage experience={experience}>{experience.content}</ExperiencePage>
-      </Stack>
-    </Container>
+    </ViewTransition>
   )
 }
 

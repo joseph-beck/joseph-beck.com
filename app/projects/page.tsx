@@ -20,12 +20,16 @@ const Page = async () => {
     },
   })
 
+  const sortedProjects = projects.toSorted((a, b) => {
+    return b.priority - a.priority
+  })
+
   return (
     <Container>
       <Stack className="w-full">
         <Typography variant="h2">projects</Typography>
-        <Stack className="flex max-w-md">
-          {projects.map((project) => (
+        <Stack className="flex max-w-lg">
+          {sortedProjects.map((project) => (
             <ProjectCard key={project.slug} project={project} />
           ))}
         </Stack>

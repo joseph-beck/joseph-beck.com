@@ -1,3 +1,5 @@
+import { isNonEmptyArray } from '@jblib/is'
+
 import { contentDirectory } from '@/app/experience/contentDirectory'
 import { ExperienceCard } from '@/app/experience/ExperienceCard'
 import { Experience } from '@/app/experience/types'
@@ -21,13 +23,17 @@ const Page = async () => {
     },
   })
 
-  const sortedExperiences = experiences.sort((a, b) => {
+  const sortedExperiences = experiences.toSorted((a, b) => {
     return new Date(b.startDate).getTime() - new Date(a.startDate).getTime()
   })
 
   const professionalExperiences = sortedExperiences.filter((experience) => experience.type === 'professional')
 
   const educationExperiences = sortedExperiences.filter((experience) => experience.type === 'education')
+
+  const freelanceExperiences = sortedExperiences.filter((experience) => experience.type === 'freelance')
+
+  const extraCurricularExperiences = sortedExperiences.filter((experience) => experience.type === 'extra-curricular')
 
   return (
     <Container>
@@ -43,20 +49,48 @@ const Page = async () => {
             </TabsList>
             <TabsContent value="professional">
               <Stack className="flex max-w-lg">
-                {professionalExperiences.map((experience) => (
-                  <ExperienceCard key={experience.slug} experience={experience} />
-                ))}
+                {isNonEmptyArray(professionalExperiences) ? (
+                  professionalExperiences.map((experience) => (
+                    <ExperienceCard key={experience.slug} experience={experience} />
+                  ))
+                ) : (
+                  <Typography variant="p">nothing to see here...</Typography>
+                )}
               </Stack>
             </TabsContent>
             <TabsContent value="education">
               <Stack className="flex max-w-lg">
-                {educationExperiences.map((experience) => (
-                  <ExperienceCard key={experience.slug} experience={experience} />
-                ))}
+                {isNonEmptyArray(educationExperiences) ? (
+                  educationExperiences.map((experience) => (
+                    <ExperienceCard key={experience.slug} experience={experience} />
+                  ))
+                ) : (
+                  <Typography variant="p">nothing to see here...</Typography>
+                )}
               </Stack>
             </TabsContent>
-            <TabsContent value="freelance">freelance</TabsContent>
-            <TabsContent value="extra-curricular">extra-curricular</TabsContent>
+            <TabsContent value="freelance">
+              <Stack className="flex max-w-lg">
+                {isNonEmptyArray(freelanceExperiences) ? (
+                  freelanceExperiences.map((experience) => (
+                    <ExperienceCard key={experience.slug} experience={experience} />
+                  ))
+                ) : (
+                  <Typography variant="p">nothing to see here...</Typography>
+                )}
+              </Stack>
+            </TabsContent>
+            <TabsContent value="extra-curricular">
+              <Stack className="flex max-w-lg">
+                {isNonEmptyArray(extraCurricularExperiences) ? (
+                  extraCurricularExperiences.map((experience) => (
+                    <ExperienceCard key={experience.slug} experience={experience} />
+                  ))
+                ) : (
+                  <Typography variant="p">nothing to see here...</Typography>
+                )}
+              </Stack>
+            </TabsContent>
           </Stack>
         </Tabs>
       </Stack>

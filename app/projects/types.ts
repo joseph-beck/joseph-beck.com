@@ -3,6 +3,7 @@ import * as z from 'zod'
 const projectSchema = z.object({
   description: z.string(),
   languages: z.string().array().optional(),
+  priority: z.number().default(0),
   repo: z.string().optional(),
   title: z.string(),
 })

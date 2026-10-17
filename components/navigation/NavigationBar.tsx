@@ -12,19 +12,19 @@ const NavigationBar = (): ReactElement => {
         joseph-beck.com
       </Typography>
       <Separator className="bg-primary" orientation="vertical" />
-      <Link underline href="/">
+      <Link styleActive underline href="/">
         <Typography style="mono">home</Typography>
       </Link>
       <Separator className="bg-primary" orientation="vertical" />
-      <Link underline href="/projects">
+      <Link styleActive underline href="/projects">
         <Typography style="mono">projects</Typography>
       </Link>
       <Separator className="bg-primary" orientation="vertical" />
-      <Link underline href="/experience">
+      <Link styleActive underline href="/experience">
         <Typography style="mono">experience</Typography>
       </Link>
       <Separator className="bg-primary" orientation="vertical" />
-      <Link underline href="/blog">
+      <Link styleActive underline href="/blog">
         <Typography style="mono">blog</Typography>
       </Link>
     </Stack>

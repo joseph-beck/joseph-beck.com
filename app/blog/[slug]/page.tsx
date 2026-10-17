@@ -1,9 +1,13 @@
+import { isDefined } from '@jblib/is'
+import { ViewTransition } from 'react'
+
 import { BlogPost } from '@/app/blog/BlogPost'
 import { contentDirectory } from '@/app/blog/contentDirectory'
 import { Blog } from '@/app/blog/types'
 import { type BlogData } from '@/app/blog/types'
 import { Container } from '@/components/layout/Container'
 import { Stack } from '@/components/layout/Stack'
+import { BackArrow } from '@/components/navigation/BackArrow'
 import { Typography } from '@/components/ui/Typography'
 import { getContentBySlug } from '@/lib/mdx/getContentBySlug'
 import { getContentFromFile } from '@/lib/mdx/getContentFromFile'
@@ -27,24 +31,21 @@ const Page = async ({ params }: { params: Promise<PageParams> }) => {
     slug,
   })
 
-  if (!blog) {
-    return (
+  return (
+    <ViewTransition name={`blog-${slug}`}>
       <Container>
         <Stack>
-          <Typography style="mono" variant="h5">
-            sorry, blog {slug} could not be found
-          </Typography>
+          <BackArrow href="/blog">back to blog</BackArrow>
+          {isDefined(blog) ? (
+            <BlogPost blog={blog}>{blog.content}</BlogPost>
+          ) : (
+            <Typography style="mono" variant="h5">
+              sorry, blog {slug} could not be found
+            </Typography>
+          )}
         </Stack>
       </Container>
-    )
-  }
-
-  return (
-    <Container>
-      <Stack>
-        <BlogPost blog={blog}>{blog.content}</BlogPost>
-      </Stack>
-    </Container>
+    </ViewTransition>
   )
 }
 

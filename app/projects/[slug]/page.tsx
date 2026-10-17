@@ -1,9 +1,13 @@
+import { isDefined } from '@jblib/is'
+import { ViewTransition } from 'react'
+
 import { contentDirectory } from '@/app/projects/contentDirectory'
 import { ProjectPage } from '@/app/projects/ProjectPage'
 import { Project } from '@/app/projects/types'
 import { type ProjectData } from '@/app/projects/types'
 import { Container } from '@/components/layout/Container'
 import { Stack } from '@/components/layout/Stack'
+import { BackArrow } from '@/components/navigation/BackArrow'
 import { Typography } from '@/components/ui/Typography'
 import { getContentBySlug } from '@/lib/mdx/getContentBySlug'
 import { getContentFromFile } from '@/lib/mdx/getContentFromFile'
@@ -27,24 +31,21 @@ const Page = async ({ params }: { params: Promise<PageParams> }) => {
     slug,
   })
 
-  if (!project) {
-    return (
+  return (
+    <ViewTransition name={`project-${slug}`}>
       <Container>
-        <Stack>
-          <Typography style="mono" variant="h5">
-            sorry, project {slug} could not be found
-          </Typography>
+        <Stack className="w-full max-w-lg">
+          <BackArrow href="/projects">back to projects</BackArrow>
+          {isDefined(project) ? (
+            <ProjectPage project={project}>{project.content}</ProjectPage>
+          ) : (
+            <Typography style="mono" variant="h5">
+              sorry, project {slug} could not be found
+            </Typography>
+          )}
         </Stack>
       </Container>
-    )
-  }
-
-  return (
-    <Container>
-      <Stack className="w-full max-w-lg">
-        <ProjectPage project={project}>{project.content}</ProjectPage>
-      </Stack>
-    </Container>
+    </ViewTransition>
   )
 }
 

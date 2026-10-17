@@ -1,5 +1,6 @@
 import { isNonEmptyArray } from '@jblib/is'
 import { type ReactElement } from 'react'
+import { ViewTransition } from 'react'
 
 import { type ExperienceData } from '@/app/experience/types'
 import { Stack } from '@/components/layout/Stack'
@@ -22,26 +23,28 @@ const ExperienceCard = ({ experience }: ExperienceCardProps): ReactElement => {
         </Badge>
       </div>
       <Link key={experience.slug} className="w-full" href={`/experience/${experience.slug}`}>
-        <Card variant="gradient">
-          <CardHeader>
-            <CardTitle>{experience.title}</CardTitle>
-            <CardDescription>{experience.location}</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <Typography size="sm" variant="p">
-              {experience.description}
-            </Typography>
-          </CardContent>
-          <CardFooter>
-            {isNonEmptyArray(experience.tags) ? (
-              <Stack orientation="horizontal" spacing="sm">
-                {experience.tags.map((tag) => (
-                  <Badge key={tag}>{tag}</Badge>
-                ))}
-              </Stack>
-            ) : undefined}
-          </CardFooter>
-        </Card>
+        <ViewTransition name={`experience-${experience.slug}`}>
+          <Card variant="gradient">
+            <CardHeader>
+              <CardTitle>{experience.title}</CardTitle>
+              <CardDescription>{experience.location}</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Typography size="sm" variant="p">
+                {experience.description}
+              </Typography>
+            </CardContent>
+            <CardFooter>
+              {isNonEmptyArray(experience.tags) ? (
+                <Stack orientation="horizontal" spacing="sm">
+                  {experience.tags.map((tag) => (
+                    <Badge key={tag}>{tag}</Badge>
+                  ))}
+                </Stack>
+              ) : undefined}
+            </CardFooter>
+          </Card>
+        </ViewTransition>
       </Link>
     </Stack>
   )

@@ -26,8 +26,12 @@ const Page = async () => {
     <Container>
       <Stack className="w-full">
         <Typography variant="h2">blog</Typography>
-        <Stack className="flex max-w-md">
-          {isNonEmptyArray(blogs) ? blogs.map((blog) => <BlogCard key={blog.slug} blog={blog} />) : undefined}
+        <Stack className="flex max-w-lg">
+          {isNonEmptyArray(blogs) ? (
+            blogs.map((blog) => <BlogCard key={blog.slug} blog={blog} />)
+          ) : (
+            <Typography variant="p">nothing to see here...</Typography>
+          )}
         </Stack>
       </Stack>
     </Container>
