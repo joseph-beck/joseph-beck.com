@@ -1,7 +1,7 @@
 import { BlogPost } from '@/app/blog/BlogPost'
+import { contentDirectory } from '@/app/blog/contentDirectory'
 import { Blog } from '@/app/blog/types'
 import { type BlogData } from '@/app/blog/types'
-import { contentDirectory } from '@/app/experience/contentDirectory'
 import { Container } from '@/components/layout/Container'
 import { Stack } from '@/components/layout/Stack'
 import { Typography } from '@/components/ui/Typography'
