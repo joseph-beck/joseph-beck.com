@@ -1,3 +1,4 @@
+import { isDefined } from '@jblib/is'
 import { type ReactElement, type ReactNode } from 'react'
 
 import { type Experience } from '@/app/experience/types'
@@ -13,7 +14,7 @@ const ExperiencePage = ({ children, experience }: ExperiencePageProps): ReactEle
   return (
     <Stack>
       <Typography variant="h2">{experience.title}</Typography>
-      <Typography>{experience.description}</Typography>
+      {isDefined(experience.description) ? <Typography>{experience.description}</Typography> : undefined}
       {children}
     </Stack>
   )

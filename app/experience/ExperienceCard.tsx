@@ -1,33 +1,35 @@
-import { isNonEmptyArray } from '@jblib/is'
+import { isDefined, isNonEmptyArray } from '@jblib/is'
 import { type ReactElement } from 'react'
 import { ViewTransition } from 'react'
 
 import { type ExperienceData } from '@/app/experience/types'
 import { Stack } from '@/components/layout/Stack'
 import { Badge } from '@/components/ui/Badge'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/Card'
+import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Link } from '@/components/ui/Link'
 import { Typography } from '@/components/ui/Typography'
-import { formatDate } from '@/lib/format/formatDate'
+import { getDateRange } from '@/lib/date/getDateRange'
 
 interface ExperienceCardProps {
   experience: ExperienceData
 }
 
 const ExperienceCard = ({ experience }: ExperienceCardProps): ReactElement => {
+  const dateRange = getDateRange(experience.startDate, experience.endDate)
+
   return (
     <Stack orientation="horizontal">
-      <div className="flex w-fit shrink-0 items-center justify-center">
-        <Badge variant="outline">
-          {`${formatDate(experience.startDate)} - ${experience.endDate ? formatDate(experience.endDate) : 'present'}`}
-        </Badge>
-      </div>
       <Link key={experience.slug} className="w-full" href={`/experience/${experience.slug}`}>
         <ViewTransition name={`experience-${experience.slug}`}>
           <Card variant="gradient">
             <CardHeader>
               <CardTitle>{experience.title}</CardTitle>
-              <CardDescription>{experience.location}</CardDescription>
+              {isDefined(experience.location) ? <CardDescription>{experience.location}</CardDescription> : undefined}
+              {isDefined(dateRange) ? (
+                <CardAction>
+                  <Badge variant="outline">{dateRange}</Badge>{' '}
+                </CardAction>
+              ) : undefined}
             </CardHeader>
             <CardContent>
               <Typography size="sm" variant="p">

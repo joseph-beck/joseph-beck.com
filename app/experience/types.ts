@@ -3,8 +3,8 @@ import * as z from 'zod'
 const experienceSchema = z.object({
   description: z.string(),
   endDate: z.date().optional(),
-  location: z.string(),
-  startDate: z.date(),
+  location: z.string().optional(),
+  startDate: z.date().optional(),
   tags: z.string().array().optional(),
   title: z.string(),
   type: z.literal(['professional', 'extra-curricular', 'freelance', 'education']),
