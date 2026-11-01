@@ -8,6 +8,7 @@ import { Container } from '@/components/layout/Container'
 import { Stack } from '@/components/layout/Stack'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/Tabs'
 import { Typography } from '@/components/ui/Typography'
+import { compareDates } from '@/lib/date/compareDates'
 import { getAllContent } from '@/lib/mdx/getAllContent'
 import { getContentFromFile } from '@/lib/mdx/getContentFromFile'
 
@@ -23,9 +24,9 @@ const Page = async () => {
     },
   })
 
-  const sortedExperiences = experiences.toSorted((a, b) => {
-    return new Date(b.startDate).getTime() - new Date(a.startDate).getTime()
-  })
+  const sortedExperiences = experiences.toSorted((a, b) =>
+    compareDates(a.startDate?.toISOString(), b.startDate?.toISOString()),
+  )
 
   const professionalExperiences = sortedExperiences.filter((experience) => experience.type === 'professional')
 
