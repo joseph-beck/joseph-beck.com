@@ -3,8 +3,8 @@ import { type ReactElement } from 'react'
 import { ViewTransition } from 'react'
 
 import { type ProjectData } from '@/app/projects/types'
+import { LanguageBadge } from '@/components/common/LanguageBadge'
 import { Stack } from '@/components/layout/Stack'
-import { Badge } from '@/components/ui/Badge'
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Link } from '@/components/ui/Link'
 
@@ -24,7 +24,7 @@ const ProjectCard = ({ project }: ProjectCardProps): ReactElement => {
           <CardFooter>
             <Stack orientation="horizontal" spacing="sm">
               {isNonEmptyArray(project.languages)
-                ? project.languages.map((language) => <Badge key={language}>{language}</Badge>)
+                ? project.languages.map((language) => <LanguageBadge key={language} language={language} />)
                 : undefined}
             </Stack>
           </CardFooter>

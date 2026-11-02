@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
+    "@dev.icons/react": "^1.3.0",
     "@jblib/has": "0.0.7",
     "@jblib/is": "0.0.11",
     "@jblib/should": "0.0.9",

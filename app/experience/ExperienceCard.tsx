@@ -3,6 +3,7 @@ import { type ReactElement } from 'react'
 import { ViewTransition } from 'react'
 
 import { type ExperienceData } from '@/app/experience/types'
+import { LanguageBadge } from '@/components/common/LanguageBadge'
 import { Stack } from '@/components/layout/Stack'
 import { Badge } from '@/components/ui/Badge'
 import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/Card'
@@ -40,7 +41,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps): ReactElement => {
               {isNonEmptyArray(experience.tags) ? (
                 <Stack orientation="horizontal" spacing="sm">
                   {experience.tags.map((tag) => (
-                    <Badge key={tag}>{tag}</Badge>
+                    <LanguageBadge key={tag} language={tag} />
                   ))}
                 </Stack>
               ) : undefined}
