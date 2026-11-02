@@ -15,7 +15,9 @@ const BackArrow = ({ children, href }: BackArrowProps): ReactElement => {
     <Link href={href}>
       <Stack className="items-center" orientation="horizontal" spacing="sm">
         <IconArrowBack className="h-4 w-4" />
-        <Typography style="mono">{children}</Typography>
+        <Typography style="mono" variant="h6">
+          {children}
+        </Typography>
       </Stack>
     </Link>
   )
