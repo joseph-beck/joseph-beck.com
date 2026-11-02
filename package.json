@@ -12,6 +12,7 @@
     "lint:fix": "eslint --fix --cache",
     "fmt": "prettier . --check --cache",
     "fmt:fix": "prettier . --write --cache",
+    "test": "vitest run",
     "prepare": "husky"
   },
   "dependencies": {
@@ -23,7 +24,7 @@
     "@tabler/icons-react": "^3.48.0",
     "@tailwindcss/typography": "^0.5.20",
     "class-variance-authority": "^0.7.1",
-    "cn": "^0.4.0",
+    "cn": "^0.5.2",
     "gray-matter": "^4.0.3",
     "next": "16.3.4",
     "next-intl": "^4.14.3",
@@ -52,6 +53,7 @@
     "eslint-config-next": "16.3.0",
     "eslint-plugin-no-relative-import-paths": "^1.7.3",
     "husky": "^9.1.7",
+    "jsdom": "^30.1.3",
     "prettier": "^3.9.8",
     "prettier-plugin-tailwindcss": "^0.8.1",
     "tailwindcss": "^4.3.3",

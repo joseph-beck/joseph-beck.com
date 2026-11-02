@@ -1,13 +1,15 @@
+import { isUndefined } from '@jblib/is'
+
 const compareDates = (a?: string, b?: string): number => {
-  if (!a && !b) {
+  if (isUndefined(a) && isUndefined(b)) {
     return 0
   }
 
-  if (!a) {
+  if (isUndefined(a)) {
     return -1
   }
 
-  if (!b) {
+  if (isUndefined(b)) {
     return 1
   }
 
