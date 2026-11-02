@@ -19,6 +19,7 @@ const language = z.union([
     'next.js',
     'sqlite',
     'postgresql',
+    'python',
   ]),
   z.string(),
 ])

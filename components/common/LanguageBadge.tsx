@@ -4,7 +4,7 @@ import {
   AngularIcon,
   C,
   CPlusplus,
-  Docker,
+  DockerIcon,
   Gopher,
   Graphql,
   Java,
@@ -12,6 +12,7 @@ import {
   MysqlIcon,
   NextjsIcon,
   Postgresql,
+  Python,
   Ruby,
   Rust,
   SqliteIcon,
@@ -30,7 +31,7 @@ const LanguageBadge = ({ language }: LanguageBadgeProps) => {
   switch (language) {
     case 'mysql':
       return (
-        <Badge className="bg-blue-500 text-white">
+        <Badge className="bg-amber-400 text-blue-800">
           <MysqlIcon /> {language}
         </Badge>
       )
@@ -66,8 +67,14 @@ const LanguageBadge = ({ language }: LanguageBadgeProps) => {
       )
     case 'docker':
       return (
-        <Badge className="bg-blue-500 text-white">
-          <Docker /> {language}
+        <Badge className="bg-blue-800 text-white">
+          <DockerIcon /> {language}
+        </Badge>
+      )
+    case 'python':
+      return (
+        <Badge className="bg-yellow-400 text-blue-800">
+          <Python /> {language}
         </Badge>
       )
     case 'ruby':
