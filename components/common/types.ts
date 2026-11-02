@@ -20,6 +20,8 @@ const language = z.union([
     'sqlite',
     'postgresql',
     'python',
+    'c#',
+    'firebase',
   ]),
   z.string(),
 ])

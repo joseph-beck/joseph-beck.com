@@ -4,7 +4,9 @@ import {
   AngularIcon,
   C,
   CPlusplus,
+  CSharp,
   DockerIcon,
+  FirebaseIcon,
   Gopher,
   Graphql,
   Java,
@@ -53,6 +55,12 @@ const LanguageBadge = ({ language }: LanguageBadgeProps) => {
           <Postgresql /> {language}
         </Badge>
       )
+    case 'firebase':
+      return (
+        <Badge className="bg-orange-600 text-white">
+          <FirebaseIcon /> {language}
+        </Badge>
+      )
     case 'graphql':
       return (
         <Badge className="bg-pink-600 text-white">
@@ -99,6 +107,12 @@ const LanguageBadge = ({ language }: LanguageBadgeProps) => {
       return (
         <Badge className="bg-pink-700 text-white">
           <CPlusplus /> {language}
+        </Badge>
+      )
+    case 'c#':
+      return (
+        <Badge className="bg-purple-700 text-white">
+          <CSharp /> {language}
         </Badge>
       )
     case 'angular':
