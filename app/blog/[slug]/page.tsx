@@ -37,7 +37,7 @@ const Page = async ({ params }: { params: Promise<PageParams> }) => {
         <Stack>
           <BackArrow href="/blog">back to blog</BackArrow>
           {isDefined(blog) ? (
-            <BlogPost blog={blog}>{blog.content}</BlogPost>
+            <BlogPost blog={blog} content={blog.content} />
           ) : (
             <Typography style="mono" variant="h5">
               sorry, blog {slug} could not be found

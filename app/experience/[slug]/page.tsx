@@ -34,10 +34,10 @@ const Page = async ({ params }: { params: Promise<PageParams> }) => {
   return (
     <ViewTransition name={`experience-${slug}`}>
       <Container>
-        <Stack>
+        <Stack className="w-full max-w-lg">
           <BackArrow href="/experience">back to experience</BackArrow>
           {isDefined(experience) ? (
-            <ExperiencePage experience={experience}>{experience.content}</ExperiencePage>
+            <ExperiencePage content={experience.content} experience={experience} />
           ) : (
             <Typography style="mono" variant="h5">
               sorry, experience {slug} could not be found

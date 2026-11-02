@@ -37,7 +37,7 @@ const Page = async ({ params }: { params: Promise<PageParams> }) => {
         <Stack className="w-full max-w-lg">
           <BackArrow href="/projects">back to projects</BackArrow>
           {isDefined(project) ? (
-            <ProjectPage project={project}>{project.content}</ProjectPage>
+            <ProjectPage content={project.content} project={project} />
           ) : (
             <Typography style="mono" variant="h5">
               sorry, project {slug} could not be found

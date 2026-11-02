@@ -1,19 +1,21 @@
 import { isDefined, isNonEmptyArray } from '@jblib/is'
 import { IconBrandGithub } from '@tabler/icons-react'
-import { type ReactElement, type ReactNode } from 'react'
+import { MDXRemote } from 'next-mdx-remote/rsc'
+import { type ReactElement } from 'react'
 
 import { type Project } from '@/app/projects/types'
 import { LanguageBadge } from '@/components/common/LanguageBadge'
+import { Prose } from '@/components/common/Prose'
 import { Stack } from '@/components/layout/Stack'
 import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Link } from '@/components/ui/Link'
 
 interface ProjectPageProps {
-  children: ReactNode
+  content: string
   project: Project
 }
 
-const ProjectPage = ({ children, project }: ProjectPageProps): ReactElement => {
+const ProjectPage = ({ content, project }: ProjectPageProps): ReactElement => {
   return (
     <Card className="w-full" variant="invisible">
       <CardHeader>
@@ -36,7 +38,11 @@ const ProjectPage = ({ children, project }: ProjectPageProps): ReactElement => {
           ) : undefined}
         </CardAction>
       </CardHeader>
-      <CardContent>{children}</CardContent>
+      <CardContent>
+        <Prose>
+          <MDXRemote source={content} />
+        </Prose>
+      </CardContent>
     </Card>
   )
 }

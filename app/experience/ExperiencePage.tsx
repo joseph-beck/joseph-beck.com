@@ -1,22 +1,40 @@
-import { isDefined } from '@jblib/is'
-import { type ReactElement, type ReactNode } from 'react'
+import { isNonEmptyArray } from '@jblib/is'
+import { MDXRemote } from 'next-mdx-remote/rsc'
+import { type ReactElement } from 'react'
 
 import { type Experience } from '@/app/experience/types'
+import { LanguageBadge } from '@/components/common/LanguageBadge'
+import { Prose } from '@/components/common/Prose'
 import { Stack } from '@/components/layout/Stack'
-import { Typography } from '@/components/ui/Typography'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 
 interface ExperiencePageProps {
-  children: ReactNode
+  content: string
   experience: Experience
 }
 
-const ExperiencePage = ({ children, experience }: ExperiencePageProps): ReactElement => {
+const ExperiencePage = ({ content, experience }: ExperiencePageProps): ReactElement => {
   return (
-    <Stack>
-      <Typography variant="h2">{experience.title}</Typography>
-      {isDefined(experience.description) ? <Typography>{experience.description}</Typography> : undefined}
-      {children}
-    </Stack>
+    <Card className="w-full" variant="invisible">
+      <CardHeader>
+        <CardTitle>{experience.title}</CardTitle>
+        <CardDescription>
+          <Stack spacing="md">
+            {experience.description}
+            <Stack orientation="horizontal" spacing="sm">
+              {isNonEmptyArray(experience.tags)
+                ? experience.tags.map((tag) => <LanguageBadge key={tag} language={tag} />)
+                : undefined}
+            </Stack>
+          </Stack>
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <Prose>
+          <MDXRemote source={content} />
+        </Prose>
+      </CardContent>
+    </Card>
   )
 }
 
