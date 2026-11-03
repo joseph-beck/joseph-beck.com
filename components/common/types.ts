@@ -30,4 +30,10 @@ const Language = z.compile(language)
 
 type Language = z.infer<typeof language>
 
-export { Language }
+const brand = z.union([z.literal(['github', 'linkedin']), z.string()])
+
+const Brand = z.compile(brand)
+
+type Brand = z.infer<typeof brand>
+
+export { Brand, Language }

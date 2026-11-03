@@ -26,7 +26,7 @@ const Page = async () => {
     <Container>
       <Stack className="w-full">
         <Typography variant="h2">blog</Typography>
-        <Stack className="flex max-w-lg">
+        <Stack className="flex max-w-xl">
           {isNonEmptyArray(blogs) ? (
             blogs.map((blog) => <BlogCard key={blog.slug} blog={blog} />)
           ) : (

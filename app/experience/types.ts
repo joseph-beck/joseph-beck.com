@@ -1,5 +1,11 @@
 import * as z from 'zod'
 
+const experienceTypeSchema = z.union([z.literal(['professional', 'extra-curricular', 'freelance', 'education'])])
+
+const ExperienceType = z.compile(experienceTypeSchema)
+
+type ExperienceType = z.infer<typeof experienceTypeSchema>
+
 const experienceSchema = z.object({
   description: z.string().optional(),
   endDate: z.date().optional(),
@@ -7,7 +13,7 @@ const experienceSchema = z.object({
   startDate: z.date().optional(),
   tags: z.string().array().optional(),
   title: z.string(),
-  type: z.literal(['professional', 'extra-curricular', 'freelance', 'education']),
+  type: ExperienceType,
 })
 
 const Experience = z.compile(experienceSchema)
@@ -23,4 +29,4 @@ const ExperienceData = z.compile(experienceDataSchema)
 
 type ExperienceData = z.infer<typeof experienceDataSchema>
 
-export { Experience, ExperienceData }
+export { Experience, ExperienceData, ExperienceType }

@@ -2,6 +2,7 @@ import { isDefined, isNonEmptyArray } from '@jblib/is'
 import { type ReactElement } from 'react'
 import { ViewTransition } from 'react'
 
+import { getExperienceTypeString } from '@/app/experience/getExperienceTypeString'
 import { type ExperienceData } from '@/app/experience/types'
 import { LanguageBadge } from '@/components/common/LanguageBadge'
 import { Stack } from '@/components/layout/Stack'
@@ -26,11 +27,12 @@ const ExperienceCard = ({ experience }: ExperienceCardProps): ReactElement => {
             <CardHeader>
               <CardTitle>{experience.title}</CardTitle>
               {isDefined(experience.location) ? <CardDescription>{experience.location}</CardDescription> : undefined}
-              {isDefined(dateRange) ? (
-                <CardAction>
-                  <Badge variant="outline">{dateRange}</Badge>{' '}
-                </CardAction>
-              ) : undefined}
+              <CardAction>
+                <Stack orientation="horizontal" spacing="sm">
+                  <Badge>{getExperienceTypeString(experience.type)}</Badge>
+                  {isDefined(dateRange) ? <Badge variant="outline">{dateRange}</Badge> : undefined}{' '}
+                </Stack>
+              </CardAction>
             </CardHeader>
             {isDefined(experience.description) ? (
               <CardContent>

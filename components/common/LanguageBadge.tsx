@@ -21,6 +21,7 @@ import {
   TypescriptIcon,
 } from '@dev.icons/react/mono'
 import { IconSql } from '@tabler/icons-react'
+import { type ReactElement } from 'react'
 
 import { type Language } from '@/components/common/types'
 import { Badge } from '@/components/ui/Badge'
@@ -29,7 +30,7 @@ interface LanguageBadgeProps {
   language: Language
 }
 
-const LanguageBadge = ({ language }: LanguageBadgeProps) => {
+const LanguageBadge = ({ language }: LanguageBadgeProps): ReactElement => {
   switch (language) {
     case 'mysql':
       return (

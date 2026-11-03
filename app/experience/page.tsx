@@ -23,15 +23,21 @@ const Page = async () => {
     },
   })
 
-  const sortedExperiences = experiences.toSorted((a, b) =>
-    compareDates(a.endDate?.toISOString(), b.endDate?.toISOString()),
-  )
+  const sortedExperiences = experiences.toSorted((a, b) => {
+    const endDateCompare = compareDates(a.endDate?.toISOString(), b.endDate?.toISOString())
+
+    if (endDateCompare !== 0) {
+      return endDateCompare
+    }
+
+    return compareDates(a.startDate?.toISOString(), b.startDate?.toISOString())
+  })
 
   return (
     <Container>
       <Stack className="w-full">
         <Typography variant="h2">experience</Typography>
-        <Stack className="flex max-w-lg">
+        <Stack className="flex max-w-xl">
           {isNonEmptyArray(sortedExperiences) ? (
             sortedExperiences.map((experience) => <ExperienceCard key={experience.slug} experience={experience} />)
           ) : (

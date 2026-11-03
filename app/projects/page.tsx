@@ -28,7 +28,7 @@ const Page = async () => {
     <Container>
       <Stack className="w-full">
         <Typography variant="h2">projects</Typography>
-        <Stack className="flex max-w-lg">
+        <Stack className="flex max-w-xl">
           {sortedProjects.map((project) => (
             <ProjectCard key={project.slug} project={project} />
           ))}
