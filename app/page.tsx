@@ -21,7 +21,9 @@ const Page = () => {
               <BrandButton brand="linkedin">connect on linkedin</BrandButton>
             </Link>
             <Link href="https://github.com/joseph-beck" target="_blank">
-              <BrandButton brand="github">check out out my github</BrandButton>
+              <BrandButton brand="github" variant="outline">
+                check out out my github
+              </BrandButton>
             </Link>
           </Stack>
         </Stack>

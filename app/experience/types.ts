@@ -1,10 +1,8 @@
 import * as z from 'zod'
 
-const experienceTypeSchema = z.union([z.literal(['professional', 'extra-curricular', 'freelance', 'education'])])
+const ExperienceType = z.enum(['professional', 'extra-curricular', 'freelance', 'education'])
 
-const ExperienceType = z.compile(experienceTypeSchema)
-
-type ExperienceType = z.infer<typeof experienceTypeSchema>
+type ExperienceType = z.infer<typeof ExperienceType>
 
 const experienceSchema = z.object({
   description: z.string().optional(),

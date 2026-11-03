@@ -1,7 +1,5 @@
-import { isNonEmptyArray } from '@jblib/is'
-
 import { contentDirectory } from '@/app/experience/contentDirectory'
-import { ExperienceCard } from '@/app/experience/ExperienceCard'
+import { ExperienceFilters } from '@/app/experience/ExperienceFilters'
 import { Experience } from '@/app/experience/types'
 import { type ExperienceData } from '@/app/experience/types'
 import { Container } from '@/components/layout/Container'
@@ -37,12 +35,8 @@ const Page = async () => {
     <Container>
       <Stack className="w-full">
         <Typography variant="h2">experience</Typography>
-        <Stack className="flex max-w-xl">
-          {isNonEmptyArray(sortedExperiences) ? (
-            sortedExperiences.map((experience) => <ExperienceCard key={experience.slug} experience={experience} />)
-          ) : (
-            <Typography variant="p">nothing to see here...</Typography>
-          )}
+        <Stack className="max-w-xl">
+          <ExperienceFilters experiences={sortedExperiences} />
         </Stack>
       </Stack>
     </Container>

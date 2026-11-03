@@ -1,7 +1,7 @@
 import * as z from 'zod'
 
 const language = z.union([
-  z.literal([
+  z.enum([
     'go',
     'typescript',
     'rust',
@@ -30,7 +30,7 @@ const Language = z.compile(language)
 
 type Language = z.infer<typeof language>
 
-const brand = z.union([z.literal(['github', 'linkedin']), z.string()])
+const brand = z.union([z.enum(['github', 'linkedin']), z.string()])
 
 const Brand = z.compile(brand)
 

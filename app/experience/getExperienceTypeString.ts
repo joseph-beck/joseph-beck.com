@@ -1,6 +1,6 @@
 import { type ExperienceType } from '@/app/experience/types'
 
-const getExperienceTypeString = (type: ExperienceType): string => {
+const getExperienceTypeString = (type: 'all' | ExperienceType): string => {
   switch (type) {
     case 'professional':
       return 'professional'
