@@ -32,11 +32,13 @@ const ExperienceCard = ({ experience }: ExperienceCardProps): ReactElement => {
                 </CardAction>
               ) : undefined}
             </CardHeader>
-            <CardContent>
-              <Typography size="sm" variant="p">
-                {experience.description}
-              </Typography>
-            </CardContent>
+            {isDefined(experience.description) ? (
+              <CardContent>
+                <Typography size="sm" variant="p">
+                  {experience.description}
+                </Typography>
+              </CardContent>
+            ) : undefined}
             <CardFooter>
               {isNonEmptyArray(experience.tags) ? (
                 <Stack orientation="horizontal" spacing="sm">

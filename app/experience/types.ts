@@ -1,7 +1,7 @@
 import * as z from 'zod'
 
 const experienceSchema = z.object({
-  description: z.string(),
+  description: z.string().optional(),
   endDate: z.date().optional(),
   location: z.string().optional(),
   startDate: z.date().optional(),
