@@ -1,5 +1,5 @@
+import { GithubIcon } from '@dev.icons/react/mono'
 import { isDefined, isNonEmptyArray } from '@jblib/is'
-import { IconBrandGithub } from '@tabler/icons-react'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { type ReactElement } from 'react'
 
@@ -9,6 +9,8 @@ import { Prose } from '@/components/common/Prose'
 import { Stack } from '@/components/layout/Stack'
 import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Link } from '@/components/ui/Link'
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/Tooltip'
+import { Typography } from '@/components/ui/Typography'
 
 interface ProjectPageProps {
   content: string
@@ -32,9 +34,20 @@ const ProjectPage = ({ content, project }: ProjectPageProps): ReactElement => {
         </CardDescription>
         <CardAction>
           {isDefined(project.repo) ? (
-            <Link href={project.repo} target="_blank">
-              <IconBrandGithub />
-            </Link>
+            <Tooltip>
+              <TooltipTrigger
+                render={
+                  <Link href={project.repo} target="_blank">
+                    <GithubIcon size={24} />
+                  </Link>
+                }
+              />
+              <TooltipContent sideOffset={8}>
+                <Typography size="xs" variant="p">
+                  check it out on github
+                </Typography>
+              </TooltipContent>
+            </Tooltip>
           ) : undefined}
         </CardAction>
       </CardHeader>

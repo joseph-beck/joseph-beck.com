@@ -6,6 +6,7 @@ import { Geist, Geist_Mono } from 'next/font/google'
 
 import { NavigationBar } from '@/components/navigation/NavigationBar'
 import { ThemeProvider } from '@/components/theme/ThemeProvider'
+import { TooltipProvider } from '@/components/ui/Tooltip'
 
 const geistMonoHeading = Geist_Mono({
   subsets: ['latin'],
@@ -39,10 +40,12 @@ const RootLayout = ({
       lang="en"
     >
       <body>
-        <ThemeProvider>
-          <NavigationBar />
-          {children}
-        </ThemeProvider>
+        <TooltipProvider>
+          <ThemeProvider>
+            <NavigationBar />
+            {children}
+          </ThemeProvider>
+        </TooltipProvider>
       </body>
     </html>
   )
