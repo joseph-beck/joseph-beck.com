@@ -8,9 +8,6 @@ import { Typography } from '@/components/ui/Typography'
 const NavigationBar = (): ReactElement => {
   return (
     <Stack className="items-center gap-4 p-6" orientation="horizontal">
-      <Typography intensity="muted" style="italic" variant="p">
-        joseph-beck.com
-      </Typography>
       <Separator className="bg-primary" orientation="vertical" />
       <Link styleActive underline href="/">
         <Typography style="mono">home</Typography>
