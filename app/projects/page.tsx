@@ -20,7 +20,7 @@ const Page = async () => {
     },
   })
 
-  const sortedProjects = projects.toSorted((a, b) => {
+  const sortedProjects = projects.sort((a, b) => {
     return b.priority - a.priority
   })
 

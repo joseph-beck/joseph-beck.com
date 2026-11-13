@@ -21,7 +21,7 @@ const Page = async () => {
     },
   })
 
-  const sortedExperiences = experiences.toSorted((a, b) => {
+  const sortedExperiences = experiences.sort((a, b) => {
     const endDateCompare = compareDates(a.endDate?.toISOString(), b.endDate?.toISOString())
 
     if (endDateCompare !== 0) {
