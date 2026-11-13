@@ -20,10 +20,6 @@ const NavigationBar = (): ReactElement => {
       <Link styleActive underline href="/experience">
         <Typography style="mono">experience</Typography>
       </Link>
-      <Separator className="bg-primary" orientation="vertical" />
-      <Link styleActive underline href="/blog">
-        <Typography style="mono">blog</Typography>
-      </Link>
     </Stack>
   )
 }
