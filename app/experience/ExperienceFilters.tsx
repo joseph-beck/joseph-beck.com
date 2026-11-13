@@ -15,7 +15,7 @@ interface ExperienceFiltersProps {
 }
 
 const ExperienceFilters = ({ experiences }: ExperienceFiltersProps): ReactElement => {
-  const [selectedType, setSelectedType] = useState('all')
+  const [selectedType, setSelectedType] = useState('professional')
 
   const filteredExperiences =
     selectedType === 'all' ? experiences : experiences.filter((experience) => experience.type === selectedType)
