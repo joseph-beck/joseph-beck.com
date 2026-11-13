@@ -26,6 +26,12 @@ const Page = () => {
               </BrandButton>
             </Link>
           </Stack>
+          <Typography variant="p">
+            take a look at some of my projects{' '}
+            <Link underline className="underline" href="/projects">
+              here
+            </Link>
+          </Typography>
         </Stack>
       </Stack>
     </Container>
