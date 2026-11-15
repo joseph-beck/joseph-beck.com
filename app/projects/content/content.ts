@@ -1,16 +1,16 @@
-import amp from '@/app/projects/content/amp.mdx' with { turbopackModuleType: 'raw' }
-import battleships from '@/app/projects/content/battleships.mdx' with { turbopackModuleType: 'raw' }
-import gear from '@/app/projects/content/gear.mdx' with { turbopackModuleType: 'raw' }
-import hackAndSeek from '@/app/projects/content/hack-and-seek.mdx' with { turbopackModuleType: 'raw' }
-import hangmanRobot from '@/app/projects/content/hangman-robot.mdx' with { turbopackModuleType: 'raw' }
-import josephBeck from '@/app/projects/content/joseph-beck.mdx' with { turbopackModuleType: 'raw' }
-import oaxaca from '@/app/projects/content/oaxaca.mdx' with { turbopackModuleType: 'raw' }
-import openBotBrain from '@/app/projects/content/open-bot-brain.mdx' with { turbopackModuleType: 'raw' }
-import ppeg from '@/app/projects/content/ppeg.mdx' with { turbopackModuleType: 'raw' }
-import pratt from '@/app/projects/content/pratt.mdx' with { turbopackModuleType: 'raw' }
-import royalHackawayV9 from '@/app/projects/content/royal-hackaway-v9.mdx' with { turbopackModuleType: 'raw' }
-import rustedAttractors from '@/app/projects/content/rusted-attractors.mdx' with { turbopackModuleType: 'raw' }
-import tuner from '@/app/projects/content/tuner.mdx' with { turbopackModuleType: 'raw' }
+import amp from '@/app/projects/content/amp.mdx?raw'
+import battleships from '@/app/projects/content/battleships.mdx?raw'
+import gear from '@/app/projects/content/gear.mdx?raw'
+import hackAndSeek from '@/app/projects/content/hack-and-seek.mdx?raw'
+import hangmanRobot from '@/app/projects/content/hangman-robot.mdx?raw'
+import josephBeck from '@/app/projects/content/joseph-beck.mdx?raw'
+import oaxaca from '@/app/projects/content/oaxaca.mdx?raw'
+import openBotBrain from '@/app/projects/content/open-bot-brain.mdx?raw'
+import ppeg from '@/app/projects/content/ppeg.mdx?raw'
+import pratt from '@/app/projects/content/pratt.mdx?raw'
+import royalHackawayV9 from '@/app/projects/content/royal-hackaway-v9.mdx?raw'
+import rustedAttractors from '@/app/projects/content/rusted-attractors.mdx?raw'
+import tuner from '@/app/projects/content/tuner.mdx?raw'
 
 const content = {
   'amp.mdx': amp,

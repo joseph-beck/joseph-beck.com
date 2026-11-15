@@ -1,20 +1,12 @@
-import amadeus from '@/app/experience/content/amadeus.mdx' with { turbopackModuleType: 'raw' }
-import compsocCompetitionsDirector from '@/app/experience/content/compsoc-competitions-director.mdx' with {
-  turbopackModuleType: 'raw',
-}
-import compsocTreasurer from '@/app/experience/content/compsoc-treasurer.mdx' with { turbopackModuleType: 'raw' }
-import lxPat from '@/app/experience/content/lx-pat.mdx' with { turbopackModuleType: 'raw' }
-import mohcFullStack from '@/app/experience/content/mohc-full-stack.mdx' with { turbopackModuleType: 'raw' }
-import mohcJuniorFullStack from '@/app/experience/content/mohc-junior-full-stack.mdx' with {
-  turbopackModuleType: 'raw',
-}
-import rhul from '@/app/experience/content/rhul.mdx' with { turbopackModuleType: 'raw' }
-import rhulResearchAssistant from '@/app/experience/content/rhul-research-assistant.mdx' with {
-  turbopackModuleType: 'raw',
-}
-import rhulTeachingAssistant from '@/app/experience/content/rhul-teaching-assistant.mdx' with {
-  turbopackModuleType: 'raw',
-}
+import amadeus from '@/app/experience/content/amadeus.mdx?raw'
+import compsocCompetitionsDirector from '@/app/experience/content/compsoc-competitions-director.mdx?raw'
+import compsocTreasurer from '@/app/experience/content/compsoc-treasurer.mdx?raw'
+import lxPat from '@/app/experience/content/lx-pat.mdx?raw'
+import mohcFullStack from '@/app/experience/content/mohc-full-stack.mdx?raw'
+import mohcJuniorFullStack from '@/app/experience/content/mohc-junior-full-stack.mdx?raw'
+import rhul from '@/app/experience/content/rhul.mdx?raw'
+import rhulResearchAssistant from '@/app/experience/content/rhul-research-assistant.mdx?raw'
+import rhulTeachingAssistant from '@/app/experience/content/rhul-teaching-assistant.mdx?raw'
 
 const content = {
   'amadeus.mdx': amadeus,
