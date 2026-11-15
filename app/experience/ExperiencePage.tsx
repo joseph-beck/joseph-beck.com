@@ -1,6 +1,6 @@
 import { isNonEmptyArray } from '@jblib/is'
-import { MDXRemote } from 'next-mdx-remote/rsc'
 import { type ReactElement } from 'react'
+import Markdown from 'react-markdown'
 
 import { type Experience } from '@/app/experience/types'
 import { LanguageBadge } from '@/components/common/LanguageBadge'
@@ -31,7 +31,7 @@ const ExperiencePage = ({ content, experience }: ExperiencePageProps): ReactElem
       </CardHeader>
       <CardContent>
         <Prose>
-          <MDXRemote source={content} />
+          <Markdown>{content}</Markdown>
         </Prose>
       </CardContent>
     </Card>

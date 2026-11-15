@@ -1,7 +1,7 @@
 import { isNonEmptyArray } from '@jblib/is'
 
 import { BlogCard } from '@/app/blog/BlogCard'
-import { contentDirectory } from '@/app/blog/contentDirectory'
+import { content } from '@/app/blog/content/content'
 import { Blog } from '@/app/blog/types'
 import { type BlogData } from '@/app/blog/types'
 import { Container } from '@/components/layout/Container'
@@ -10,12 +10,12 @@ import { Typography } from '@/components/ui/Typography'
 import { getAllContent } from '@/lib/mdx/getAllContent'
 import { getContentFromFile } from '@/lib/mdx/getContentFromFile'
 
-const Page = async () => {
-  const blogs = await getAllContent<BlogData>({
-    contentDirectory,
-    getFn: async (filename) => {
+const Page = () => {
+  const blogs = getAllContent<BlogData>({
+    content,
+    getFn: (filename) => {
       return getContentFromFile<Blog>({
-        contentDirectory,
+        content,
         filename,
         schema: Blog,
       })

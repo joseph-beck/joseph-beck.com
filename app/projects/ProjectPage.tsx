@@ -1,7 +1,7 @@
 import { GithubIcon } from '@dev.icons/react/mono'
 import { isDefined, isNonEmptyArray } from '@jblib/is'
-import { MDXRemote } from 'next-mdx-remote/rsc'
 import { type ReactElement } from 'react'
+import Markdown from 'react-markdown'
 
 import { type Project } from '@/app/projects/types'
 import { LanguageBadge } from '@/components/common/LanguageBadge'
@@ -53,7 +53,7 @@ const ProjectPage = ({ content, project }: ProjectPageProps): ReactElement => {
       </CardHeader>
       <CardContent>
         <Prose>
-          <MDXRemote source={content} />
+          <Markdown>{content}</Markdown>
         </Prose>
       </CardContent>
     </Card>

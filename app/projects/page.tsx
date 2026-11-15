@@ -1,4 +1,4 @@
-import { contentDirectory } from '@/app/projects/contentDirectory'
+import { content } from '@/app/projects/content/content'
 import { ProjectCard } from '@/app/projects/ProjectCard'
 import { Project } from '@/app/projects/types'
 import { type ProjectData } from '@/app/projects/types'
@@ -8,19 +8,19 @@ import { Typography } from '@/components/ui/Typography'
 import { getAllContent } from '@/lib/mdx/getAllContent'
 import { getContentFromFile } from '@/lib/mdx/getContentFromFile'
 
-const Page = async () => {
-  const projects = await getAllContent<ProjectData>({
-    contentDirectory,
-    getFn: async (filename) => {
+const Page = () => {
+  const projects = getAllContent<ProjectData>({
+    content,
+    getFn: (filename) => {
       return getContentFromFile<Project>({
-        contentDirectory,
+        content,
         filename,
         schema: Project,
       })
     },
   })
 
-  const sortedProjects = projects.toSorted((a, b) => {
+  const sortedProjects = projects.sort((a, b) => {
     return b.priority - a.priority
   })
 

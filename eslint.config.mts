@@ -12,7 +12,7 @@ const config: Linter.Config[] = [
   ...jblibJsonConfig,
   ...jblibNextConfig,
   {
-    ignores: ['**/*.mjs', '**/*.mts'],
+    ignores: ['**/*.mjs', '**/*.mts', 'next.config.ts', 'open-next.config.ts', '.open-next/**', '.wrangler/**'],
   },
   {
     plugins: {

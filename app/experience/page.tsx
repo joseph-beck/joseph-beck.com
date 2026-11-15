@@ -1,4 +1,4 @@
-import { contentDirectory } from '@/app/experience/contentDirectory'
+import { content } from '@/app/experience/content/content'
 import { ExperienceFilters } from '@/app/experience/ExperienceFilters'
 import { Experience } from '@/app/experience/types'
 import { type ExperienceData } from '@/app/experience/types'
@@ -9,19 +9,19 @@ import { compareDates } from '@/lib/date/compareDates'
 import { getAllContent } from '@/lib/mdx/getAllContent'
 import { getContentFromFile } from '@/lib/mdx/getContentFromFile'
 
-const Page = async () => {
-  const experiences = await getAllContent<ExperienceData>({
-    contentDirectory,
-    getFn: async (filename) => {
+const Page = () => {
+  const experiences = getAllContent<ExperienceData>({
+    content,
+    getFn: (filename) => {
       return getContentFromFile<Experience>({
-        contentDirectory,
+        content,
         filename,
         schema: Experience,
       })
     },
   })
 
-  const sortedExperiences = experiences.toSorted((a, b) => {
+  const sortedExperiences = experiences.sort((a, b) => {
     const endDateCompare = compareDates(a.endDate?.toISOString(), b.endDate?.toISOString())
 
     if (endDateCompare !== 0) {

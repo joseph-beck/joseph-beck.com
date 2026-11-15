@@ -2,7 +2,7 @@ import { isDefined } from '@jblib/is'
 import { ViewTransition } from 'react'
 
 import { BlogPost } from '@/app/blog/BlogPost'
-import { contentDirectory } from '@/app/blog/contentDirectory'
+import { content } from '@/app/blog/content/content'
 import { Blog } from '@/app/blog/types'
 import { type BlogData } from '@/app/blog/types'
 import { Container } from '@/components/layout/Container'
@@ -19,11 +19,11 @@ interface PageParams {
 const Page = async ({ params }: { params: Promise<PageParams> }) => {
   const { slug } = await params
 
-  const blog = await getContentBySlug<BlogData>({
-    contentDirectory,
-    getFn: async (filename) => {
+  const blog = getContentBySlug<BlogData>({
+    content,
+    getFn: (filename) => {
       return getContentFromFile<Blog>({
-        contentDirectory,
+        content,
         filename,
         schema: Blog,
       })

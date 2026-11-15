@@ -6,6 +6,8 @@ allowBuilds:
   msw: false
   '@parcel/watcher': true
   '@swc/core': true
+  esbuild: true
+  workerd: true
 
 minimumReleaseAgeExclude:
   - '@jblib/eslint-json@0.0.4'
