@@ -1,0 +1,45 @@
+import { isNonEmptyArray } from '@jblib/is'
+
+import { BlogCard } from '@/app/blog/BlogCard'
+import { content } from '@/app/blog/content/content'
+import { Blog } from '@/app/blog/types'
+import { type BlogData } from '@/app/blog/types'
+import { Container } from '@/components/layout/Container'
+import { Stack } from '@/components/layout/Stack'
+import { Typography } from '@/components/ui/Typography'
+import { getAllContent } from '@/lib/mdx/getAllContent'
+import { getContentFromFile } from '@/lib/mdx/getContentFromFile'
+
+const Page = () => {
+  const blogs = getAllContent<BlogData>({
+    content,
+    getFn: (filename) => {
+      return getContentFromFile<Blog>({
+        content,
+        filename,
+        schema: Blog,
+      })
+    },
+  })
+
+  return (
+    <Container>
+      <Stack className="w-full">
+        <Typography variant="h2">blog</Typography>
+        <Stack className="flex max-w-xl">
+          <Typography intensity="muted" variant="p">
+            you found the not so hidden blog page! there&apos;s nothing here yet, but come back later and maybe there
+            will be something to read. or not. who knows.
+          </Typography>
+          {isNonEmptyArray(blogs) ? (
+            blogs.map((blog) => <BlogCard key={blog.slug} blog={blog} />)
+          ) : (
+            <Typography variant="p">nothing to see here...</Typography>
+          )}
+        </Stack>
+      </Stack>
+    </Container>
+  )
+}
+
+export default Page
