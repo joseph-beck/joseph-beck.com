@@ -1,7 +1,7 @@
 import { isDefined } from '@jblib/is'
 import { ViewTransition } from 'react'
 
-import { contentDirectory } from '@/app/experience/contentDirectory'
+import { content } from '@/app/experience/content/content'
 import { ExperiencePage } from '@/app/experience/ExperiencePage'
 import { Experience } from '@/app/experience/types'
 import { type ExperienceData } from '@/app/experience/types'
@@ -15,15 +15,14 @@ import { getContentFromFile } from '@/lib/mdx/getContentFromFile'
 interface PageParams {
   slug: string
 }
-
 const Page = async ({ params }: { params: Promise<PageParams> }) => {
   const { slug } = await params
 
-  const experience = await getContentBySlug<ExperienceData>({
-    contentDirectory,
-    getFn: async (filename) => {
+  const experience = getContentBySlug<ExperienceData>({
+    content,
+    getFn: (filename) => {
       return getContentFromFile<Experience>({
-        contentDirectory,
+        content,
         filename,
         schema: Experience,
       })

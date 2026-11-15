@@ -1,6 +1,15 @@
 import { type NextConfig } from 'next'
 
-const nextConfig: NextConfig = {}
+const nextConfig: NextConfig = {
+  turbopack: {
+    rules: {
+      '*.mdx': {
+        as: '*.js',
+        loaders: ['raw-loader'],
+      },
+    },
+  },
+}
 
 const config = nextConfig
 

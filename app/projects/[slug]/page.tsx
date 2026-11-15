@@ -1,7 +1,7 @@
 import { isDefined } from '@jblib/is'
 import { ViewTransition } from 'react'
 
-import { contentDirectory } from '@/app/projects/contentDirectory'
+import { content } from '@/app/projects/content/content'
 import { ProjectPage } from '@/app/projects/ProjectPage'
 import { Project } from '@/app/projects/types'
 import { type ProjectData } from '@/app/projects/types'
@@ -19,11 +19,11 @@ interface PageParams {
 const Page = async ({ params }: { params: Promise<PageParams> }) => {
   const { slug } = await params
 
-  const project = await getContentBySlug<ProjectData>({
-    contentDirectory,
-    getFn: async (filename) => {
+  const project = getContentBySlug<ProjectData>({
+    content,
+    getFn: (filename) => {
       return getContentFromFile<Project>({
-        contentDirectory,
+        content,
         filename,
         schema: Project,
       })
