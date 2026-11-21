@@ -8,6 +8,7 @@ import oaxaca from '@/app/projects/content/oaxaca.mdx?raw'
 import openBotBrain from '@/app/projects/content/open-bot-brain.mdx?raw'
 import ppeg from '@/app/projects/content/ppeg.mdx?raw'
 import pratt from '@/app/projects/content/pratt.mdx?raw'
+import rat from '@/app/projects/content/rat.mdx?raw'
 import royalHackawayV9 from '@/app/projects/content/royal-hackaway-v9.mdx?raw'
 import rustedAttractors from '@/app/projects/content/rusted-attractors.mdx?raw'
 import tuner from '@/app/projects/content/tuner.mdx?raw'
@@ -23,6 +24,7 @@ const content = {
   'open-bot-brain.mdx': openBotBrain,
   'ppeg.mdx': ppeg,
   'pratt.mdx': pratt,
+  'rat.mdx': rat,
   'royal-hackaway-v9.mdx': royalHackawayV9,
   'rusted-attractors.mdx': rustedAttractors,
   'tuner.mdx': tuner,
